@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <table>
+        <!-- caption 필수 스크린리더가 읽어줘야 함
+            th는 분류를 넣는 것  td는 데이터 -->
+        <caption>month/savings Table</caption>
+        <!-- 무조건 caption아래에 넣기 이렇게 선언한는 순간 열들을 잡은 것 (1열,2열..) -->
+        <colgroup>
+            <col style="background-color: darkkhaki; width:300px;">
+            <col style="background-color: darkorange; width:300px;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <!-- 헤드 발 몸 순서 기억
+             합계는 분류니까 th
+             더한 숫자는 값이니까 td -->
+        <tfoot>
+            <tr>
+                <th>Sum</th>
+                <td>$180</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$80</td>
+            </tr>
+        </tbody>
+        
+
+
+    </table>
+</body>
+</html>

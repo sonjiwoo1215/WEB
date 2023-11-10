@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic Tag</title>
+</head>
+<body>
+     <!-- !  -->
+    <header>
+        <!-- global은 공통으로 사용하는 영역(페이지마다 상단이 바뀔 수 없음) 
+             nav는 주 메뉴 등급일때 사용 
+             sidebox는 검색창 쇼핑카트 겁나 큰 패널 등등 뭐가 들어갈지 모르니까 div로 감싼다 
+             div는 같은 블럭계열 안에서는 감쌀수도 감싸질 수도 있다 -->
+        <p>
+            모든 page에서 공통으로 사용하는 상단영역. (global=공통으로 사용하는 영역)
+            page 상단 logo (h1), navigation(nav), sideBox(div)등이 들어간다.
+            통상적으론 변경이 절대 일어나서는 안되는 영역이다.
+        </p>
+        <h1>logo</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">menu</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <input type="button" value="search">
+            <a href="#">login</a>
+            <a href="#">cart</a>
+        </div>
+    </header>
+    <!-- section은 header를 꼭 써줘야함 귀찮으면 div쓰기 section은 article을 감쌀 수 있음 -->
+    <section>
+        <h2>section 에는 머릿글(h)을 넣어줘야 한다.</h2>
+        <p>
+            복합적인 content group(명확히 내용이 별도로 구분 되는 경우) = 모든 다 받을 수 있음
+            이 들어가는 section
+        </p>
+        <!-- 얘도 타이틀이 있어야함 근데 섹션이랑 다른 느낌 독립적인 문서형태 이미지랑? 텍스트만 가질 수 있음 
+             네이버 뉴스 보면 네이버 안에서 기사가 열리지만 위에 보면 신문사 url
+             네이버가 정해준 공간에서 걔네 기사를 불러온 것 독립적임 그래서 타이틀 필수 블로그 제목 없는거 봤냐 아티클이 섹션 안에 없는 경우 타이틀이 바뀔 수 있음 
+             타임이랑 사이트 태그를 친구처럼 데리고 다님 -->
+        <article>
+            <h3>
+                article 자체로 이해가 될 수 있고, 독립적으로 취급될 수 있는 문서 content만
+                사용하는 article. 머릿글(h)을 넣어줘야 한다.
+            </h3>
+            <p>
+                예를 들어 신문기사나 블로그등의 포스트 등, 그렇기 때문에 time Tag를 보통 같이 사용하게 된다.
+            </p>
+            <time datetime="2020-12-23T12:17:00+09:00">
+                2020년 12월 23일 12시 17분 00초
+            </time>
+            <!--time안에 기입하는 날짜와 시간은 사람에게 전달하는 목적을 띄고, datetime이라는 속성은 각 디바이스들이 받아들이는 값이다.
+            T를 기준으로 날짜와 시간을 구분하여 입력한다. 끝에 +로 타임존정보(협정세계시) 를 표기한다. -->
+            <cite>저작권관련 표기 명칭(제목, 인용한대상명등)</cite>
+        </article>
+    </section>
+
+    <!-- 우측이나 좌측면 기준으로 뭔가(패널)가 있거나 나오거나 하는경우 다 사이드임 
+         가끔 상단이나 하단에도 이례적으로 쓰긴 함 근데 상단하단은 헤더와 푸터의 영역이기 때문에 덮지않게 건들지 않는게 좋음
+         선택적으로 글로벌임(항상 고정은 아님 체크아웃 할때만 뜨는 사이드 패널..) 
+         전체 글로벌일때는 헤더와 푸터를 감싸는 경우임 이럴 때는 좌측 사이드만 고정해놓고 우측만 변화 헤더와 푸터가 사이드 안에 있고 스크롤해도 좌측 패널이 사라지지 않음-->
+    <aside>
+        전체적으로 사용하는 global(선택적)중 좌, 우측에 있는
+        menu, bannerBar, quickMenu 등의 content가 들어가는 aside
+    </aside>
+    <footer>
+        저작권정보, 회사주소, 증명/신고내용, 개인정보취급방침(link), 이용약관(link),
+        결제가 가능한 사이트일 경우 반품/환불/교환등의 정책.(link) 등이 들어가는
+        하단 global 요소
+    </footer>
+</body>
+</html>

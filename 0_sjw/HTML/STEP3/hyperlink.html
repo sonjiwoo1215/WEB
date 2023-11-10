@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyper Link</title>
+    <style>
+        /* 1세대 jquery 2세대 react 
+            jquery  js 열심*/
+        /* 부모의 자손의 그의 자손까지 (계단 느낌) 100이라는건 화면 맨 위에 있는 것*/
+        html,body, #targetAnchor{
+            height: 100%;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <h1>hyperLink List</h1>
+    <p>
+       a의 기능<br>
+       hyperLink를 이용하여 원하는 URL 및 URL내 위치 이동 외 기타 여러 기능을 배워보자
+    </p>
+
+    <!-- todo ul>li*6>a -->
+    <!-- http는 가는거 src는 오는거 -->
+    <!-- href 는 target을 가질 수 있음 blank(새 창)랑 self(디폴트,현재 창)만 기억 
+         우리 페이지 내에서는 self써야 함 blank쓰면 로그인 등 연결이 다 끊김-->
+    <ul>
+        <li><a href="https://www.naver.com" target="_self">NAVER바로가기</a></li>
+        <li><a href="https://www.daum.net" target="_blank">DAUM바로가기</a></li>
+        <li><a href="../STEP2.zip">file Download</a></li>
+        <li><a href="mailto:jiwoo211500@naver.com?subject=문의사항남깁니다.">메일보내기</a></li>
+        <li><a href="tel:+821044992170">전화걸기</a></li>
+        <li><a href="#targetAnchor">목표지점바로가기</a></li>
+    </ul>
+    <!-- todo #targetAnchor -->
+    <!--  id를 잘 쓰면 안되지만 써야하는 2가지 경우: targetAnchor,label -->
+    <div id="targetAnchor">목표지점</div>
+    
+    <!-- <label for="userID">아이디:</label>
+    <input type="text" id="userID" placeholder="사용자의 아이디를 입력하시오"> -->
+
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 잔여 HTML5 Tag's </title>
+    
+    <style>
+
+        body > ul li{border:1px solid black; width:250px; list-style:none;}
+        body > ul li figure{position:relative;}
+        body > ul li figure img{width:100%;}
+        body > ul li figure:hover figcaption{display:block;}
+        body > ul li figure figcaption{display:none; position:absolute; width:100%; height:100%; background-color:rgba(0,0,0,0.5); left:0; top:0;}
+        body > ul li figure figcaption dl{text-align:center; color:white; padding:0;}
+        body > ul li figure figcaption dl dt{font-size:24px;}
+        body > ul li figure figcaption dl dd{margin:0;}
+
+
+    </style>
+</head>
+<body>
+    <!-- 확정구조인데 이미지 자체가 충분히 상징적이면 figcaption(설명글)은 필수는 아님
+         목적에 맞게 쓰려면: 이미지가 상징적이여야 쓸 수 있음(로고처럼 ci나 bi정도는 되어야함)
+         개인적으로: 같은 공간에서 텍스트보다 이미지의 비중이 높은 경우에 사용 -->
+     <figure>
+        <img src="https://via.placeholder.com/250?text=undefined" alt="미정이미지">
+        <figcaption>이미지가 들어갈 자리입니다.</figcaption>
+     </figure>
+     
+     <!--  todo ul>li>figure>img+figcaption>dl>dt{example}+dd*2{example} -->
+     <ul>
+        <li>
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="example">
+                <figcaption>
+                    <dl>
+                        <dt>example Name</dt>
+                        <dd>example Descript</dd>
+                        <dd>example Price</dd>
+                    </dl>
+                </figcaption>
+            </figure>
+        </li>
+     </ul>
+     <!-- assistant 어시스턴트가 안됨 직접치기 
+          서버에서 datetime="" 통해 시간이 넘어오면 그걸 받는 태그
+          다국어로 지원되는 웹사이트면 국제 규칙으로 표기 2023-10-25-10:41T09:00:00Z
+        
+          yyyy-mm-dd 형식 
+          날짜만? 2016-06-12 시간만? 09:00:00 z는 그리니치 시간대를 나타내는 Zulu의 약자-->
+     <time datetime="2023-10-25T10:41">2023년 10월 25일 오전 10시 41분</time>
+    
+     <!-- customize가 안됨 색 변경 잘 안됨 얘 모양은 숨겨놓고 작동은 얘로 시키되 css사용해서 새 모양 만들고 보여주는 식으로 변경 가능
+          진행도를 나타냄 시작을 하면 끝이 나야 함 max=100%거의 고정 value=현재 22%진행됨 (자바스크립트 도움 필요)
+          요즘은 잘 사용 안하지만 자동차 웹사이트처럼 무거운 경우에는 사용함-->
+     <progress value="22" max="100"></progress>
+     <!-- 색 변경 잘 안됨 현재 상태를 보여주는 그래프 같은 것 progress와 다름 위에거는 시작하면 끝이 나야 함
+          high와 low는 꼭 둘 다 써야하는 건 아님 일반적으로 둘 중 하나만 씀 용량 낮다고 경고해야해 ?-->
+     <meter value="80" max="100" min="10" high="90" low="20"></meter>80%
+     <!-- 표기방식이 다른 경우에 씀 일본이나 중국 우리나라에서는 쓸 일 없음 -->
+     <ruby>
+        <rt></rt>
+     </ruby>
+
+     <!-- 웹상,이메일,소셜네트워크서비스의 주소 등등 이 대상과 컨택하는 것들은 다 들어가도 됨 인라인을 감싸는 정도
+          보통 footer 안에 들어감 -->
+     <address>
+        <span>인천광역시 부평구 부평동 194-23 SBS아카데미컴퓨터아트학원 부평점</span>
+        <a href="https://www.incheon.sbsart.com">사이트바로가기</a>
+        <a href="tel:+82324370111">032-437-0111</a>
+        <a href="mailto:privacy@koreaedugroup.com">이메일보내기</a>
+     </address>
+
+     <!-- ! IE 지원불가 -->
+     <details>
+        <summary>Copyright 1999 - 2023.</summary>
+        <!-- ! 이하 무엇을 사용해도 상관은 없으나 반드시 block 속성이어야 함 엄청 큰 컨테이너 같은 공간태그는 못들어가지만 웬만한 공간태그는 다 블럭이라 들어감-->
+        <p> - by Refsnes Data. All Rights Reserved.</p>
+        <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+    </details>
+
+
+
+
+    <!-- ! -->
+    <ul>
+        <!-- 다국어에서 많이 쓰임 외부텍스트를 뺴놓을떄? 자신의 외부 텍스트와 다른 포맷으로 규정되는 텍스트를 분리 -->
+        <li>User <bdi>hrefs</bdi> : 60 points</li>
+        <li>User <bdi>jdoe</bdi>: 80 points</li>
+        <li>User <bdi>إيان</bdi>: 90 points</li>
+    </ul>
+    
+    <form action="demo_keygen.asp" method="get">
+        Username: <input type="text" name="security">
+        Encryption: <keygen name="security">
+        <input type="submit">
+    </form>
+    <!--개발쪽 보안에 주된 사항이다. 보안키를 생성해내고, 
+        공개 키를 제출하는데, 개인 키는 로컬에 저장되게 하고, 
+        공개키를 서버로 전송시킨다.-->
+    <form oninput="x.value=parseInt(a.value) + parseInt(b.value)">
+        0<input type="range" id="a" value="50">100
+        + 
+        <input type="number" id="b" value="50">
+        =
+        <!-- 실시간 감지 출력이 원활 -->
+        <output id="x" for="a b"></output>
+    </form>
+    <!--form에 지정된 스크립트 연산을 지정 input(id)들로 수행하여, 
+        결과값을 산출해내는 식이다.
+        range는 값을 마우스를 이용해 입력할 수 있고, number는 직접입력 
+        및 up,down버튼을 이용해 입력할수있다.-->
+    <!-- ! -->
+
+
+       <!--body와 동급 자주 쓸 수 없음 main페이지 -->
+    <main>
+        <h1>Web Browsers</h1>
+        <p>Google Chrome, FireFox, and Internet Explorer are the most used browsers today.</p>
+        <!-- 문서단위에 해당하는 컨테이너 사진이 간혹 들어갈 수는 있지만 주 컨텐츠가 텍스트 
+             메인 컨텍스트(텍스트컨텐츠) 노트 / 아이프레임 비디오 등등은 못들어감
+             태그안에 title은 거의 필수로 들어감 -->
+        <article>
+            <h2>Google Chrome</h2>
+            <p>
+                Google Chrome is a free, open-source web browser developed by Google, released in 2008.
+            </p>
+        </article>
+    </main>
+
+    <!-- ! IE, safari 지원불가 -->
+    <!-- 기준이 있으면 패널 기준없이 좌측 상단이나 중앙에 그냥 뜨는 경우는 팝업 -->
+    <input type="text" list="browsers">
+    <datalist id="browsers">
+        <option value="Internet Explorer">IE</option>
+        <option value="FireFox">FF</option>
+        <option value="Chrome">CR</option>
+        <option value="Opera">OP</option>
+        <option value="Safari">SA</option>
+    </datalist>
+
+    <!-- ! 대부분 지원불가 -->
+    <!-- open 넣으면 나오고 없으면 안보임 -->
+    <dialog open>This is an open dialog window</dialog>
+    <dialog>This is an open dialog window</dialog>
+</body>
+</html>

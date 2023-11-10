@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list Tag</title>
+</head>
+<body>
+    <!-- i5 16기가 cpu뒤 숫자가 높은거(3,00Hz 어쩌고) 사기 -->
+    <!-- 개발환경 플러그인 컨퍼먼트? vuetify jquery react-->
+    <!-- f12 개발자모드-->
+    <!-- 라이버 서버 등등 삭제할 때 사용안함 했다가 제거해야함 -->
+    <!-- 이름바꾸기 F2 파일 만들 때 확장자 필수 -->
+
+
+    <!-- 순서 없음 -->
+    <!-- >는 직계 ul>li*3 ul은 확정구조 무조건 안에 li만 쓸 수 있음-->
+    <!-- 동시편집 ctrl+alt+아래방향키   끄는 법은 esc -->
+    <!-- 블록은 width가 자동 100% 50%로 설정해도 밑에 애들이 못올라옴 -->
+    <!-- 속성값은 3개, circle,disc,square 가 있음 -->
+    <!-- 중요한 것은 레이아웃을 구성할 때 navigation,board,sitemap등 목록 형태의 컨텐츠를 표현하는 중요한 레이아웃 블럭이라는 것 -->
+    <ul>
+        <li>번호없는 목록</li>
+        <li>번호없는 목록</li>
+        <li>번호없는 목록</li>
+    </ul>    
+
+    <!-- 순서 있음 -->
+    <!-- ol>li*5{번호있는목록.} -->
+    <!-- 속성값은 4개(+@) "A,a,I,i"가 있다 -->
+    <!-- 레이아웃을 구성할 때 번호로 정렬되어야 하는 목록 형태의 컨텐츠를 표현하는 레이아웃 블럭이라는 것 -->
+    <ol>
+        <li>번호있는목록.</li>
+        <li>번호있는목록.</li>
+        <li>번호있는목록.</li>
+        <li>번호있는목록.</li>
+        <li>번호있는목록.</li>
+    </ol>
+
+    <!-- dl>dt+dd  dt는 타이틀, dd는 설명 -->
+    <!-- +는 바로 뒤를 의미 백엔드에서는 다름 -->
+    <!-- 하나의 dt에 여러 개의 dd를 구성하는게 가장 이상적 -->
+    <!-- dl은 definition list 의 약자 정의형 목록인데 사전적 의미는 중요하지 않음 특별한 속성값 없음
+        추천하는 구조는 한개의 title(dt)을 기준으로 연관 및 보완되는 내용의 data(dd)를 추가삽입할 때 유리하다 -->
+    <dl>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    
+    <!-- ul>li>dl>dt{캘린더모음전.}+dd>strong>mark -->
+    <!-- mark는 색깔 변경 mark랑 strong은 인라인요소 -->
+    <!-- dd안에 mark동일 구조는 안됨 하나는 strong안에 mark -->
+    <!-- dd가 dt위로 올라가는 건 안됨 dd끼리 순서는 상관 없음-->
+    
+    <ul>
+        <li>
+            <dl>
+                <dt>캘린더모음전.</dt>
+                <dd>
+                    <strong>
+                        <mark>40%</mark>
+                        8,900원
+                    </strong>
+                </dd>
+                
+                <dd>1</dd>
+                <dd>
+                    <mark>오늘출발</mark>
+                    평일 16시 마감
+                </dd>
+                <dd>미뉴잇</dd>
+            </dl>
+        </li>
+    </ul>
+
+
+
+</body>
+</html>

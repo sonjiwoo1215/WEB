@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video / audio</title>
+</head>
+<body>
+    <!--video iframe embed 3가지 방법 비디오는 소스 태그 가능 직접 다 할 수 있음 어딘가에서 끌어올때 iframe이나 embed
+        줄바꿈 alt+z
+        비디오나 버튼처럼 alt(ernate)가 안되는 경우 title 쓰기 
+        allow 어쩌고는 html이 아니라 유튜브 것
+        gyroscope 중력감지센서
+
+        traffic 웹에서는 통신량 의미
+            1.서버임대 -> 일정용량을 폴더화해서 제공 + 도메인 = 웹
+            2.naver.com -> 임대시 할당된 트래픽 용량이 100m라 가정했을 때
+            3.네이버의 메인페이지 용량이 1m라 가정했을 떄
+            4.100명이 네이버에 접근을 시도하면 100m 사용완료(24시까지 잠김)
+            (제한해서 일정 이상 접속하지 못하게)
+        
+            유튜브 영상 끌어다 쓸 때는  iframe은 보안상 문제 때문에 embed사용-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ThHS9Zh_jNY?si=cGea1LhFFXEksteQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    <!-- <iframe src="https://www.weekang.co.kr/" width="1024" height="768" frameborder="0"></iframe> -->
+
+    <embed src="https://www.youtube.com/embed/ThHS9Zh_jNY?si=cGea1LhFFXEksteQ" width="560" height="315" type="">
+
+    <!-- muted무음 loop무한재생 
+        preload다운로드속도 >재생속도 인터넷 속도가 느릴 때 알아서 다운로드를 먼저 받고 어느정도 되면 재생되게 알아서 전환해줌
+            스트리밍 방식이 아닌 백그라운드 다운로드를 통해 재생 
+         poster썸네일,안내 멘트(재생오류가 있는 경우) autoplay일때 안내역할 없을 때는 썸네일
+         비디오가 닫는 태그가 있다는 건 안에 태그를 넣을 수 있다는 것
+         source 티비 폰 아이패드 등 접근하는 장치에 따라 스와치 몇 인치면 뭐 내보내고..
+         width,height은 비디오 전용 속성값-->
+    <video controls muted loop preload="auto" poster="images/thumbNail.webp">
+        <source src="video/file_example_MP4_1280_10MG (1).mp4" type="video/mp4">
+        <source src="video/file_example_MP4_480_1_5MG (1).mp4" type="video/mp4">
+        <source src="video/file_example_MP4_640_3MG (1).mp4" type="video/mp4">
+        <!-- css와 스크립트로 조절 가능<source media="(min-width: )" srcset=""> -->
+
+    </video>
+
+    <!--  -->
+    <audio controls>
+        <source src="audio/file_example_MP3_1MG.mp3" type="audio/mp3">
+        <source src="audio/file_example_MP3_5MG.mp3" type="audio/mp3">
+    </audio>
+
+</body>
+</html>

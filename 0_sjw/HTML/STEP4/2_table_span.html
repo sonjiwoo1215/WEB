@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colspan, rowspan</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- todo table>caption{table cell span}+tbody>tr*3>td*3{-$}--> 
+    <table>
+        <caption>table cell span</caption>
+        <!-- 뿌수는 대상이 열이면 colspan 행이면 rowspan
+            col이든 row이든 어느 방향으로 한 번 병합이 되면 둘 다는 안됨 -->
+        <tbody>
+            <tr>
+                <td colspan="3">1-1 1-2 1-3</td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td rowspan="2">2-1 3-1</td>
+                <td>2-2</td>
+                <td>2-3</td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td colspan="2">3-2 3-3</td>
+                <!-- <td></td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

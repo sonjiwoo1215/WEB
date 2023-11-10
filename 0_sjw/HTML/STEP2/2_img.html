@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img Tag</title>
+</head>
+<body>
+    <!-- 이미지는 웬만하면  png 용량 줄일 때만 jpg
+        svg(아이콘)랑 webp(사진)가 요즘 핫함 용량에서 이점  -->
+
+    <!-- 절대경로(Apath):최초의 경로 시작 점부터 기재하는 경로방식 환경에 따라 상이함   
+         우리의 절대경로는 대한민국 인천광역시 부평구...
+      (ex > pc: c:\users/userName/fileName.ext   (ext는 확장자)
+            web : DNS/folderName/fileName.ext    (DNS는 프로토콜 naver.com 같은 것(원래는 192.168..같은 ip주소인데 어려워서 바꿈))
+            server : \fileName.ext...)           (\가 의미하는건 소속되어 있는 폴더 최상위 여기서는 0_ sjw)-->
+
+    <!-- 상대경로(Rpath):현재 파일의 위치를 기준으로 대상의 위치를 불러오는 방식 
+         대상에 따라 다를 수 있음 (사진이 있는 폴더명/사진명) 
+         깃허브 넘길 때 css,js,images는 폴더로 html은 밖에
+      (ex > 동위선상 -> fileName.ext
+            한단계위 -> ../folderName or fileName.ext,   (../가 문 한 번 열고 나간다는 뜻 한 번이면 step2 두 번이면 html)
+            두단계위 -> ../../folderName or fileName.ext)-->
+
+    <img src="images/file_example_PNG_500kB.png" alt="노을진 창가의 테이블에 놓인 맥북">
+    <!-- 이미지는 인라인블럭 속성 옆으로 나란히 나오는데 부피를 가질 수 있음 가로150만큼은 다 차지함 윈도우 크기가 작아지면 밑으로 내려갔다가 커지면 옆으로 -->
+    <img src="https://via.placeholder.com/50x150?text=jiwooson" alt="imageFileExample">
+</body>
+</html>
