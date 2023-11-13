@@ -1,0 +1,47 @@
+/* dev: localFont (PSD: font's..) ex> roboto
+   cli: localFont 
+   cdn: content delivery network ex> google font 
+    고객이 폰트를 일일이 설치할 수 없으니 씨디엔에서 땡겨서 개발하기 이게 웹폰트다 
+   thin - 100 (표기방식이 폰트 별 상이 할 수 있지만 거의 없음)
+   extraLight- 200 (표기방식이 폰트 별 상이 할 수 있음 )
+   light - 300
+   regular - 400
+   medium - 500
+   semibold - 600
+   bold - 700
+   extrabold - 800
+   black - 900
+   */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+
+/* 한글폰트는 다 알파벳 포함 만약 영어일때만 폰트를 다르게(roboto)사용하고 싶다면 roboto, Noto Sans 이런식으로 쓰기 */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* line-height는 줄간(줄이 바뀌었을때 줄과 줄 사이의 간격)대체적으로 모든 폰트들은 (본문) 30픽셀까지는 폰트사이즈 + 6픽셀이 이상적임
+    왜 30픽셀까지냐? 그 이상을 넘어가면 본문이 아니라 제목느낌 */
+/* rgba() a는 alpha채널 = 투명도 필요할때 사용*/
+h1{
+    font-size: 20px; line-height: 26px; color: rgba(3, 9, 36, 0.5);
+}
+/* 해외에서는 거의 rgb로 사용 */
+h2{
+    font-size: 15px; line-height: 21px; color: rgb(250, 234, 214)
+}
+/* 16진법 Hex코드 우리나라는 익숙 ff가장 높음
+    무채색은 명도만 존재하는 것 rgb코드가 같아야함 #eaeaea*/
+h3{
+    font-size: 13px; line-height: 19px; color: #8a2be2;
+}
+/* line-height는 p태그에서 크게 작용 */
+p{
+    font-size: 14px; line-height: 20px; font-weight: 700;
+}
+p.letter{
+    /* 자간 */
+    letter-spacing: -1px;
+}
+p.word{
+    /* 단간 */
+    word-spacing: 10px;
+}
