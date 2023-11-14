@@ -28,8 +28,8 @@ h1{
 h2{
     font-size: 15px; line-height: 21px; color: rgb(250, 234, 214)
 }
-/* 16진법 Hex코드 우리나라는 익숙 ff가장 높음
-    무채색은 명도만 존재하는 것 rgb코드가 같아야함 #eaeaea*/
+/* 16진법 Hex코드 우리나라는 익숙 ff=가장 높음
+    무채색(흰회검)은 명도만 존재하는 것 rgb코드가 같아야함 #eaeaea*/
 h3{
     font-size: 13px; line-height: 19px; color: #8a2be2;
 }
@@ -44,4 +44,33 @@ p.letter{
 p.word{
     /* 단간 */
     word-spacing: 10px;
+}
+p[class^='w_']{
+    border: 3px solid black;
+}
+/* white-space:normal 공간을 벗어날 때 줄바꿈 자동으로 */
+p.w_normal{
+    width: 150px; white-space: normal; line-height: 21px;
+}
+/* text-overflow: ellipsis(생략하다); 점점점 말줄임표 /  overflow: hidden; 박스크기 넘으면 숨긴다
+    no+wrap 감싸지 않음 */
+p.w_nowrap{
+    width: 150px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+}
+/* ? 수직정렬은 디스플레이가 block인건 안됨 블럭은 위에서 아래로 떨어지니까 할 것도 없음 span은 인라인 img는 인라인 블럭 */
+/* vertical-align은 상중하(T,m,b)일 경우 큰 놈한테만 정렬을 줘도 됨 그 외 어정쩡한 위치면 작은 놈한테도 정렬을 줘야함 */
+.v_alignTest img{
+    width: 200px; vertical-align: middle;
+}
+/* 100% 글자면 자기 높이(폰트사이즈)만큼 위로 올라감 음수면 아래로 200%이면 두 배만큼 
+    브라우저의 디폴트 폰트사이즈는 16px h1은 32px */
+.v_alignTest span{
+    vertical-align: 100%;
+}
+/* font-size가 line-height보다 클 때 글자가 겹칠 수 있음 들여쓰기인데 보통 밀어넣는 건 padding-left:px 을 사용함*/
+p.t_indent{
+    text-indent: 20px; font-size: 24px; line-height: 30px;
+}
+button.test{
+    
 }
