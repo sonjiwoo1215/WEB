@@ -1,0 +1,10 @@
+html,body{
+    height: 100%;
+}
+body, .wrap p{
+    margin: 0;
+}
+/* 가장 바깥쪽 부모 영역까지 height 필수 */
+.wrap{
+    background-color: skyblue; height: 100%;
+}
