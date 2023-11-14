@@ -71,6 +71,22 @@ p.w_nowrap{
 p.t_indent{
     text-indent: 20px; font-size: 24px; line-height: 30px;
 }
+/* 눈이 안보이는 사람은 텍스트가 있어야 버튼인 걸 알 수 있으니 텍스트를 넣어야함
+    하지만 눈이 보이는 사람한테는 이미지가 잘 보이려면 텍스트를 안보이게 할 필요가 있음
+    텍스트를 없애기는 그렇지만 숨겨야할때 text-indent 사용
+    음수는 안보이는 비가시영역 9999는 css의 최대 속성 수 -는 왼쪽으로 미는 것*/
 button.test{
-    
+    background: url('https://via.placeholder.com/150x50?text=blahblah button');
+    border: none; width: 150px; line-height: 50px; text-indent: -9999px;
+    /*  폰트사이즈는 없어도 됨 ??겹치게 하려고 넣은 것 */
+    font-size: 12px;
 }
+a{
+    display: block;
+}
+/* none은 극도의 부정 그리는거 조차 하지 않는다 none이 들어갔을 때 다시 돌려놓는 속성을 알아야함 text-decoration : none <-> underline
+    text-transform은 대소문자(lower 소 upper 대) capitalize는 단어 앞 글자 대문자  */
+a.t_deco_N{text-decoration: none; text-transform: none; color:#090;}
+a.t_deco_U{text-decoration: underline; text-transform:lowercase; color: #0cf;}
+a.t_deco_O{text-decoration: overline; text-transform: capitalize; color:96c;}
+a.t_deco_T{text-decoration: line-through; text-transform: uppercase; color:#f63;}
