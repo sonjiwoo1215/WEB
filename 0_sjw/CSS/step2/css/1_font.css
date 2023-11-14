@@ -90,3 +90,16 @@ a.t_deco_N{text-decoration: none; text-transform: none; color:#090;}
 a.t_deco_U{text-decoration: underline; text-transform:lowercase; color: #0cf;}
 a.t_deco_O{text-decoration: overline; text-transform: capitalize; color:96c;}
 a.t_deco_T{text-decoration: line-through; text-transform: uppercase; color:#f63;}
+
+/* 출력순서 바꾸는 것 rtl은 오른쪽부터 tset 순서로 ltr왼쪽붙이기 rtl오른쪽붙이기 */
+p.DR_ltr{
+    direction: ltr;
+    /* 위의 것 대신 우리가 많이 씀 text-align은 부모가 자손한테 주는 것
+       인라인이나 인라인블럭일때 부모한테?가? align 주면 자손이 움직임 
+       input:button email text img 다 인라인블럭 */
+    text-align: left;
+}
+p.DR_rtl{
+    direction: rtl;
+    text-align: right;;
+}
