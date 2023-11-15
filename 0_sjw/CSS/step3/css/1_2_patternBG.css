@@ -1,0 +1,24 @@
+/* 우주 지구 어쩌고 한계를 100으로 지정  */
+html, body, .wrap{
+    height: 100%;
+}
+body{
+    margin: 0;
+}
+/* 배경의 기본은 패턴 이미지 하나만 넣어도 자동으로 패턴으로 됨
+    패턴 확인 순서 상중하->좌중우->대각선
+    디폴트는 repeat( x,y다 패턴이 일어남 ) x는 가로 y는 세로 no-repeat은 패턴 안일어나게 함 */
+.wrap{
+    background-image:url('../images/pt.gif') ; background-repeat: repeat;
+}
+.wrap p{
+    margin: 0 0 20px;
+}
+/* 패턴이미지 사이즈가 1x75라서 height을 75로 맞춤 x로만 패턴 반복이니까 세로만 길게 지정 만약 세로 길이가 가변적인 경우는 아예 크게 2000으로 지정
+    우리가 쓰는 용도는 줄바꿈이 절대 일어나지 않는 경우에만 사용해야함 원래 사용목적이 줄바꿈이기 때문 
+    우리는 수직 중앙으로 정렬하기 위해 사용 
+    패딩은 좌우를 40 살짝 띄어놓음*/
+.wrap button{
+    line-height: 75px; padding: 0 40px; color: white; border: none;
+    background-image: url('../images/pt_ex.png'); background-repeat: repeat-x;
+}
