@@ -1,7 +1,7 @@
 *{
     margin: 0; padding: 0;
 }
-/* 배경에 이미지랑 단색 동시에 넣을 수 있음 그럴 땐 단색을 가장 끝에 쓰기
+/* 배경에 이미지랑 단색 동시에 넣을 수 있음 그럴 땐 단색을 가장 끝에 쓰기 앞에 있는게 우선, 투명도 조절
     /는 center cover 둘 다 숫자가 들어갈 수 있음 다 수치를 넣으면 코드가 뭔지 못 알아들어서 구분 지으려고 넣음 */
 html,body{
     background: url('../images/example.jpg') center / cover no-repeat fixed ;
@@ -11,6 +11,6 @@ html,body{
 body > div{
     background-color: white; margin-bottom: 15%; padding: 5%;
 }
-body > div2 h2{
+body > div h2{
     font-size: 38px; margin-bottom: 20px;
 }
