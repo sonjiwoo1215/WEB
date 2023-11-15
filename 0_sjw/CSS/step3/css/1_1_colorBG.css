@@ -4,7 +4,13 @@ html,body{
 body, .wrap p{
     margin: 0;
 }
-/* 가장 바깥쪽 부모 영역까지 height 필수 */
+/* 가장 바깥쪽 부모 영역까지 height 필수 height: 100%; 이거 안하면 배경 색 뚝 끊겨서 나옴*/
 .wrap{
     background-color: skyblue; height: 100%;
+}
+.topLine input{
+    background-color: transparent;
+}
+.wrap p{
+    background-color: rgba(0,0,255,0.5);
 }
