@@ -1,0 +1,47 @@
+ul li.circle{
+    list-style: circle;
+}
+ul li.disc{
+    list-style: disc;
+}
+ul li.square{
+    list-style: square;
+}
+
+ol li.decimal{
+    list-style:decimal;
+}
+ol li.lower-alpha{
+    list-style:lower-alpha;
+}
+ol li.upper-alpha{
+    list-style:upper-alpha;
+}
+ol li.lower-roman{
+    list-style:lower-roman;
+}
+ol li.upper-roman{
+    list-style:upper-roman;
+}
+/* 다 none으로 할 경우 li한테 각각 주지말고 ol에 주기 css의 c의 의미를 잘 기억 */
+ol li.none{
+    list-style:none;
+}
+
+/* 기존에 사용하던 방식 모양 이쁘게 꾸미기 힘들어서 잘 사용 안함 */
+/* ul.custom{
+    list-style-image: url('../images/bul_li.gif');
+    list-style-position: outside;
+} */
+/* ?우리가 전에 배운 스프라이트방식 유리하고 자주 씀 ul에 줄 수는 없고 li에 줘야함*/
+ul.custom li{
+    list-style: none;
+    background: url('../images/bul_li.gif') left center no-repeat;
+    padding-left: 15px;
+}
+
+
+
+
+
+
