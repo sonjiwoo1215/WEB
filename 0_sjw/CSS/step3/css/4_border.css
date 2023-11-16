@@ -1,0 +1,33 @@
+div{
+    width: 300px; height: 150px; margin-bottom: 10px;
+}        
+.singleBox{
+    /* ? 경계 숏앤드 border: width style color 사방으로 다 적용 */
+    border: 3px solid #60f;
+}
+/* Top Right Bottom Left 순서로 각각 적용 가능 
+    상하 좌우도 가능 3개만 적으면 상하는 별도 좌우는 동시적용*/
+.multiBox{
+    /* !속성별 분리 (원래 있는 애 일경우)*/
+    /* border-width: 1px 5px 10px 25px;
+    border-style: solid dotted dashed double;
+    border-color: blue red violet salmon; */
+    /* ! 방향별 분리 */
+    border-top: 1px solid blue;
+    border-right: 5px dotted red;
+    border-bottom: 10px dashed violet;
+    border-left: 25px double salmon;
+}
+/* width 100% 알아서 늘어나고 줄어들게 */
+.searchField{
+    display: block; width: 100%; padding-left: 65px; margin-bottom: 50px;
+
+    line-height: 50px; font-size: 18px;
+    background-image: url('../images/chevron_right_FILL0_wght400_GRAD0_opsz48.svg'), url('../images/search_FILL0_wght400_GRAD0_opsz48.svg');
+    background-repeat: no-repeat;
+    /* 좌중우 상중하 순서 이미지 두 개니까 ,로 연결 */
+    background-position: 30px center, right 40px center;
+    background-size: 25px;
+    border-width: 0px 0px 1px 0px; outline: none;
+    /* ! width ㄱㄹ 두께///  outline 알아보기 써서는 안됨*/
+}
