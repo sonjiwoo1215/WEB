@@ -1,0 +1,44 @@
+/* ul은 마진과 패딩을 다 갖고있음 */
+*{
+    margin: 0; padding: 0;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+ul{
+    width: 640px; margin: 0 auto;
+}
+ul:after{
+    content: ''; display: block; clear: both;
+}
+/* li 한 칸에 공간이 160x140 */
+ul li{
+    float: left; display: block; width: 160px; height: 140px;
+    background-image: url('../images/sprite.png'); background-repeat: no-repeat;
+}
+/* 화면상에서 +-는 가시 비가시 영역 y축이 양수음수가 다름 밑 우측이 양수 */
+ul li.captain{
+    background-position: 0px 0px;
+}
+ul li.wolverine{
+    background-position: -160px 0px;
+}
+ul li.thor{
+    background-position: -320px 0px;
+}
+ul li.ironman{
+    background-position: -480px 0px;
+}
+ul li.spiderman{
+    background-position: 0px -140px;
+}
+ul li.superman{
+    background-position: -160px -140px;
+}
+ul li.rangerRed{
+    background-position: -320px -140px;
+}
+ul li.rangerBlue{
+    background-position: -480px -140px;
+}
