@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css spacing</title>
+    <link rel="stylesheet" href="css/1_spacing.css">
+</head>
+<!--    부모가 할거냐 지들끼리 할거냐로 구분하기 
+        패딩과 마진은 증감됨
+
+    padding 부모가 자손에게 자신의 경계에 닿지 않게 밀어내는 간격
+        위에다 입는 것 = 부모 / 부모가 안쪽으로 자손을 밀어내는 것
+        
+     margin 부모를 제외한 자손들끼리 닿지 않게 밀어내는 간격 
+        형제관계 마진은 같은 방향에서 만나면 증감되지 않음 둘 중에 큰놈이 들어감
+        방향에 주의해야함 좌우에서는 좌 상하에서는 하만 사용 둘 중 하나만 사용해도 됨-->
+<body>
+     <div class="firstDiv">
+        첫 번째 Div
+            <article>
+                첫 번째 Div 내 article
+            </article>
+     </div>
+     <div class="secondDiv">
+        <!-- 글자를 감싸야 하는 이유 글자한테는 css 줄 수 없음 -->
+        <span>
+            두 번째 Div 
+        </span>
+        <article>
+            두 번째 Div 내 article
+        </article>
+     </div>
+     <div class="centerDiv">
+        중앙에 위치하는 Div
+        <article>
+            중앙 Div 내 article
+        </article>
+     </div>
+</body>
+</html>

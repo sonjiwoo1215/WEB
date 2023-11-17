@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+.firstDiv{
+    margin: 30px;
+    background-color: #555;
+}
+.firstDiv article{
+    background-color: #039;
+    color: white;
+}
+.secondDiv{
+    background-color: #ddd;
+    margin: 20px 15px 0px;
+    padding: 40px;
+}
+.secondDiv span{
+    display: block; margin-bottom: 20px;
+}
+.secondDiv article{
+    background-color: #930;
+    /* 아래 자손이 부모를 밀어내는 용도로 사용하면 안됨 margin: 40px; 
+        위에 세컨디아이브이스팬 부분이 헤결 부분*/
+    
+}
+.centerDiv{
+    width: 300px; border: 5px solid #33f;
+    text-align: center; 
+    /* 너비를 300으로 설정했지만 패딩을 입고 보더를 더해서 330으로 나옴 width랑 패딩은 퍼센트가 되는데 보더는 픽셀만 가능*/
+    padding: 10px; 
+    /* 너비 300으로 맞추기 위한 해결법1 밖으로 빼지말고 안으로 삼켜라 연산은 쉽지만 컨텐츠 너비가 줄어드는 단점*/
+    box-sizing: border-box;
+    /* 박스(block) 가운데로 보내기 글자 가운데는 text-align */
+    /* auto 중앙정렬 공식 (전체너비-대상너비)/2 -> left:1 right:1 각각 하나씩
+            우측 (전체너비-대상너비)-> left all 다 던져 */
+    margin: 0 auto; /* margin-left: auto; */
+}
+/* 패딩과 마진은 물과 기름 같은 방향에서 만나도 증감됨 여기다 마진을 왜 넣어 
+   마진은 박스사이즈 영향을 못받음 박스사이즈는 패딩과 보더에만 들어감 마진과 패딩을 만나게 하지말기 */
+.centerDiv article{
+    margin: 0 10px;
+    background-color: #f33;
+    color: white;
+}
