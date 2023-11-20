@@ -1,0 +1,34 @@
+*{
+    margin: 0; padding: 0;
+}
+body{
+    width: 960px; margin: 0 auto; background-color: #ffc;
+}
+header{
+    background-color: #cff;
+}
+header nav{
+    background-color: #9f9;
+}
+/* float할 때 배경 넣어서 확인해보기 */
+div{
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+div:after{
+    content: ''; display: block; clear: both;
+}
+div aside,
+div section{
+    height: 800px; float: left;
+}
+div aside{
+    width: 200px; background-color: #f96;
+}
+div section{
+    width: 760px; background-color: #66f;
+}
+/* after안넣으면 footer가 끌려올라감 footer에 clear 넣는다고 해결 안됨 해결은 부모인 div가 해야함 */
+footer{
+    background-color: aqua;
+}

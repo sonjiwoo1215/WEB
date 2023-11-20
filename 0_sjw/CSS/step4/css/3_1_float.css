@@ -1,0 +1,39 @@
+*{
+    margin: 0; padding: 0;
+}
+.wrap{
+    background-color: gray;
+}
+.wrap .exam_1 img{
+    /* 자기가 선언되고 나면 그 이후의 태그들을 다 무효화 
+        이미지와 p태그를 떨어트리려고 margin-right*/
+    float: left; margin-right: 30px;
+}
+.wrap .exam_1 p{
+    font-size: 24px; line-height: 40px;
+}
+/* !clear 차이 확인 부모?를 끌어올린다? 배경색이 사라진다? */
+.wrap .exam_2{
+    background: midnightblue; clear: both;
+}
+
+/* float가 일어난 당사자들의 부모한테 after속성을 공식처럼 씀
+    밑에 애들이 float해서 부모의 높이를 망가뜨리는걸 막음 content는 지정된 위치에 원래 없었던 걸 넣어줌 
+    content가 비었으니 보이지 않지만 너비가 100% 걔한테 클리어 시킴 float를 끊어줌 그럼 그 이하에 애들도 멀쩡함*/
+.wrap .exam_2:after{
+    content: ''; display: block; clear: both; 
+    /* 요즘은 안넣어도 됨 visibility: hidden; */
+}
+
+/* div 2개에 float:left 해서 두번째 div는 끌어당길게 없어서 밑에 공간들을 끌어당김 
+    어짜피 우리는 감싸는게 아니라 공간들을 옆으로 배치를 하는거니까 각각 float을 줘야함 
+     근데 마지막 놈은 끌어당길 놈이 없어서 이하 애들과 부모의 높이까지 망가트리고 그걸 막기위해 after 선택자를 넣음 */
+.wrap .exam_2 div{
+    width: 300px; height: 300px; background-color: slateblue; float: left;
+}
+
+/* 밑에서 끊는게 아니라는 설명 */
+/* .wrap .exam_3{
+    clear:left;
+    background-color: orange;
+} */
