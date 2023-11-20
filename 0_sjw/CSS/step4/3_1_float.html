@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="stylesheet" href="css/3_1_float.css">
+</head>
+<!-- 1. 공간=display:block;->width:100% 좌우를 차지하는 성향(자신 외 아무것도 안둠)
+     2. web = 공간들의 배치 -> 상하 보다는 좌중우가 많다 (1번조건과 상충)
+     3. 해결방안
+        -1. float: img옆에 text를 붙이기 용도로 태어남 
+             단점: 기존 block을 무효화 / 좌우 서로의 높이가 다를 경우 layout이 무너짐(상하를 계산할 능력이 없음 좌우만 봄)
+        -2. grid: float의 단점인 높이가 틀릴 경우 layout이 무너지는 현상을 효율적으로 관리
+             단점: column으로 화면을 바라보기 때문에 좌우의 변형 능력이 떨어짐
+        -3. flex: 위 두 단점 뿐만 아니라 기존 공간배치의 어려움을 모두 쉽게 바꿔낼 수 있음
+             단점: 세부설정 및 조정 자체의 난이도가 굉장히 높은 편-->
+
+<!-- float는 모든 합이 100%을 맞춰줘야 가장 안정적 (화면크기를 줄였을때) 보더가 방해가 됨 퍼센트가 안되니까 그래서 박스사이즈 사용-->
+<body>
+    <div class="wrap">
+        <div class="exam_1">
+            <img src="https://via.placeholder.com/150" alt="undefined">
+            <p>
+                본래 float 속성을 만들었을 때는 img Tag에 text를 붙히는것을 기본목적으로 하였다.
+            </p>
+            <p>
+                허나 사용하는 사람들이 float속성을 이용해 공간tag들을 수평정렬 하기 시작하면서
+                해당 용도로 많이 사용되었고, 이를 추가 활용하여 webPage Layout을 제작하였다.
+            </p>
+            <p>
+                하지만 float 속성으로 layout을 설계하기에는 완벽하지 않은 부분들이 있으니 주의사항을 꼭 기억해야한다.
+            </p>
+            <p>
+                그에 해당하는 부분을 여러 예제에 걸쳐 알아보자.
+            </p>
+        </div>
+        <div class="exam_2">
+            <div>test Box 1</div>
+            <div>test Box 2</div>
+        </div>
+        <div class="exam_3">
+            clear!
+        </div>
+    </div>
+</body>
+</html>
