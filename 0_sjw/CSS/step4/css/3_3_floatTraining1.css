@@ -1,0 +1,38 @@
+/*  adaptive니까 %로 나누기 */
+/* 0 준게 각각 갖고있는 속성 
+    li는 display가 list-item이라는 속성 위에서 아래로 떨어진다고 다 block은 아님 
+        li속성때문에 불릿이 찍히는거임 li을 block으로 바꾸면 불릿 안나옴
+        inherit 속성 : 자식은 자기가 갖지 않은 css만 부모에게 내려받음
+    float:right는 출력 순서가 오른쪽부터 1,2,3
+    백앤드 언어jsp*/
+body,figure{
+    margin: 0;
+}
+ul{
+    margin: 0; padding: 0;
+}
+ul:after{
+    content: ''; display: block; clear: both;
+}
+ul li{
+    width: 33.33%; float: left; display: block; border: 1px solid red;    
+    box-sizing: border-box;
+}
+/* 밑에 중복 코드 안써도 되는 방법 */
+ul li figure > *{
+    float: left; width: 49%; margin-bottom: 10px;
+}
+ul li figure img{
+    float: left; width: 49%; margin-bottom: 10px; margin-right: 2%; 
+}
+ul li figure figcaption{
+    border-bottom: 1px solid #555; float: left; width: 49%; margin-bottom: 10px;
+}
+ul li figure figcaption dl dt{
+    font-size: 24px; margin-bottom: 35px;
+}
+ul li figure figcaption dl dd{
+    font-size: 14px; line-height: 24px;
+}
+/* a는 전송이 됨 a input button 차이 
+     h1 h2 공부*/

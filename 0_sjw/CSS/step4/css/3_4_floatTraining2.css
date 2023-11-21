@@ -1,0 +1,44 @@
+/* body,figure{
+    margin: 0;
+}
+ul{
+    margin: 0; padding: 0;
+}
+ul:after{
+    content: ''; display: block; clear: both;
+}
+ul li{
+    display: block; width: 16.66%; float: left; box-sizing: border-box; border: 1px solid black; 
+}
+ul li figure{
+    padding: 0;
+}
+ul li figure img{
+    width: 100%; display:block;
+}
+
+ul li figure figcaption dl{
+    width: 100%;  background-color: yellow; margin: 0; 
+}
+ul li figure figcaption dl dt{
+    margin: 0; text-align: center;
+}
+ul li figure figcaption dl dd{
+    margin: 0; text-align: center;
+} */
+/* 이미지가 인라인블럭이라 틈새가 생김 */
+
+*{
+    margin: 0; padding: 0;
+}
+/* width:calc(16.66%-2px) */
+ul li{
+    width: 16.66%; border: 1px solid black; display: block; float: left; box-sizing: border-box;
+}
+/* ! img display가 block이라 틈새벌어짐 */
+ul li figure img{
+    width: 100%; display: block;
+}
+ul li figure figcaption dl{
+    text-align: center; background-color: yellow;
+}
