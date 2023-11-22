@@ -1,7 +1,9 @@
 *{
     margin: 0; padding: 0;
 }
-/* margin 0 auto크기 줄이고 키울때 가운데로 온다 */
+/* margin: 0 auto크기 줄이고 키울때 가운데로 온다 
+    가운데로 보내려면 너비가 필요 margin: 0 auto쓸 때 너비 지정*/
+   
 .wrap{
     width: 960px; margin: 0 auto;
 }
@@ -20,3 +22,51 @@
 .wrap header nav{
     width: 830px; float: left; background-color: blue;
 }
+/* ! menu나란히 하는데 float를 사용할 때 문제점: 사이트는 메뉴 개수가 다 같지 않음
+    float하면서 너비(56) 지정했고 56안에 갇혀 있기 때문에 개수가 늘어날 경우 줄바꿈이 일어남
+    위와 같은 상황 해결법: 밑에 float와 관련된 코드를 주석처리
+    inline-block은 공백 인정 띄어쓰기 하면 살짝 띄어서 나옴*/
+.wrap header nav ul{
+    list-style: none; text-align: center;
+    /* background-color: yellow; */
+    /* width: 280px; margin: 0 auto; */ 
+}
+/* .wrap header nav ul:after{
+    content: ''; display: block; clear: both;
+} */
+
+/* float할때 너비 지정 필수 */
+.wrap header nav ul li{
+    display: inline-block;
+    /* float: left; width: 56px;  */
+}
+.wrap header nav ul li a{
+    color: white; line-height: 55px;
+}
+/* 동일선상에 놓여있을 때 margin */
+section{
+    margin-bottom: 300px;
+}
+section:after{
+    content: ''; display: block; clear: both;
+}
+section h2{
+    background-color: #0cf;
+}
+/* article은 지금 section 너비 기준으로 33.33% 차지
+    그럼 section은? wrap기준으로 100%차지(block이니까)
+        즉 article은 960을 3분할 */
+section article{
+    float: left; width: 33.33%;
+}
+section article h3{
+    background-color: black; color: white;
+}
+section article ul li{
+    display: block; font-size: 14px; line-height: 20px;
+}
+footer{
+    background-color: #4800ff; color: white; line-height: 55px;
+}
+/* ! 코드는 어디서부터 시작하고 어디서 끝났는지 기승전결이 확실해야 함 나무 반 쪽 모양 
+     구조화 할 때도 가장 바깥쪽 부터 안쪽을 봐라*/
