@@ -1,0 +1,13 @@
+/* 시작은 계단 */
+html,body{
+    height: 100%;
+}
+body{
+    margin: 0; background-color: black;
+}
+/* lt은 왜  */
+/* 푸터 높이 만큼 스크롤 발생시키려면 아티클 어사이드 헤더 등등 앞 100퍼가 되어야함 헤더에 20 준거 기억하기 */
+header{
+    position: fixed; background-color: red; width: 100%; left: 0; top: 0;
+    height: 20%; color: white;
+}
