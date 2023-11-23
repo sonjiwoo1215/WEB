@@ -1,0 +1,16 @@
+html,body,.wrap{
+    height: 100%;
+}
+*{
+    margin: 0; padding: 0;
+}
+.wrap aside{
+    width: 250px; height: 100%; background-color: paleturquoise; position: fixed;
+    left: 0; top: 0;
+}
+/* 사이드를 밀어내는게 아니라 지가 갖고 있는 글자들을 밀어내는 거니까 자기 안쪽으로 넣어야함 마진이 아니라 패딩
+    마진으로 하려면 margin-left 250px 주고 padding-left 15px하면 되지만 이게 뭐하는짓
+    자기 자신 혹은 자기 자신 안에 자식을 밀려면 패딩 */
+.wrap article{
+    padding-left: 265px; background-color: palegoldenrod;
+}

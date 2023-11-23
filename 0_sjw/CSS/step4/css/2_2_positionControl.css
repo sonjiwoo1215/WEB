@@ -1,0 +1,37 @@
+body{
+    margin: 0; height: 2000px;
+}
+.position_A{
+    position: absolute; left: 300px; top: 300px; background-color: #fc0;
+    width: 150px; height: 150px;
+}
+/* position이 absolute 이고 부모 relative가 존재하지 아니하면 browser의 좌,상을 기준으로 움직인다.
+    * 컴퓨터 언어는 순서가 중요하다. 동시처리가 불가능 하기 때문에. 적는 순서가 곧 실행 순서와 같다.
+*/ 
+
+/*  적용된다고 뜨는게 아니라 좌표를 줘야 뜸 선언만으로는 일반 블럭과 다를게 없음
+    우리는 필드셋 레전드 태그 운영하려고 할 때만 r입력,좌표 사용 */
+.position_R{
+    position: relative; width: 150px; height: 150px; margin: 0 auto; top: 55px; left: 0;
+    background-color: #0f0;
+}
+/* left가 200px이 되면 부모를 뚫고 나감 
+    초록박스를 담는 큰 공간이 있으면 거기에 r을 줘야함 좌표가 공간보다 크면 안보임 
+    a는 r에만 종속되는 것 */
+.position_R .position_A2{
+    position: absolute; left: 200px; top: 50px; background-color: #0ff;
+    width: 50px; height: 50px;
+}
+/* fixed 너비 상실 너비 줘야함 width: 100%; 헤더부분은 페이지마다 바뀌면 안됨 스크롤의 영향 받지 않음
+        무조건 browser의 좌,상을 기준으로 움직인다.*/
+/* static은 left고 top이고 다 무시하고 지가 원래 있던 자리로 돌아감 */
+.position_F{
+    background-color: #9f9; line-height: 55px; position: fixed; width: 100%;
+    left: 0; top: 0;
+}
+/* sticky 우리가 지정한 픽셀에서 걸리게 할 수 있음 top: 55px; 이건 즉 헤더의 높이
+    자신에게 부여된 top좌표에 윈도우 스크롤이 도달할 경우 fixed. 그렇지 않은 경우 absolute*/
+.position_S{
+    position: sticky;  width: 100px; height: 100px; background-color: blueviolet;
+    color: white; top: 55px;
+}
