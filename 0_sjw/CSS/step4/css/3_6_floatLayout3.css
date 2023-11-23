@@ -5,10 +5,10 @@ body{
     width: 960px; margin: 0 auto;
 }
 header{
-    background-color: aquamarine; position: relative;
+    background-color: rgb(127, 251, 255); position: relative;
 }
 header h1{
-    width: 300px; background-color: blue; color: white; text-align: center; margin: 0 auto;
+    width: 300px; background-color: rgb(96, 72, 231); color: white; text-align: center; margin: 0 auto;
     font-size: 24px; line-height: 50px;
 }
 
@@ -27,7 +27,7 @@ header div #searchB{
 }
 
 header nav{
-    background-color: aqua; height: 50px;
+    background-color: rgb(92, 182, 241); height: 50px;
 }
 header nav ul{
     text-align: center; line-height: 50px;
@@ -40,7 +40,7 @@ header nav ul li a{
     margin-left: 30px;
 }
 .wrap img{
-    width: 100%; display: block; margin-bottom: 30px;
+    width: 100%; display: block; margin-bottom: 50px;
 }
 .wrap:after{
     content: ''; display: block; clear: both;
@@ -48,12 +48,12 @@ header nav ul li a{
 .wrap .latest1,
 .wrap .latest2,
 .wrap .latest3{
-    float: left; width: 30%; border: 1px solid gray; box-sizing: border-box;
+    float: left; width: 32%; border: 1px solid gray; box-sizing: border-box;
 }
 /* ! 이래도 되나 */
 .wrap .latest2,
 .wrap .latest3{
-   margin-left: 5%;
+   margin-left: 2%;
 }
 .wrap .latest1 ul li,
 .wrap .latest2 ul li,
