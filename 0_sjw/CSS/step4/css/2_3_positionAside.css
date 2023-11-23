@@ -6,11 +6,76 @@ html,body,.wrap{
 }
 .wrap aside{
     width: 250px; height: 100%; background-color: paleturquoise; position: fixed;
-    left: 0; top: 0;
+    left: 0; top: 0; padding: 30px 15px; box-sizing: border-box;
+}
+.wrap aside header{
+    margin-bottom: 50px;
+}
+.wrap aside header h1{
+    text-align: center;
+}
+.wrap aside header h1 a{
+    display: block;
+}
+.wrap aside header h1 a img{
+    width: 100%;
+}
+.wrap aside nav ul{
+    list-style: none;
+}
+.wrap nav ul li {
+    text-align: center;
+}
+.wrap nav ul li:not(:last-child){
+    margin-bottom: 15px; 
+}
+/* !  ul li 부분 속성 어디에 줬는지 확인 */
+/* 보통 a에는 사용자 편의상 block을 줌 */
+.wrap nav ul li a{
+    font-size: 20px; line-height: 26px;
+    color: green; display: block; text-decoration: none;
+}
+.wrap nav ul li a:hover{
+    text-decoration: underline; color: darkmagenta;
 }
 /* 사이드를 밀어내는게 아니라 지가 갖고 있는 글자들을 밀어내는 거니까 자기 안쪽으로 넣어야함 마진이 아니라 패딩
     마진으로 하려면 margin-left 250px 주고 padding-left 15px하면 되지만 이게 뭐하는짓
     자기 자신 혹은 자기 자신 안에 자식을 밀려면 패딩 */
 .wrap article{
     padding-left: 265px; background-color: palegoldenrod;
+}
+/* 마진을 주면 화면이 줄어들때 마진은 버티고 있고 뷰포트만 줄어들면서 안보이게 됨
+     이런 경우도 포지션 사용 가능 
+    r안에 a처럼 f안에 있는 a도 f기준으로 움직임 (right:0주면 확인가능) */
+   
+.wrap aside footer{
+        position: absolute; bottom: 30px; font-size: 12px; color: white;
+        background-color: midnightblue;
+}
+/* q는 인라인 */
+.wrap article h2,
+.wrap article blockquote,
+.wrap article q{
+    margin-bottom: 100px;
+}
+.wrap article h2{
+    font-size: 40px; color: forestgreen; font-weight: bold;
+}
+.wrap article blockquote{
+    border: 5px solid olive; padding: 30px; box-sizing: border-box;
+    font-size: 26px;
+}
+.wrap article q{
+    font-size: 21px; display: block;
+}
+/* 우리 눈에 안보이지만 마지막 div도 50px을 갖게됨 
+    버츄얼 선택자 :not(:last-child)이거 쓰면 마지막거에는 마진 안들어감 */
+.wrap article div:not(:last-child){
+    margin-bottom: 50px;
+}
+.wrap article div h3{
+    color: purple; font-size: 30px; margin-bottom: 50px;
+}
+.wrap article div p{
+    font-size: 21px; line-height: 40px; color: darkolivegreen;
 }
