@@ -1,3 +1,4 @@
+/* * 우리는 포지션으로 레이아웃 전체를 잡는 코드를 치지 않음 */
 /* 시작은 계단 */
 html,body{
     height: 100%;
@@ -5,9 +6,34 @@ html,body{
 body{
     margin: 0; background-color: black;
 }
-/* lt은 왜  */
-/* 푸터 높이 만큼 스크롤 발생시키려면 아티클 어사이드 헤더 등등 앞 100퍼가 되어야함 헤더에 20 준거 기억하기 */
+/* footer 높이만큼만 스크롤 발생시키려면 article aside header 등등 높이 합 100%이 되어야함 
+    그리고 그만큼 footer의 top 내리기 
+     코드치면서 header에 20%준거 기억하기 */
+/* 스크롤할때 header가 깔리니까 z-index */
 header{
     position: fixed; background-color: red; width: 100%; left: 0; top: 0;
-    height: 20%; color: white;
+    height: 20%; color: white; z-index: 1;
 }
+aside{
+    position: absolute; width: 20%; height: 80%; background-color: green;
+    left: 0; top: 20%; font-size: 18px; font-weight: bold; color: white;
+}
+/* width 원래 할당된게 80%이였는데 빈틈 10%빼서 70% */
+article{
+    position: absolute; width: 70%; height: 80%; background-color: blue;
+    top: 20%; right: 0; color: white;
+}
+footer{
+    position: absolute; background-color: orange; width: 100%;
+    left: 0; top: 100%; font-size: 24px; line-height: 55px;
+}
+
+/* * 이런식으로 코드 줄이는 연습하기  */
+/* aside,
+article,
+footer{
+    position: absolute;
+}
+aside, article{
+    height: 80%; top: 20%;
+} */
