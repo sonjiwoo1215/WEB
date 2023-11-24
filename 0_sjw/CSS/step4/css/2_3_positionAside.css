@@ -23,19 +23,19 @@ html,body,.wrap{
 .wrap aside nav ul{
     list-style: none;
 }
-.wrap nav ul li {
+.wrap aside nav ul li {
     text-align: center;
 }
-.wrap nav ul li:not(:last-child){
+.wrap aside nav ul li:not(:last-child){
     margin-bottom: 15px; 
 }
 /* !  ul li 부분 속성 어디에 줬는지 확인 */
 /* 보통 a에는 사용자 편의상 block을 줌 */
-.wrap nav ul li a{
+.wrap aside nav ul li a{
     font-size: 20px; line-height: 26px;
     color: green; display: block; text-decoration: none;
 }
-.wrap nav ul li a:hover{
+.wrap aside nav ul li a:hover{
     text-decoration: underline; color: darkmagenta;
 }
 /* 사이드를 밀어내는게 아니라 지가 갖고 있는 글자들을 밀어내는 거니까 자기 안쪽으로 넣어야함 마진이 아니라 패딩

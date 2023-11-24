@@ -8,7 +8,7 @@ div{
 /* Top Right Bottom Left 순서로 각각 적용 가능 
     상하 좌우도 가능 3개만 적으면 상하는 별도 좌우는 동시적용*/
 .multiBox{
-    /* !속성별 분리 (원래 있는 경계가 있는 애일경우)*/
+    /* !속성별 분리 (원래 경계가 있는 애일경우)*/
     /* border-width: 1px 5px 10px 25px;
     border-style: solid dotted dashed double;
     border-color: blue red violet salmon; */

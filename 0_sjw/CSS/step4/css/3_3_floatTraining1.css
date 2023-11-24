@@ -18,7 +18,8 @@ ul li{
     width: 33.33%; float: left; display: block; border: 1px solid red;    
     box-sizing: border-box;
 }
-/* 밑에 중복 코드 안써도 되는 방법 */
+/* 밑에 중복 코드 안써도 되는 방법 
+    >는 직계라는 뜻*/
 ul li figure > *{
     float: left; width: 49%; margin-bottom: 10px;
 }
