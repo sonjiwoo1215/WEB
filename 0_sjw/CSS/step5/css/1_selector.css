@@ -200,6 +200,22 @@ shapeSelector:nth-child(2) 부모가 바라볼때 두번째에 있는 자손
 .textSelector h1::first-letter{
     font-size: 100px; color: #09f;
 }
+.textSelector p{
+    color: pink;
+}
 .textSelector p::first-line{
     color: #090; line-height: 30px; font-size: 14px; text-decoration: underline;
+}
+/* ol은 안에 counter를 갖고있음 */
+/* p의 개수 rint는 p의 이름표 태그를 셀 수는 없음 이름표 사용 그래야 컴퓨터가 계산을 할 수 있음 */
+.backandfrontSelector p{
+    counter-increment: rint;
+}
+/* 공간에서 가장 위를 열어주는것(화면에서 가장 왼쪽) 뭘 만들지 않았는데 공간을 열어서 강제로 뭔가를 끼울 수 있게 함
+   after는 맨 밑을 열어주는 것 (화면에서 가장 오른쪽)*/
+.backandfrontSelector p::before{
+    content: counter(rint) ". ";
+}
+.backandfrontSelector p::after{
+    content: '-'; attr(data-page) "page"; font-weight: bold; color: deeppink;
 }
