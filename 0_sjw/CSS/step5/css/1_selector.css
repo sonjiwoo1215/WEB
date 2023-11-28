@@ -61,7 +61,7 @@
 .directSelector > span{
     font-size: 22px; color: maroon; line-height: 40px; font-weight: bold;
 }
-/* h1이하에 있는 모든 동위선상에 있는 h2에 적용 (div가 있다해도 적용) */
+/* h1이하에 모든 동위선상에 있는 h2에 적용 (div가 있다해도 적용) */
 .sameSelector h1 ~ h2{
     background-color: #333; color: white;
 }
@@ -122,4 +122,84 @@
 /* checkbox가 체크된 상태 */
 .statusSelector input[type='checkbox']:checked+label{
     line-height: 0px; font-size: 0px;  
+}
+/* disabled 아예 입력조차 안됨 readonly 수정이되면 안됨 
+    여기 color는 입력했을 때 글씨 색*/
+.statusSelector input:enabled{
+    background-color: black; color: red;
+}
+/* placeholder도 status의 하나임 잡을 때는 :: 이런식으로
+    여기 color는 기본 placeholder상태의 글씨 색  */
+.statusSelector input:enabled::placeholder{
+    color: peachpuff;
+}
+.statusSelector input:disabled{
+    background-color: lightgray; color: darkgray;
+}
+.statusSelector input:disabled::placeholder{
+    color: red;
+}
+/*  ? input checkbox, radio -> checked */
+/*  ! select option check -> selected라는 명칭으로 선택자를 쓸 수 있음 */
+/* overflow는 간단하게 float 해제하려고 after 대신 넣음 별로 추천하지 않음 */
+.virtualSelector ul{
+    overflow: hidden; list-style: none; margin: 30px 0; padding: 0;
+}
+.virtualSelector ul li{
+    width: 14.28%; box-sizing: border-box; margin: 0; padding: 15px; float: left;
+    text-align: center;
+}
+/* 가상선택자 (앞으로 생겨날 애들도 미리 선택해서 고를 수 있는 선택자)
+    - child = 부모 기준으로 바라보는 자손의 순서
+    - of-type =  자손들끼리의 순서 */
+/* ul 이 바라보는 li의 순서 */
+.virtualSelector ul li:nth-child(2n){
+    background-color: #444; color: white;
+}
+/* 홀수의 조건: 짝수의 최소수 2로 나눈 나머지가 1이 발생되는 모든 수 */
+.virtualSelector ul li:nth-child(2n+1){
+    background-color: #09F;
+}
+/*  * nth 1번으로 할 수 있음 */
+.virtualSelector ul li:first-child{
+    border-radius: 15px 0 0 15px;
+}
+/* * last는 가변된다 마진을 오른쪽으로 밀지 않는다 왼쪽으로 민다 nth 몇 번으로 할 수 없음 */
+.virtualSelector ul li:last-child{
+    border-radius: 0 15px 15px 0;
+}
+/* todo https://css-tricks.com/examples/nth-child-tester/ */
+
+/* shapeSelector h1:nth-of-type(2) h1중에 2번째 
+shapeSelector :nth-of-type(2) 두번째에 해당하는 자손들은 다 선택
+
+shapeSelector h1:nth-child(2) 부모가 바라볼때 두번째에 있는 h1 자손 / 없으니까 선택 안됨
+shapeSelector:nth-child(2) 부모가 바라볼때 두번째에 있는 자손 
+ */
+
+/* .shapeSelector h1:nth-of-type(2){
+    color: #30f;
+}
+.shapeSelector h2:first-of-type{
+    color: #0c6;
+}
+.shapeSelector h3:last-of-type{
+    color: #f06;
+} */
+
+/* h1:last-child */
+.shapeSelector h1:nth-child(6){
+    color: #30f;
+}
+.shapeSelector h2:nth-child(2){
+    color: #0c6;
+}
+.shapeSelector h3:nth-child(4){
+    color: #f06;
+}
+.textSelector h1::first-letter{
+    font-size: 100px; color: #09f;
+}
+.textSelector p::first-line{
+    color: #090; line-height: 30px; font-size: 14px; text-decoration: underline;
 }
