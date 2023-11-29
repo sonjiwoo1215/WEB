@@ -1,21 +1,19 @@
-
+/*태그선택자 사용법*/
 .tagSelector h1{color:#0c0; font-size:20px;}
 .tagSelector p{color:#0cf; font-size:15px;}
 .tagSelector span{color:#336; font-size:13px;}
 
-/*태그선택자 사용법*/
 
+/*ID선택자 사용법*/
 .idSelector p#paragraph1{font-size:16px; text-decoration:underline;}
 .idSelector p#paragraph2{color:#09F; text-decoration:line-through;}
 .idSelector p#paragraph3{font-weight:bold; text-decoration:overline;}
 
-/*ID선택자 사용법*/
 
+/*CLASS 선택자 사용법 + 다중 클래스 지정 */
 .classSelector p.f_size{font-size:20px;}
 .classSelector p.f_weight{font-weight:bold;}
 .classSelector p.f_color{color:#9cf;}
-
-/*CLASS 선택자 사용법 + 다중 클래스 지정 */
 
 
 .attrSelector fieldset{
@@ -219,4 +217,17 @@ shapeSelector:nth-child(2) 부모가 바라볼때 두번째에 있는 자손
 }
 .backandfrontSelector p::after{
     content: '-' attr(data-page)"page"; font-weight: bold; color: deeppink;
+}
+/* >* 직계 전체 */
+.reactionSelector > *{
+    color: #fff;
+}
+/* selection 반응선택자 잡아내는 용도 웬만하면 사용하지 말기 */
+.reactionSelector > *::selection{
+    background-color: #000; color: #ff0;
+}
+/* ()안에 대상을 제외한 나머지 */
+.notSelector input:not([type='text'],[type='password']){
+    background-color: deepskyblue;
+    border: 5px solid red;
 }
