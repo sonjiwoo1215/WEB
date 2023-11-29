@@ -11,6 +11,7 @@
         <div>
             <nav>
                 <ul>
+                    <!-- 클래스 넣은건 자바스크립트를 위한 재료 -->
                     <li class="currentStat"><a href="#">login</a></li>
                     <li><a href="#">join</a></li>
                     <li><a href="#">lost</a></li>
@@ -18,6 +19,7 @@
                 </ul>
             </nav>
             <h1>member's login</h1>
+            <!-- 필드셋은 다른 유형의 뭐가 또 있을떄 사용해야함 결국 ul이 할 일이 없어짐  -->
             <form>
                 <fieldset>
                     <ul>
@@ -29,8 +31,10 @@
                             <label for="userPW">pw</label>
                             <input id="userPW" type="password" name="userPW" maxlength="12"/>   
                         </li>
-                    </ul>                 
+                    </ul>  
+                    <!-- <input type="submit" value="login" />                -->
                 </fieldset>
+                <!-- 필드셋 안에 넣지 왜 밖에 넣니 -->
                 <input type="submit" value="login" />
             </form>
         </div>
