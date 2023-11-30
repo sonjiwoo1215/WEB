@@ -1,0 +1,31 @@
+div:first-of-type{
+    max-width: 960px; margin: 0 auto;
+}
+/* fieldset에 마진 들어가있는데 필요없어서 끔 */
+div:first-of-type fieldset{
+    border-width: 1px; border-color: #05f; padding: 15px 20px 25px; margin: 0;
+}
+div:first-of-type fieldset:not(:last-of-type){
+    margin-bottom: 25px;
+}
+/* label은 인라인 */
+/* verticla-align은 인라인이나 인라인블럭들끼리만 가능 
+    큰 놈을 기준으로 맞추기*/
+div:first-of-type fieldset label{
+    display: inline-block; line-height: 20px; vertical-align: middle;
+}
+div:first-of-type fieldset input[type='checkbox']{
+    vertical-align: -20%;
+}
+/* input은 블럭을 준다고해서 자동으로 100%잡지는 않음 그래서 너비 따로 잡기 */
+/* 위 레이블과 체크박스는 인라인블럭이기 때문에 전체를 잡지 않고 일부만 잡고있음 그래서 여기서 안정적으로 margin-top */
+/* resize해야 사용자가 사이즈조절을 못함 */
+div:first-of-type fieldset textarea{
+    display: block; width: 100%; box-sizing: border-box; padding: 10px 1%;
+    margin-top: 25px; height: 150px; border-color: #05f; resize: none;
+    transition-duration: 0.75s;
+}
+/* 체크박스 클릭하면 textarea 접어라 근데 다 안접히고 패딩만큼 남기고 접힘 height는 0이되지만 패딩이 버티고있음 */
+div:first-of-type fieldset input[type='checkbox']:checked+textarea{
+    height: 0px; padding: 0px 1%;
+}
