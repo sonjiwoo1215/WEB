@@ -1,0 +1,37 @@
+/* body wrapper는 추천하지 않지만 따로 없어서 그냥 함 */
+body{
+    width: 80%; margin: 0 auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+}
+/* !밑에 패딩 설명 확인 */
+h1{
+    margin: 0; font-size: 30px; font-weight: normal; color: gray; position: relative;
+    padding: 15px 50% 15px 0;
+}
+/* a는 h1을 기준으로 오른쪽 끝으로 날라감 */
+/* 너비 50% 차지하는데 왼쪽기반이니까 우리가 원하는 위치로 보내려면 text-align right
+    포지션을 쓰면 붕 뜸 지금 a가 붕 뜬것 
+    relative(h1)에 떠있는 대상(a)의 너비(50%)만큼 패딩을 주면 화면이 줄어들어도 겹치지 않음 서로가 정확하게 줄바꿈이 됨 h1의 글자를 아무리 늘려도 ㄱㅊ*/
+    /* 근데 너비 50%주면 옆 클릭해도 이동하니까 원래 이러면 안됨 밑에 셀렉트는 필드셋 40%줬다고 그대로 안주고 제대로줌 */
+h1 a{
+    position: absolute; right: 0; bottom: 0; font-size: 24px; width: 50%; text-align: right;
+    color: darkgreen;
+}
+/* body > fieldset:first-of-type */
+fieldset{
+    padding: 10px 40% 10px 0; position: relative; border-width: 2px 0 1px;
+    border-style: solid none; border-color: darkgreen;
+}
+/* 화면 줄이면 너비가 계속 줄어드니까 더이상 줄지 않게 min */
+fieldset input[type='search']{
+    width: 20%; border: 1px solid forestgreen; background-color: palegreen;
+    line-height: 24px; min-width: 115px;
+}
+fieldset input[type='submit']{
+    width: 10%; min-width: 60px; background-color: darkolivegreen; color: white;
+    border: 2px solid limegreen; line-height: 24px;
+}
+/* select는 line-height이 안들어감 그래서 대신 패딩 */
+fieldset select{
+    position: absolute; right: 0; width: 25%; min-width: 150px; 
+    background-color: lightseagreen; padding: 5px 0; border-color: skyblue;
+}
