@@ -1,55 +1,92 @@
+/* height: 100%; 높낮이에 대한 반응 */
+html{
+    height: 100%;
+}
 body{
-    margin: 0; background-color: black;
+    margin: 0; height: 100%; font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
 }
-body div{
-    width: 960px; height: 500px; margin: 0 auto; background-color: rgb(53, 50, 50);
+body div:first-of-type{
+    width: 50%; height: 50%; background-color: #262626; position: absolute;
+    /* position쓰고 중앙으로 보내기 50/2 */
+    left: 25%; top: 25%;
+    min-height: 285px; max-height: 300px;
 }
-body div > :first-child{
-    background-color: rgb(85, 90, 90);
+div:first-of-type nav{
+    margin-bottom: 25px;
 }
-body div > :first-child > :first-child{
-    padding: 0; margin: 0;
+div:first-of-type nav ul{
+    margin: 0; padding: 0;
 }
-body div > :first-child > :first-child:after{
+div:first-of-type nav ul:after{
     content: ''; display: block; clear: both;
 }
-body div > :first-child > :first-child > *{
-    display: block; width: 25%; float: left; 
+div:first-of-type nav ul li{
+    width: 25%; display: block; float: left; background-color: #3a3a3a;
 }
-body div > :first-child > :first-child > * > *{
-    text-decoration: none; font-size: 20px; color: deeppink; display: block;
-    line-height: 50px; text-align: center; text-transform: capitalize;
+/* a는 사용자 편의를 위해 block */
+/* 글자는 기본으로 line-height를 동반함 우리처럼 숫자를 계산해야하는 경우 거슬림 계산할때 5단위-> 2,4 짝수사용
+    padding보다는 line-height가 간편함 밑에 패딩이 10인 이유는 폰트사이즈 12지만 line-height 고려해서 14로 보고 4를 빼고 계산 */
+div:first-of-type nav ul li a{
+    display: block; text-decoration: none; font-size: 12px; text-transform: capitalize;
+    padding: 10px 0; color: #ea0e52; text-align: center;
 }
-body div > :first-child > :first-child > * > *:hover{
-    background-color: deeppink; color: white;
+/* currentStat은 difault상태 */
+div:first-of-type nav ul li a:hover,
+div:first-of-type nav ul li.currentStat a{
+    background-color: #ea0e52; color: white;
 }
-body div > :nth-child(2){
-    width: 100%; color: white; font-size: 20px; text-align: center;
-    text-transform: capitalize; margin: 0; padding: 30px 0; 
+/*  ? nav Fin */
+/* h1이 원래 갖고있는 불필요한 마진꺼주고 위에처럼 아래로 마진 주기 */
+div:first-of-type h1{
+    font-size: 14px; color: white; margin: 0 0 25px; text-transform: capitalize;
+    text-align: center;
 }
-body div > :last-child > :first-child{
-    padding: 0; border: 0px; 
+/* 필드셋은 패딩과 마진을 갖고있음 */
+/* 화면이 아무리 늘어나도 90% */
+/* 양쪽 패딩 5%씩 주지말고 마진 0 오토 */
+div:first-of-type fieldset{
+    border: none; padding: 0; width: 90%; margin: 0 auto 25px;
 }
-body div > :last-child > :first-child > *{
-    padding: 0 50px; 
+div:first-of-type fieldset ul{
+    margin: 0; padding: 0;
 }
-body div > :last-child > :first-child > :first-child > *{
-    width: 100%; display: block;
-    list-style: none; margin-bottom: 20px; 
+div:first-of-type fieldset ul li{
+    display: block;
 }
-body div > :last-child > :first-child > :first-child > *:after{
+div:first-of-type fieldset ul li:after{
     content: ''; display: block; clear: both;
 }
-body div > :last-child > :first-child > :first-child > * > :first-child{
-    width: 15%; background-color: deeppink; display: inline-block; padding: 12px 0 13px;
-    text-align: center; color: white; text-transform: uppercase; 
+div:first-of-type fieldset ul li:first-of-type{
+    margin-bottom: 25px;
 }
-body div > :last-child > :first-child > :first-child > * > :last-child{
-    width: 85%; line-height: 40px; display: block; float: right; box-sizing: border-box;
-    margin-bottom: 20px; font-size: 20px;
+/* li안에 레이블 인풋 둘 밖에 없으니 굳이 직계 안씀 */
+div:first-of-type fieldset ul li *{
+    float: left; display: block; font-size: 12px; line-height: 36px;
 }
-/* ! 모르겠어요.. */
-body div > :last-child > :last-child{
-    background-color:  rgb(85, 90, 90); width: 865px; color: deeppink; padding: 10px;
-    border: 0px; margin-left: 48px; line-height: 25px;font-size: 16px;
+/* fieldset 90%라고 정해놨던 공간에서의 15%를 잡은것 */
+div:first-of-type fieldset ul li label{
+    width: 15%; text-align: center; background-color: #ea0e52; color: white;
+    font-weight: bold; text-transform: uppercase;
 }
+/* 인풋은 패딩보더를 같이 동반해서 더 두껍게 나옴 보더 패딩 없애면 끝 
+    인풋은 줄바꿈 안나니까 line-height안쓸 이유가 없음 좌우패딩은 없으면 좌측선에 글자가 붙어버리니까 쓰기 패딩5%넣을거 예상하고 너비 80%준것 그래서 박스사이즈 안넣음*/
+div:first-of-type fieldset ul li input{
+    width: 80%; border: none; padding: 0 2.5%;
+}
+div:first-of-type fieldset ul li input:focus{
+    background-color: #ea0252;
+}
+div:first-of-type fieldset ul li input[type='password']:focus{
+    color: white;
+}
+/* 마진 0오토는 블럭인 요소에만 적용 가능 너비주고 마진0오토했는데 가운데로 안가면 디스플레이가 블럭인지 아닌지 확인 */
+/* 위처럼 보더 패딩 꺼주기 */
+div:first-of-type input[type='submit']{
+    width: 90%; margin: 0 auto; display: block; line-height: 36px; padding: 0; border: none; background-color: #3a3a3a;
+    color: #ea0e52;
+}
+div:first-of-type input[type='submit']:hover{
+    background-color: #ea0e52; color: black; cursor: pointer;
+}
+/* ! 너비% 주는거 ul li속성넣는거 인풋 직계 정리 화면 늘어나고 줄어드는거 */
