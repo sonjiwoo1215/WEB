@@ -35,3 +35,85 @@ fieldset select{
     position: absolute; right: 0; width: 25%; min-width: 150px; 
     background-color: lightseagreen; padding: 5px 0; border-color: skyblue;
 }
+h2{
+    padding: 30px 0; margin: 0; color: #555;
+}
+h2 strong{
+    color: seagreen;
+}
+h2 strong:not(:nth-of-type(2)){
+    text-transform: capitalize;
+}
+h2 strong:nth-of-type(2){
+    text-transform: uppercase;
+}
+ul{
+    margin: 0 0 30px; padding: 0; list-style: none;
+}
+/* li한테 패딩을 주지 않아도 스팬에서 따로 넣을 거라 안넣음 */
+ul li:first-child{
+    padding: 10px 0;
+    border-width: 3px 0 1px; border-style: solid none; border-color: darkgreen;
+}
+/* * li할때는 딴 거 보지말고 li만 집중해서 하기 */
+ul li:not(:first-child){
+    border-bottom: 1px solid mediumpurple; position: relative;
+}
+ul li:nth-child(2n){
+    background-color: #cacaca;
+}
+ul li:after{
+    content: ''; display: block; clear: both;
+}
+/* 상하는 px 좌우는 사이즈가 상이하니까 %로하기  */
+/* 브라우저는 원래 키워드 단위로 줄바꿈 */
+/*  normal은 띄어쓰기 기준
+    keep-all은 줄바꿈 안함 무조건 한 줄 white-space no-wrap같음
+    break-all은 모두 줄바꿈 */
+ul li span{
+    display: block; float: left; padding: 10px 2.5%; font-size: 14px;
+    word-break: break-all;
+}
+/*  위에서 패딩이 양쪽 합 5%씩 4열에 들어갔으니 20% 차지 그럼 100%-20% = 80% 
+    80-35=45 , 45/3=15% 나머지 3개는 각 15%씩 주기  */
+ul li span:not(:nth-child(2)){
+    width: 15%;
+}
+/* 가장 넓은게 2열 이분법으로 대강 계산하면 35%정도 되겠구나 */
+ul li span:nth-child(2){
+    width: 35%; 
+}
+/* 영문폰트의 최저가 9px 한글은 11-12px 일반적으로 타이틀은 최저가 30px
+     패딩 넣어서 살 찌우기 */
+ul li mark{
+    position: absolute; right: 0; top: 0; font-size: 9px; padding: 3px;
+    background-color: rgba(127,255,0,0.5);
+}
+/*  직계a 좌우로 보내려고 포지션 */
+div:first-of-type{
+    mask-border-width: 400px; margin: 0 auto; position: relative; line-height: 30px;
+}
+div:first-of-type a{
+    text-decoration: none; display: block;
+    font-size: 14px; padding: 5px;
+}
+/* max-width가 가둔 너비 400px안에서 맨 위 그리고 양 옆 */
+div:first-of-type > a{
+    position: absolute; top: 0;
+}
+div:first-of-type > a:first-of-type{
+    left: 0;
+}
+div:first-of-type > a:last-of-type{
+    right: 0;
+}
+/* 화면이 줄어들어도 숫자가 깔리지 않도록 벽을 준 것  */
+div:first-of-type ol{
+    padding: 0 25px; margin: 0; text-align: center;
+}
+div:first-of-type ol li{
+    display: inline-block;
+}
+div:first-of-type ol li a:hover{
+    color: red;
+}
