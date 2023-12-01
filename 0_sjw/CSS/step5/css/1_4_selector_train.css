@@ -18,7 +18,7 @@ div:first-of-type fieldset input[type='checkbox']{
     vertical-align: -20%;
 }
 /* input은 블럭을 준다고해서 자동으로 100%잡지는 않음 그래서 너비 따로 잡기 */
-/* 위 레이블과 체크박스는 인라인블럭이기 때문에 전체를 잡지 않고 일부만 잡고있음 그래서 여기서 안정적으로 margin-top */
+/* 위 label과 input:checkbox는 인라인블럭이기 때문에 전체를 잡지 않고 일부만 잡고있음 그래서 여기서 안정적으로 margin-top */
 /* resize해야 사용자가 사이즈조절을 못함 */
 div:first-of-type fieldset textarea{
     display: block; width: 100%; box-sizing: border-box; padding: 10px 1%;
