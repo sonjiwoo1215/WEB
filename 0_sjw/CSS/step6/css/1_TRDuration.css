@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+}
+/* none은 숫자가 아니니까 transition의 대상이 될 수 없음 */
+.durationEX1{
+    width: 100px; height: 100px; background-color: #ff0; transition-duration: 2s;
+}
+.durationEX1:hover{
+    width: 200px; height: 200px;
+}
+.durationEX1:active{
+    background-color: #f00;
+}
+/* 변화가 일어나기 전(시작되는 위치)에 transition-duration쓰기 그래야 변화가 일어나고 다시 돌아갈때도 부드럽게 2s가 적용이 됨 */
+.durationEX2{
+    width: 200px; height: 200px; font-size: 16px; background-color: #ff6a00;
+    padding: 30px; transition-duration: 2s; line-height: 32px;
+}
+.durationEX2:hover{
+    padding: 10px; font-size: 12px; line-height: 16px;
+}
+.durationEX2:active{
+    padding: 30px; font-size: 16px; line-height: 32px;
+}
+.durationEX3{
+    position: relative; height: 23px; background-color: #808080; margin-bottom: 50px;
+}
+/* ! */
+.durationEX3 .moveSpan{
+    background-color: #000; width: 3%; height: 23px; position: absolute;
+    left: 0; top: 0; transition-duration: 3s;
+}
+/* left0 right0은 적용이 안됨 */
+.durationEX3:hover .moveSpan{
+    left: 97%;
+}
+/* transition은 숫자만 변환 가능 solid는 안됨 */
+.durationEX4{
+    width: 50%; height: 300px; transition-duration: 2s; 
+    border-width: 1px; border-style: solid; border-color: #ff0000 #ffa500 #ffff00 #008000;
+}
+/* ! 마진 */
+.durationEX4:hover{
+    border-width: 1px; border-style: solid; border-color: #008000  #0000ff #00008b #ee82ee; color: #0000ff;
+    margin: 0 25%;
+}
