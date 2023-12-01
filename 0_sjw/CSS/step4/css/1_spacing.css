@@ -20,13 +20,13 @@ body{
 .secondDiv article{
     background-color: #930;
     /* 아래 자손이 부모를 밀어내는 용도로 사용하면 안됨 margin: 40px; 
-        위에 세컨디아이브이스팬 부분이 헤결 부분*/
+        위에 secondDiv span부분이 해결*/
     
 }
 .centerDiv{
     width: 300px; border: 5px solid #33f;
     text-align: center; 
-    /* 너비를 300으로 설정했지만 패딩을 입고 보더를 더해서 330으로 나옴 width랑 패딩은 퍼센트가 되는데 보더는 픽셀만 가능*/
+    /* 너비를 300으로 설정했지만 padding을 입고 border를 더해서 330으로 나옴 width랑 padding은 %가 되는데 border는 픽셀만 가능*/
     padding: 10px; 
     /* 너비 300으로 맞추기 위한 해결법1 밖으로 빼지말고 안으로 삼켜라 연산은 쉽지만 컨텐츠 너비가 줄어드는 단점*/
     box-sizing: border-box;

@@ -1,4 +1,4 @@
-/*  adaptive니까 %로 나누기 */
+/*  adaptive(적응형)니까 %로 나누기 */
 /* 0 준게 각각 갖고있는 속성 
     li는 display가 list-item이라는 속성 위에서 아래로 떨어진다고 다 block은 아님 
         li속성때문에 불릿이 찍히는거임 li을 block으로 바꾸면 불릿 안나옴
@@ -18,8 +18,7 @@ ul li{
     width: 33.33%; float: left; display: block; border: 1px solid red;    
     box-sizing: border-box;
 }
-/* 밑에 중복 코드 안써도 되는 방법 
-    >는 직계라는 뜻*/
+/* 밑에 중복 코드 안써도 되는 방법 */
 ul li figure > *{
     float: left; width: 49%; margin-bottom: 10px;
 }

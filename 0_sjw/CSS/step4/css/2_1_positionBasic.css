@@ -1,26 +1,26 @@
 /* ? relative과 absolute의 관계 */
 /* height를 쓰는 몇 가지의 경우
     height원래 잘 안주는데 왜 줬나? overflow해보려고 */
-    #wrap{
-        margin: 0 auto; width: 300px; height: 200px; background: #999;
-        /* 부모가 돈이 있어서 다시 집으로 들어옴 */
-        position: relative; overflow-y: scroll;
-    }
-    /*  겹치는 순서가 구조화에서 맨 밑에있는게 위로 올라옴 */
-    #wrap div{
-        width: 150px; height: 150px; position: absolute;
-    }
-    /* 무작정 css 최대상수 9999 때려넣지말기 보통 4단계로 보기 헤더1 패널팝업10
-        숫자가 클수록 맨 위로 올라옴*/
-    #wrap div.redBox{
-        background: #f00; z-index: 100;
-        left:10px;  top:10px;
-    }
-    #wrap div.greenBox{
-        background-color: #0f0; z-index: 1;
-        left:50px;  top:50px;
-    }
-    #wrap div.blueBox{
-        background-color: blue; z-index: 10;
-        left:90px; top:90px;
-    }
+#wrap{
+    margin: 0 auto; width: 300px; height: 200px; background: #999;
+    /* 부모가 돈이 있어서 다시 집으로 들어옴 */
+    position: relative; overflow-y: scroll;
+}
+/*  겹치는 순서가 구조화에서 맨 밑에있는게 위로 올라옴 */
+#wrap div{
+    width: 150px; height: 150px; position: absolute;
+}
+/* 무작정 css 최대상수 9999 때려넣지말기 보통 4단계로 보기 
+    수(헤더1 패널팝업10)-> 숫자가 클수록 맨 위로 올라옴*/
+#wrap div.redBox{
+    background: #f00; z-index: 100;
+    left:10px;  top:10px;
+}
+#wrap div.greenBox{
+    background-color: #0f0; z-index: 1;
+    left:50px;  top:50px;
+}
+#wrap div.blueBox{
+    background-color: blue; z-index: 10;
+    left:90px; top:90px;
+}

@@ -1,3 +1,4 @@
+/* ! 첫 번째로 친 코드 */
 /* body,figure{
     margin: 0;
 }
@@ -26,8 +27,25 @@ ul li figure figcaption dl dt{
 ul li figure figcaption dl dd{
     margin: 0; text-align: center;
 } */
-/* 이미지가 인라인블럭이라 틈새가 생김 */
 
+/* ! 두 번째로 친 코드 */
+/* *{
+    margin: 0; padding: 0;
+}
+ul{
+    content: ''; display: block; clear: both;
+}
+ul li{
+    float: left; width: 16.66%; display: block; border: 1px solid black; box-sizing: border-box;
+}
+ul li figure img{
+    width: 100%; display: block;
+}
+ul li figure dl{
+    text-align: center; background-color: yellow;
+} */
+
+/* ! 선생님 코드 */
 *{
     margin: 0; padding: 0;
 }
@@ -35,7 +53,7 @@ ul li figure figcaption dl dd{
 ul li{
     width: 16.66%; border: 1px solid black; display: block; float: left; box-sizing: border-box;
 }
-/* ! img display가 inline-block이라 틈새벌어짐 */
+/* ! img display가 block이라 틈새벌어짐 */
 ul li figure img{
     width: 100%; display: block;
 }

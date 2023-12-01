@@ -23,7 +23,7 @@
     width: 830px; float: left; background-color: blue;
 }
 /* ! menu나란히 하는데 float를 사용할 때 문제점: 사이트는 메뉴 개수가 다 같지 않음
-    float하면서 너비(56)지정했고 56안에 갇혀 있기 때문에 개수가 늘어날 경우 줄바꿈이 일어남
+    float하면서 너비(56) 지정했고 56안에 갇혀 있기 때문에 개수가 늘어날 경우 줄바꿈이 일어남
     위와 같은 상황 해결법: 밑에 float와 관련된 코드를 주석처리
     inline-block은 공백 인정 띄어쓰기 하면 살짝 띄어서 나옴*/
 .wrap header nav ul{
