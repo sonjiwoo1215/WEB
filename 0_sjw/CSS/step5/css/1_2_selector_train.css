@@ -25,4 +25,3 @@ article p :first-child{
 article p *:not(mark){
     text-decoration: underline;
 }
-

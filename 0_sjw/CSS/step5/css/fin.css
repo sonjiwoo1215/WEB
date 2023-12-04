@@ -91,7 +91,7 @@ ul li mark{
 }
 /*  직계a 좌우로 보내려고 포지션 */
 div:first-of-type{
-    mask-border-width: 400px; margin: 0 auto; position: relative; line-height: 30px;
+    max-width: 400px; margin: 0 auto; position: relative; line-height: 30px;
 }
 div:first-of-type a{
     text-decoration: none; display: block;
