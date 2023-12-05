@@ -162,8 +162,7 @@
 .virtualSelector ul li:first-child{
     border-radius: 15px 0 0 15px;
 }
-/* * last는 가변된다 마진을 오른쪽으로 밀지 않는다 왼쪽으로 민다 
-        nth 몇 번으로 할 수 없음 */
+/* * last는 가변된다 마진을 오른쪽으로 밀지 않는다 왼쪽으로 민다 nth 몇 번으로 할 수 없음 */
 .virtualSelector ul li:last-child{
     border-radius: 0 15px 15px 0;
 }
@@ -173,7 +172,7 @@
 shapeSelector :nth-of-type(2) 두번째에 해당하는 자손들은 다 선택
 
 shapeSelector h1:nth-child(2) 부모가 바라볼때 두번째에 있는 h1 자손 / 없으니까 선택 안됨
-shapeSelector:nth-child(2) 부모가 바라볼때 두번째에 있는 자손 
+shapeSelector :nth-child(2) 부모가 바라볼때 두번째에 있는 자손 
  */
 
 /* .shapeSelector h1:nth-of-type(2){
