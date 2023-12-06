@@ -39,7 +39,6 @@ body{
     width: 50%; height: 300px; transition-duration: 2s; 
     border-width: 1px; border-style: solid; border-color: #ff0000 #ffa500 #ffff00 #008000;
 }
-/* ! 마진 */
 .durationEX4:hover{
     border-width: 1px; border-style: solid; border-color: #008000  #0000ff #00008b #ee82ee; color: #0000ff;
     margin: 0 25%;
