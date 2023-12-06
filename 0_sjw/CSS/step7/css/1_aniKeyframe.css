@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+/*  todo https://www.colorzilla.com/gradient-editor/ */
+/* 그라데이션 시작위치 %는 단계 */
+.circle{
+    background: linear-gradient(to bottom, #7db9f8 0%, #1e5799 100%);
+    width: 200px; height: 200px; border-radius: 100%; position: absolute;
+    animation-name: moveCircle; animation-duration: 5s;
+}
+/* 사용자가 임의로 설정하는 프레임
+    transition의 상위호환 개념 */
+    /* 0%는 아까 그래프에서 progress time이 없으면 움직이지 않음 시간은 duration 
+    left는 position꺼임 left를 운영할 수 있는 설정(position)을 넣어야 움직임 */
+    /* ctrl+r 임시cache(이전코드)삭제하고 새로고침 변경점만 다운받는게 아니라 아예 새로 다운 */
+@keyframes moveCircle {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 800px;
+    }
+}
