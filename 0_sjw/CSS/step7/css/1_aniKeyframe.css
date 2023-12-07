@@ -15,7 +15,7 @@ body{
 }
 /* 사용자가 임의로 설정하는 프레임 속성을 무한으로 넣을 수 있는 장점
     transition의 상위호환 개념 */
-    /* 0%는 아까 그래프에서 progress time이 없으면 움직이지 않음 시간은 duration 
+    /* 0%는 아까 그래프에서 progress / time이 없으면 움직이지 않음 시간은 duration 
     left는 position꺼임 left를 운영할 수 있는 설정(position)을 넣어야 움직임 */
     /* ctrl+r 임시cache(이전코드)삭제하고 새로고침 변경점만 다운받는게 아니라 아예 새로 다운
         아니면 네트워크에 브라우저 캐쉬 */
@@ -41,5 +41,5 @@ body{
     } */
 }
 .circle:hover{
-    animation-play-state: paused;
+    animation-play-state:paused;
 }

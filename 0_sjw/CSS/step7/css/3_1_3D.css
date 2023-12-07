@@ -48,6 +48,8 @@ div.rotater span:nth-of-type(4){background-color: yellow; animation-name: rotate
         transform: rotate3d(1,1,1,360deg);
     }
 }
+
+
 div.translater span{
     background-color: brown; animation-name: trans3D;
 }
@@ -60,3 +62,15 @@ div.translater span{
     }
 }
 /* ! scaler 해보기 */
+
+div.scaler span{
+    background-color: blueviolet; animation-name: scale3D;
+}
+@keyframes scale3D{
+    0%{
+        transform: scale3d(0,0,0);
+    }
+    100%{
+        transform: scale3d(2,2,2);
+    }
+}
