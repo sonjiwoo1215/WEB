@@ -24,12 +24,9 @@ aside:last-of-type ul *{
 }
 
 
-
-
-
 aside:last-of-type ul li{
     padding: 30px; text-align: right; position: relative;
-    width: 90%; height: 4px; 
+    width: 90%; height: 2px; 
 }
 aside:last-of-type ul li p{
     opacity: 0; transition-duration: 1s;
@@ -49,12 +46,6 @@ aside:last-of-type ul li:hover{
 aside:last-of-type ul li:hover p{
     opacity: 100%;
 }
-/* aside:last-of-type ul li p{
-     white-space: normal; text-overflow: ellipsis; overflow: hidden;
-} */
-
-
-
 
 
 aside:last-of-type ul li:first-child{
@@ -80,13 +71,10 @@ aside:last-of-type ul li:nth-of-type(7){
 }
 
 
-
-
-
 aside:last-of-type ul li p{
     width: 80%; 
 }
 aside:last-of-type ul li a{
-    width: 10%; position: absolute; top: 5%; left: 85%; text-decoration: none; 
-    color: white; line-height: 50px;
+    width: 10%; position: absolute; text-decoration: none; color: white;
+    top: 5%; left: 85%; padding-top: 2%;
 }
