@@ -1,5 +1,5 @@
 body{
-    width: 100%; margin: 100px auto; 
+    width: 90%; margin: 100px auto; 
 }
 aside{
     padding: 50px; width: 50%;  box-sizing: border-box;
@@ -22,14 +22,25 @@ aside:last-of-type{
 aside:last-of-type ul *{
     display: block;
 }
-
-
 aside:last-of-type ul li{
     padding: 30px; text-align: right; position: relative;
-    width: 90%; height: 2px; 
+    width: 100%; height: 2px; 
+}
+aside:last-of-type ul li:hover{
+    width: 100%; height: 500px; 
 }
 aside:last-of-type ul li p{
-    opacity: 0; transition-duration: 1s;
+    opacity: 0; transition-duration: 1s; width: 80%; 
+}
+aside:last-of-type ul li:hover p{
+    opacity: 100%;
+}
+aside:last-of-type ul li a{
+    width: 10%; position: absolute; text-decoration: none; color: white;
+    top: 5%; left: 85%; padding-top: 2%;
+}
+aside:last-of-type ul li:hover a{
+    color: black;
 }
 aside:last-of-type ul li a::before{
     content: '+';
@@ -37,17 +48,6 @@ aside:last-of-type ul li a::before{
 aside:last-of-type ul li:hover a::before{
     content: '>'; 
 }
-aside:last-of-type ul li:hover a{
-    color: black;
-}
-aside:last-of-type ul li:hover{
-    width: 90%; height: 400px; 
-}
-aside:last-of-type ul li:hover p{
-    opacity: 100%;
-}
-
-
 aside:last-of-type ul li:first-child{
     background-color: red; transition-duration: 1s;
 }
@@ -68,13 +68,4 @@ aside:last-of-type ul li:nth-of-type(6){
 }
 aside:last-of-type ul li:nth-of-type(7){
     background-color: blueviolet; transition-duration: 1s;
-}
-
-
-aside:last-of-type ul li p{
-    width: 80%; 
-}
-aside:last-of-type ul li a{
-    width: 10%; position: absolute; text-decoration: none; color: white;
-    top: 5%; left: 85%; padding-top: 2%;
 }
