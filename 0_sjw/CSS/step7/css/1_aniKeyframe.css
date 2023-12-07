@@ -6,19 +6,40 @@ body{
 .circle{
     background: linear-gradient(to bottom, #7db9f8 0%, #1e5799 100%);
     width: 200px; height: 200px; border-radius: 100%; position: absolute;
-    animation-name: moveCircle; animation-duration: 5s;
+    animation-name: moveCircle; animation-duration: 2s;
+    /* direction은 원래 편도로 움직임
+        alternate은 왕복으로 하라는 속성 
+        근데 재생횟수(animation-iteration-count) 안주면 편도로 움직임 2로 주면 1회 왕복운동*/
+    animation-direction: alternate; animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(.18,.47,.48,.84);
 }
-/* 사용자가 임의로 설정하는 프레임
+/* 사용자가 임의로 설정하는 프레임 속성을 무한으로 넣을 수 있는 장점
     transition의 상위호환 개념 */
     /* 0%는 아까 그래프에서 progress time이 없으면 움직이지 않음 시간은 duration 
     left는 position꺼임 left를 운영할 수 있는 설정(position)을 넣어야 움직임 */
     /* ctrl+r 임시cache(이전코드)삭제하고 새로고침 변경점만 다운받는게 아니라 아예 새로 다운
         아니면 네트워크에 브라우저 캐쉬 */
+
+/* transform은 transition과 달리 움직임을 직접 주진 않음
+    deg각도의 단위 0-360까지 입력가능 근데 가산 가능해서 720주면 두바퀴 가능 음수주면 반시계방향으로 돌리기 가능 */
 @keyframes moveCircle {
     0%{
-        left: 0;
+        left: 0; transform: rotate(0deg);
     }
     100%{
-        left: 800px;
+        left: 800px; transform: rotate(360deg);
     }
+    /* * 갔다가 다시 오게 하기 이렇게 할거면 시간 10초로 변경 */
+    /* 0%{
+        left: 0; transform: rotate(0deg);
+    }
+    50%{
+        left: 800px; transform: rotate(360deg);
+    }
+    100%{
+        left: 0; transform: rotate(0deg);
+    } */
+}
+.circle:hover{
+    animation-play-state: paused;
 }

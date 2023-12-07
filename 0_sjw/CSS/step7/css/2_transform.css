@@ -1,0 +1,37 @@
+div{
+    width: 200px; height: 200px; border: 5px solid black; margin: 0 auto;
+}
+/* origin 기준점 이동 */
+div span{
+    width: 200px; height: 200px; display: block; transform-origin: left top;
+}
+/* 중앙을 기준으로 돌았음 원래 웹의 기준은 왼쪽 상단 */
+div:first-of-type span{
+    background-color: red; transform: rotate(10deg);
+}
+/* translate 이동 */
+/* 컴퓨터는 한번에 하나만 그래서 순서가 중요 이동 후 회전 회전 후 이동 
+    단순이동이나 배치에 translate쓰지말기 */
+div:nth-of-type(2) span{
+    background-color: green; color: white;
+    transform: translateX(100px) rotate(10deg);
+}
+div:nth-of-type(3) span{
+    background-color: blue; color: white;
+    transform: rotate(10deg) translate(100px,50px);
+}
+/* skew 비틀기 */
+div:nth-of-type(4) span{
+    background-color: brown; color: white;
+    transform: rotate(10deg) translate(100px,50px) skewX(10deg);
+}
+/* opacity는 공간 자체를 투명하게 하는 속성(이미지 텍스트 등등) 0-1 사이*/
+div:nth-of-type(5) span{
+    background-color: orange; transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg);
+    opacity: 0.5;
+}
+/* scale 사이즈 0.5는 절반 1.2는 20% 증가 */
+div:nth-of-type(6) span{
+    background-color: pink;
+    transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg) scale(1.2);
+}
