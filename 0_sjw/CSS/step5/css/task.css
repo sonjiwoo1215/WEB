@@ -1,99 +1,93 @@
-html,body{
-    height: 100%;
-}
 body{
-    margin: 0;
+    margin: 0 auto; width: 70%;
 }
-div:first-of-type{
-    width: 90%; margin: 0 auto; padding-top: 20px; 
+ul{
+    padding: 0; list-style: none;
 }
-div:first-of-type ul{
-    margin: 0; padding: 0; list-style: none;
+ul li:first-child{
+    border-bottom: 1px solid deeppink; background-color: #505050;
 }
-div:first-of-type ul li:after{
+ul li:last-child{
+    border-bottom: 1px solid deeppink;
+}
+ul li:nth-child(2n+1):not(:first-child){
+    background-color: #e9e9e9;
+}
+ul li:nth-child(2n){
+    background-color: #fafafa;
+}
+ul li:nth-child(2n+3):hover{
+    background-color: darkblue;
+}
+ul li:nth-child(2n):hover{
+    background-color: darkorange;
+}
+ul li:after{
     content: ''; display: block; clear: both;
 }
-div:first-of-type ul li span{
-    display: block; float: left; color: gray; font-size: 20px;
-    text-align: left; padding: 20px 2.5%; word-break: normal;
+ul li span{
+    display: block; float: left; padding: 15px 2%; box-sizing: border-box;
+    color: #999;
 }
-div:first-of-type ul li span:nth-of-type(2){
-    width: 35%;
+ul li:first-child span:nth-child(2){
+    color: palegreen;
 }
-div:first-of-type ul li span:nth-of-type(4){
-    width: 25%;
+ul li:not(:first-child):hover span{
+    color: paleturquoise;
 }
-div:first-of-type ul li span:not(:nth-of-type(2),:nth-of-type(4)){
-    width: 10%;
-}
-div:first-of-type ul li:first-of-type{
-    background-color: rgb(37, 39, 39);
-    border-style: solid; border-color: deeppink; border-width: 0 0 2px;
-}
-div:first-of-type ul li:first-child span:nth-of-type(2){
-    color: green;
-}
-div:first-of-type ul li:not(:first-child):nth-child(2n+1){
-    background-color: rgb(221, 220, 218);
-}
-div:first-of-type ul li:not(:first-child):nth-child(2n+1):hover{
-    background-color: blue; 
-}
-div:first-of-type ul li:not(:first-child):nth-child(2n+1):hover span:not(:nth-child(2)){
-    color: skyblue;
-}
-div:first-of-type ul li:nth-child(2n){
-    background-color: rgb(239, 240, 241);
-}
-div:first-of-type ul li:nth-child(2n):hover{
-    background-color: orange;
-}
-div:first-of-type ul li:nth-child(2n):hover span:not(:nth-child(2)){
-    color: skyblue;
-}
-div:first-of-type ul li:nth-child(2n):hover span:nth-child(2){
+ul li:not(:first-child,:nth-child(2n+1)):hover span:nth-child(2){
     color: white;
 }
-div:first-of-type ul li:not(:first-child) span:nth-of-type(2){
-    color: red;
+ul li:not(:first-child) span:nth-child(2){
+    color: orangered;
 }
-div:first-of-type ul li:last-child{
-    border-style: solid; border-color: deeppink; border-width: 0 0 2px;
+ul li span:nth-child(2n+1){
+    width: 15%;
 }
-/* ! max-width주고 li에 너비 %로 주기 */
-div div:first-of-type{
-    max-width: 900px; margin: 0 auto; position: relative; 
-    margin-top: 20px; padding: 0;
+ul li span:nth-child(2){
+    width: 40%;
 }
-div div:first-of-type a{
-    display: block; text-decoration: none;
-    font-size: 15px; padding: 3px 5px; color: black;
+ul li span:nth-child(4){
+    width: 30%;
 }
-div div:first-of-type > a{
-    position: absolute; top: 0;
+div:first-of-type{
+    position: relative; width: 50%; margin: 0 auto 15px; padding: 0 3%; 
 }
-div div:first-of-type > a:first-of-type{
+div:first-of-type a{
+    text-decoration: none; color: #555; display: block; text-align: center;
+    font-size: 12px; line-height: 23px;
+}
+/* 3프로 위 패딩 3프로 */
+div:first-of-type > a{
+    position: absolute; width: 3%; top: 0;
+}
+div:first-of-type > a:nth-of-type(1){
     left: 0;
 }
-div div:first-of-type > a:last-of-type{
+div:first-of-type > a:nth-of-type(2){
     right: 0;
 }
-div div:first-of-type ol{ 
-    margin: 0; padding: 0 20px; text-align: center; 
+div:first-of-type ol{
+    margin: 0; padding: 0;
 }
-div div:first-of-type ol li{
-    display: inline-block; width: 8%;
+div:first-of-type ol:after{
+    content: ''; display: block; clear: both;
 }
-div div:first-of-type ol li:hover{
-    background-color: blueviolet; border-radius: 10%;
+div:first-of-type ol li{
+    display: block; float: left; width: 9%;
 }
-div div:first-of-type ol li:hover a{
-    color: white;
+div:first-of-type ol li:not(:first-child){
+    margin-left: 1.11%;
 }
-div div:last-of-type{
-    min-width: 450px; margin: 0 auto; padding: 0; text-align: center;
-    margin-top: 10px;
+div:first-of-type ol li a:hover{
+    background-color: darkorchid; color: violet; border-radius: 5px;
 }
-div div:last-of-type input[type='submit']{
-    border: 1px solid blueviolet; color: blueviolet;
+/* 필드셋은 보더 갖고 태어남 */
+form fieldset{
+    border: none; padding: 0; margin: 0; text-align: center;
 }
+form fieldset input[type='sumit']{
+    border: 1px solid darkorchid; background-color: lavender; color: darkorchid;
+    text-transform: capitalize;
+}
+/* !구조화 다르니까 비교해보고 css확인 */

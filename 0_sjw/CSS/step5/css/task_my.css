@@ -1,0 +1,99 @@
+html,body{
+    height: 100%;
+}
+body{
+    margin: 0;
+}
+div:first-of-type{
+    width: 90%; margin: 0 auto; padding-top: 20px; 
+}
+div:first-of-type ul{
+    margin: 0; padding: 0; list-style: none;
+}
+div:first-of-type ul li:after{
+    content: ''; display: block; clear: both;
+}
+div:first-of-type ul li span{
+    display: block; float: left; color: gray; font-size: 20px;
+    text-align: left; padding: 20px 2.5%; word-break: normal;
+}
+div:first-of-type ul li span:nth-of-type(2){
+    width: 35%;
+}
+div:first-of-type ul li span:nth-of-type(4){
+    width: 25%;
+}
+div:first-of-type ul li span:not(:nth-of-type(2),:nth-of-type(4)){
+    width: 10%;
+}
+div:first-of-type ul li:first-of-type{
+    background-color: rgb(37, 39, 39);
+    border-style: solid; border-color: deeppink; border-width: 0 0 2px;
+}
+div:first-of-type ul li:first-child span:nth-of-type(2){
+    color: green;
+}
+div:first-of-type ul li:not(:first-child):nth-child(2n+1){
+    background-color: rgb(221, 220, 218);
+}
+div:first-of-type ul li:not(:first-child):nth-child(2n+1):hover{
+    background-color: blue; 
+}
+div:first-of-type ul li:not(:first-child):nth-child(2n+1):hover span:not(:nth-child(2)){
+    color: skyblue;
+}
+div:first-of-type ul li:nth-child(2n){
+    background-color: rgb(239, 240, 241);
+}
+div:first-of-type ul li:nth-child(2n):hover{
+    background-color: orange;
+}
+div:first-of-type ul li:nth-child(2n):hover span:not(:nth-child(2)){
+    color: skyblue;
+}
+div:first-of-type ul li:nth-child(2n):hover span:nth-child(2){
+    color: white;
+}
+div:first-of-type ul li:not(:first-child) span:nth-of-type(2){
+    color: red;
+}
+div:first-of-type ul li:last-child{
+    border-style: solid; border-color: deeppink; border-width: 0 0 2px;
+}
+/* ! max-width주고 li에 너비 %로 주기 */
+div div:first-of-type{
+    max-width: 900px; margin: 0 auto; position: relative; 
+    margin-top: 20px; padding: 0;
+}
+div div:first-of-type a{
+    display: block; text-decoration: none;
+    font-size: 15px; padding: 3px 5px; color: black;
+}
+div div:first-of-type > a{
+    position: absolute; top: 0;
+}
+div div:first-of-type > a:first-of-type{
+    left: 0;
+}
+div div:first-of-type > a:last-of-type{
+    right: 0;
+}
+div div:first-of-type ol{ 
+    margin: 0; padding: 0 20px; text-align: center; 
+}
+div div:first-of-type ol li{
+    display: inline-block; width: 8%;
+}
+div div:first-of-type ol li:hover{
+    background-color: blueviolet; border-radius: 10%;
+}
+div div:first-of-type ol li:hover a{
+    color: white;
+}
+div div:last-of-type{
+    min-width: 450px; margin: 0 auto; padding: 0; text-align: center;
+    margin-top: 10px;
+}
+div div:last-of-type input[type='submit']{
+    border: 1px solid blueviolet; color: blueviolet;
+}
