@@ -1,0 +1,71 @@
+body{
+    width: 90%; margin: 100px auto; 
+}
+aside{
+    padding: 50px; width: 50%;  box-sizing: border-box;
+}
+footer{
+    color: blue;
+}
+aside:first-of-type{
+   display: inline-block;  
+}
+aside:first-of-type * {
+    display: block;
+}
+body:after{
+    content: ''; display: block; clear: both;
+}
+aside:last-of-type{
+    display: block; float: right;
+}
+aside:last-of-type ul *{
+    display: block;
+}
+aside:last-of-type ul li{
+    padding: 30px; text-align: right; position: relative;
+    width: 100%; height: 2px; 
+}
+aside:last-of-type ul li:hover{
+    width: 100%; height: 500px; 
+}
+aside:last-of-type ul li p{
+    opacity: 0; transition-duration: 1s; width: 80%; 
+}
+aside:last-of-type ul li:hover p{
+    opacity: 100%;
+}
+aside:last-of-type ul li a{
+    width: 10%; position: absolute; text-decoration: none; color: white;
+    top: 5%; left: 85%; padding-top: 2%;
+}
+aside:last-of-type ul li:hover a{
+    color: black;
+}
+aside:last-of-type ul li a::before{
+    content: '+';
+}
+aside:last-of-type ul li:hover a::before{
+    content: '>'; 
+}
+aside:last-of-type ul li:first-child{
+    background-color: red; transition-duration: 1s;
+}
+aside:last-of-type ul li:nth-of-type(2){
+    background-color: orange; transition-duration: 1s;
+}
+aside:last-of-type ul li:nth-of-type(3){
+    background-color: yellow; transition-duration: 1s;
+}
+aside:last-of-type ul li:nth-of-type(4){
+    background-color: green; transition-duration: 1s;
+}
+aside:last-of-type ul li:nth-of-type(5){
+    background-color: blue; transition-duration: 1s;
+}
+aside:last-of-type ul li:nth-of-type(6){
+    background-color: darkblue; transition-duration: 1s;
+}
+aside:last-of-type ul li:nth-of-type(7){
+    background-color: blueviolet; transition-duration: 1s;
+}
