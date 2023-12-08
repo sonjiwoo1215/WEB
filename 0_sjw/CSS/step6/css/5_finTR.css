@@ -45,11 +45,12 @@ aside:last-of-type ul li:nth-child(4){background-color: #30b052;}
 aside:last-of-type ul li:nth-child(5){background-color: #7c8aff;}
 aside:last-of-type ul li:nth-child(6){background-color: #3a5fb7;}
 aside:last-of-type ul li:nth-child(7){background-color: #6800ff;}
-/* 움직임 한번 걸기 패딩 */
+/* 움직임 한번 걸기 패딩5% */
 aside:last-of-type ul li:hover{
     padding: 5%; cursor: pointer;
 }
 /* 기본상태니까 0 높이는 호버됐을때 만들거임 p높이가 0이 됐으니 li가 주저앉음 */
+/* ! a태그 옆으로 */
 aside:last-of-type ul li p{
     width: 80%; float: left; height: 0; opacity: 0; 
     transition-property: height,opacity;
@@ -70,5 +71,3 @@ aside:last-of-type ul li a::before{
 aside:last-of-type ul li:hover a:before{
     content: '>';
 }
-
-/* ! a태그 플롯없이 확인 */
