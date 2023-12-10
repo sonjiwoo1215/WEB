@@ -1,0 +1,34 @@
+body{
+    width: 200px; margin: 200px auto;
+}
+div{
+    width: 200px; position: relative;
+    animation-name: rotate3D;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    /* 3d선언하기 */
+    transform-style: preserve-3d;
+} 
+@keyframes rotate3D {
+    0%{
+        /* 돌게끔 찾아낸 값 입력 */
+        transform: rotateX(0deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(360deg) rotateZ(1deg);
+    }
+}
+div span{
+    width: 200px; height: 100px; position: absolute; left: 0; top: 0; opacity: 0.9;
+}
+div span:nth-child(1){
+    background-color: red; transform: rotateX(-90deg) rotateY(-60deg) translateZ(-58px);
+}
+div span:nth-child(2){
+    background-color: green; transform: rotateX(90deg) rotateY(-60deg) translateZ(58px); 
+}
+div span:nth-child(3){
+    width: 100px;
+    background-color: blue; transform: translateX(50px) translateY(-29px) rotateX(-90deg);
+}
