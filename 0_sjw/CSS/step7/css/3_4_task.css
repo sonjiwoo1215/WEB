@@ -12,7 +12,6 @@ div{
 } 
 @keyframes rotate3D {
     0%{
-        /* 돌게끔 찾아낸 값 입력 */
         transform: rotateX(0deg) rotateZ(0deg);
     }
     100%{
@@ -23,6 +22,17 @@ div span{
     width: 200px; height: 100px; position: absolute; left: 0; top: 0; opacity: 0.9;
 }
 div span:nth-child(1){
+    background-color: green; transform: rotateX(270deg) rotateY(-120deg) translateX(22.5px) translateZ(45px);
+}
+div span:nth-child(2){
+    background-color: red; transform: rotateX(90deg) rotateY(60deg) translateX(22.5px) translateZ(45px); 
+}
+div span:nth-child(3){
+    width: 100px;
+    background-color: blue; transform: rotateX(90deg) translateX(50px);
+}
+
+/* div span:nth-child(1){
     background-color: red; transform: rotateX(-90deg) rotateY(-60deg) translateZ(-58px);
 }
 div span:nth-child(2){
@@ -31,4 +41,4 @@ div span:nth-child(2){
 div span:nth-child(3){
     width: 100px;
     background-color: blue; transform: translateX(50px) translateY(-29px) rotateX(-90deg);
-}
+} */
