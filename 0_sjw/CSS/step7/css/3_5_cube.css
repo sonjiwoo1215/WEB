@@ -1,0 +1,49 @@
+/* 이건 그냥 가운데 놓고 보기 위한 도화지세팅 임시코드 */
+body{
+    width: 200px; margin: 200px auto;
+    /*  원근감 거리감 1px 주면 가운데 점을 찍고 여기를 1로 찍어서 나한테 엄청 가까워보이게*/
+    perspective: 300px;
+}
+div{
+    width: 200px; height: 200px; position: relative;
+    animation-name: playBox;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
+}
+/* xyz 3d 상태의 대각선이 나오고 그거 기준으로 그쪽으로 움직인다 
+    이건 각각의 축을 따로 만들고 따로 돌게 한 것 동시 시작하게 안하고 따로따로 */
+@keyframes playBox{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
+}
+div span{
+    width: 200px; height: 200px; position: absolute; left: 0; top: 0; opacity: 0.5;
+    /* 이면 가시성 다른면 = 뒷면 
+        visible=안에가 보인다  */
+    backface-visibility: visible;
+}
+div span:nth-of-type(1){
+    background-color: red; transform: translateZ(100px);
+}
+div span:nth-of-type(2){
+    background-color: green; transform: rotateY(90deg) translateZ(100px);
+}
+div span:nth-of-type(3){
+    background-color: blue; transform: rotateY(180deg) translateZ(100px);
+}
+div span:nth-of-type(4){
+    background-color: yellow; transform: rotateY(270deg) translateZ(100px);
+}
+div span:nth-of-type(5){
+    background-color: brown; transform: rotateX(90deg) translateZ(100px);
+}
+div span:nth-of-type(6){
+    background-color: pink; transform: rotateX(270deg) translateZ(100px);
+}
+
