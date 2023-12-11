@@ -5,20 +5,27 @@ div{
     width: 200px; position: relative;
     animation-name: rotate3D;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 3s;
     animation-timing-function: ease;
-    /* 3d선언하기 */
     transform-style: preserve-3d;
 } 
-@keyframes rotate3D {
+/* @keyframes rotate3D {
     0%{
         transform: rotateX(0deg) rotateZ(0deg);
     }
     100%{
         transform: rotateX(360deg) rotateZ(1deg);
     }
+} */
+@keyframes rotate3D {
+    0%{
+        transform: rotateX(90deg) rotateY(60deg);
+    }
+    100%{
+        transform: rotateX(450deg) rotateY(60deg);
+    }
 }
-div span{
+/* div span{
     width: 200px; height: 100px; position: absolute; left: 0; top: 0; opacity: 0.9;
 }
 div span:nth-child(1){
@@ -30,15 +37,24 @@ div span:nth-child(2){
 div span:nth-child(3){
     width: 100px;
     background-color: blue; transform: rotateX(90deg) translateX(50px);
+} */
+
+div span{
+    width: 200px; height: 100px; display: block; position: absolute; left: 0; top: 0;
+    opacity: 0.9;
+}
+/* 삼각형 만드는데 2개만 움직이면 되더라 */
+div span:nth-of-type(1){
+    background-color: red;
+}
+div span:nth-of-type(2){
+    background-color: green; transform: rotateY(60deg); transform-origin: left top;
+}
+/* 위랑 반대방향으로 세워야하니까 -붙이기
+     left top히면 화살표 됨 */
+div span:nth-of-type(3){
+    background-color: blue; transform: rotateY(-60deg); transform-origin: right top;
+    width: 100px;
 }
 
-/* div span:nth-child(1){
-    background-color: red; transform: rotateX(-90deg) rotateY(-60deg) translateZ(-58px);
-}
-div span:nth-child(2){
-    background-color: green; transform: rotateX(90deg) rotateY(-60deg) translateZ(58px); 
-}
-div span:nth-child(3){
-    width: 100px;
-    background-color: blue; transform: translateX(50px) translateY(-29px) rotateX(-90deg);
-} */
+
