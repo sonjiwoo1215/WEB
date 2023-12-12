@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:ital,wght@0,500;1,300&display=swap');
+/* 폰트는 용량이 크니까 맨 위에 */
+/* fonts.css해서 위 링크 ctrl 클릭 후 복붙 서버 가능한 사람한테 파일로 만들어서 넘기면 좋음 */
+/** 순서는 항상 reset이 맨 위 내가 작성하는 css는 맨 밑 */
+@import url('reset.css');
+@import url('global.css');

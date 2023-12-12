@@ -1,0 +1,42 @@
+/* 반응형은 밑에서 위 순서로 만듬  큰 장치의 가장 작은 해상도(1280)부터 만듬 */
+
+/* 우리나라만 1279와 1280으로 해서 끊김없게 함 
+    768은 아이패드1세대 즉 가장 작음 가장 작은 사이즈를 중점으로 하면 큰 사이즈는 무조건 잘 나옴*/
+@media screen and (max-width: 767px){
+    body{
+        background-color: bisque;
+    }
+    h1{
+        font-size: 20px; line-height: 26px;
+    }
+    p{
+        font-size: 10px; line-height: 16px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:1279px){
+    body{
+        font-family: 'Roboto'; background-color: paleturquoise; color: white;
+    }
+    h1{
+        font-size: 28px; line-height: 40px; font-weight: 300;
+    }
+    p{
+        font-size: 14px; line-height: 20px; font-weight: 500;
+    }
+}
+/* ? tablet 사용자 해상도가 768이상 1280미만 일 때 */
+
+/* 1280이상의 모든 모니터를 지칭함 1280까지만 적용된것 1279부터는 적용 안됨*/
+@media screen and (min-width: 1280px){
+    body{
+        font-family: 'Playfair Display'; background-color: blue; color: white;
+    }
+    h1{
+        font-size: 32px; line-height: 40px; font-weight: 700;
+    }
+    p{
+        font-size: 16px; line-height: 22px; font-weight: 400;
+    }
+}
+/* ? desktop 사용자 해상도가 1280 이상 일 때 */
+
