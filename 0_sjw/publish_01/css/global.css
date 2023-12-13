@@ -1,8 +1,18 @@
-header > div nav ul li a{
+header > div nav ul li a,
+header > div > ul li p{
     font-family: 'Roboto';
 }
 a{
     text-decoration: none;
+}
+header > div > ul li h2{
+    font-family: 'Playfair Display';       
+}
+/* display block이라 길어짐 원래는 line-height나 padding을 줘도 됨
+    근데 얘는 모듈임 모듈은 아무에게나 적용이 되어야함 라인헤잇은 안들어가는 것도 있음 그러니 모듈쓸때는 쓰면 안됨 */
+.btn_more{
+    font-family: 'hammersmith One'; font-weight: 400; text-align: center; display: block;
+    font-size: 16px; color: #00e0d0; border: 1px solid #00e0d0; 
 }
 
 
@@ -12,6 +22,13 @@ a{
 /* header footer는 global.css / 안에 컨텐츠는 page.css */
 /* 포지션은 배경이 공간보다 클 때 의미가 있음 */
 @media screen and (min-width: 1280px) {
+    
+    footer > div{
+        max-width: 940px; margin: 0 auto; padding: 70px 0;
+    }
+    .btn_more{
+        padding: 10px 0.6%; box-sizing: border-box;
+    }
     header{
         padding: 15px 0 70px; background: url('../images/bg_01.png') left top / cover no-repeat;
     }
@@ -24,7 +41,7 @@ a{
     header > div h1{
         max-width: 128px;
     }
-    /* 밑에 a와 이미지 속성 잘 보기 a블럭은 주저앉으니까무조건 주는거고 a가줄어들때 같이 영역이 줄어드려면 이미지100 */
+    /* 밑에 a와 이미지 속성 잘 보기 a블럭은 주저앉으니까 무조건 주는거고 a가줄어들때 같이 영역이 줄어드려면 이미지100 */
     header > div h1 a{
         display: block;
     }
@@ -52,6 +69,49 @@ a{
         color: #00e0d0;
     }
     /* ? gnb Fin */
+    header > div > ul{
+        margin-bottom: 125px;
+    }
+    header > div > ul li{
+        padding-top: 165px; display: block;
+    }
+    header > div > ul li h2{
+        font-size: 32px; color: white; font-weight: 900; padding-bottom: 22px;
+        background: url('../images/border.png') no-repeat center bottom; 
+        /* 둘 중 하나가 글자인거나 둘 다 글자이면 마진을 다 잰대로 넣으면 안됨 글자는 line-height 동반 즉 시안보다 더 들어감(5배수계산 -5하기) */
+        text-align: center; margin-bottom: 25px;
+    }
+    /* max-width: 775px; 시안처럼 3줄로 나오게 하려고 텍스트상자의 너비를 구함 */
+    header > div > ul li p{
+        font-size: 14px; color: white; font-weight: 300; text-align: center;
+        line-height: 24px; max-width: 775px; margin: 0 auto 45px;
+    }
+    header > div > ul li a.btn_more{
+       width: 120px; margin: 0 auto;
+    }
+    /* ol에 너비 안줄거라 text-align: center 사용 */
+    header > div > ol{
+        text-align: center;
+    }
+    header > div > ol li{
+        display: inline-block;
+    }
+    /* 동그래미 만들려고 너비높이보더 */
+    header > div > ol li a{
+        display: block; text-indent: -9999px; width: 8px; height: 8px;
+        border: 1px solid rgba(255,255,255,0.8); border-radius: 5px;
+    }
+    header > div > ol li a:hover,
+    header > div > ol li a.active{
+        background-color: #00e0d0; border-color: #00e0d0; 
+    }
+    /* ? header Fin */
+
+    footer{
+        background: url('../images/bg_05.png') left top / cover no-repeat;
+    }
+    
+
 
 }
 /* ? desktop */
