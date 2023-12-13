@@ -1,6 +1,57 @@
+header > div nav ul li a{
+    font-family: 'Roboto';
+}
+a{
+    text-decoration: none;
+}
 
 
+
+/* ? All Use */
+
+/* header footer는 global.css / 안에 컨텐츠는 page.css */
+/* 포지션은 배경이 공간보다 클 때 의미가 있음 */
 @media screen and (min-width: 1280px) {
-    
+    header{
+        padding: 15px 0 70px; background: url('../images/bg_01.png') left top / cover no-repeat;
+    }
+    header > div{
+        max-width: 940px; margin: 0 auto; position: relative;
+    }
+    /* nav너비만큼 패딩깔아주고 포지션 쓰기 오른쪽0으로하면 안정적 nav는 인라인블럭 사용하지말기
+        float쓰기엔 nav가 좀 길다 */
+    /* 블럭이니까 %보다는 max-width줌 */
+    header > div h1{
+        max-width: 128px;
+    }
+    /* 밑에 a와 이미지 속성 잘 보기 a블럭은 주저앉으니까무조건 주는거고 a가줄어들때 같이 영역이 줄어드려면 이미지100 */
+    header > div h1 a{
+        display: block;
+    }
+    header > div h1 a img{
+        width: 100%;
+    }
+    /* 패딩 썼으니까 box-size(패딩삼킴) ab주면 너비상실하니까 너비 100프로 줌 그럼 정확히 130에서 멈춤 그럼 오른쪽 정렬해주면 됨*/
+    header > div nav{
+        position: absolute; right: 0; top: 0; padding-left: 130px; box-sizing: border-box; 
+        width: 100%; text-align: right;
+    }
+    header > div nav ul li{
+        display: inline-block; 
+    }
+    /* css는 소수 두자리수까지 쓰기 */
+    header > div nav ul li:not(:first-child){
+        margin-left: 2.65%;
+    }
+    /* 이미지 로고가 128x50사이즈라 line-height 50넣어서 수직정렬 */
+    header > div nav ul li a{
+        line-height: 50px; display: block; font-size: 13px; color: white; font-weight: 900;
+    }
+    header > div nav ul li a:hover,
+    header > div nav ul li a.active{
+        color: #00e0d0;
+    }
+    /* ? gnb Fin */
+
 }
 /* ? desktop */
