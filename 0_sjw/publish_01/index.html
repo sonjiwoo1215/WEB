@@ -2,36 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- w3c validation -->
     <!-- 타이틀은 일반적으로 바뀌지 않음 -->
-   
-    <title>Tajam</title> 
+    <title>Tajam</title>
+    <link rel="stylesheet" href="css/import.css">
 </head>
 <body>
-    <!-- 큰 공간 태그 article section div 
+     <!-- 큰 공간 태그 article section div 
          타이틀이 있어야 섹션 가능
          원페이지인 경우 이례적으로 가장 바깥 쪽을 header로 볼 수 있음 
          보통 section div 가능 섹션이나 아티클은 헤더를 감쌀 수 없음-->
     <header id="home">
-
         <!-- 고정된 940 담당 -->
         <div>
             <!-- 1. index.html 2. / (초기파일로 이동 html이 아닌 대상 최상위 폴더라는 뜻) 3.namedAnchor-->
-            <h1> <a href="#home"><img src="images/logo.png" alt="Welcome to Tajam"></a></h1>
+            <h1>
+                <a href="#home"><img src="images/logo.png" alt="welcome to Tajam"></a>
+                <!-- 
+                    ! index.html -> 초기 파일로이동
+                    ! / -> 초기 파일로이동(html파일이 아닌 대상)
+                 -->
+            </h1>
             <nav>
                 <ul>
-                    <!-- id명은 띄어쓰기 안되고 처음부터 대문자 추천안함 -->
-                    <li><a href="#home"></a>HOME</li>
-                    <li><a href="#about"></a>ABOUT</li>
-                    <li><a href="#expertise"></a>EXPERTISE</li>
-                    <li><a href="#teams"></a>TEAMS</li>
-                    <li><a href="#works"></a>WORKS</li>
-                    <li><a href="#peoplesay"></a>PEOPLE SAY</li>
-                    <li><a href="#contact"></a>CONTACT</li>
+                    <li><a href="#home" class="active">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#expertise">EXPERTISE</a></li>
+                    <li><a href="#teams">TEAMS</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#peoplesay">PEOPLE SAY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
-                <ul>
+            <ul>
                     <li>
                     <h2>We Are Awesome Creative Agency</h2>
                     <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
@@ -46,11 +51,9 @@
                     <li><a href="#">slide</a></li>
                     <li><a href="#">slide</a></li>
                 </ol>
-        
         </div>
     </header>
-    <!-- ? Header fin 이 부분은 작업 끝나면 지워주기-->
-    
+    <!-- ? header Fin -->
 
     <figure>
         <img src="images/ci.png" alt="tajam CI">
@@ -58,57 +61,54 @@
             <h2>OUR STORY</h2>
             <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus</p>
             <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <a href="#">LEARN MORE</a>
         </figcaption>
     </figure>
-    <a href="#">LEARN MORE</a>
     <!-- ? CI figure Fin -->
 
     <section class="videoArea">
         <a href="#">▷</a>
         <h2>WATCH OUR STORY</h2>
     </section>
-    <!-- ? Video Fin -->
+    <!-- ? video Fin -->
 
-   <section id="expertise" class="expArea">
+    <section id="expertise" class="expArea">
         <h2>EXPERTISE</h2>
         <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
         <hr>
-        <!-- ul>li*6>h3+p (이미지는 css로 넣기 가능)
-             ul>li*6>dl>dt+dd*2
-             ul>li*6>img+strong+p-->
-             <ul>
-                <li>
-                    <h3>WEB DESIGN &amp; DEVELOPMENT</h3>
-                    <!--* & , > , < = & -> and(그리고) ex - a&&b -> a 그리고 b
-                         !공백 : &nbsp;
-                        entity : https://www.w3schools.com/html/html_entities.asp -->
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </li>
-                <li>
-                    <h3>BRANDING IDENTITY</h3>
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </li>
-                <li>
-                    <h3>MOBILE APP</h3>
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </li>
-                <li>
-                    <h3>SEARCH ENGINE OPTIMIZATION</h3>
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </li>
-                <li>
-                    <h3>GAME DEVELOPMENT</h3>
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </li>
-                <li>
-                    <h3>MADE WITH LOVE</h3>
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </li>
-             </ul>
-   </section> 
-   <!-- ? expertise Fin -->
-
-    <!-- section#teams.teamArea -->
+        <ul>
+            <li>
+                <h3>WEB DESIGN &amp; DEVELOPMENT</h3>
+                <!-- 
+                    * & , > , < = & -> and(그리고) ex - a && b -> a 그리고 b 
+                    ! 공백 : &nbsp;
+                    entity : https://www.w3schools.com/html/html_entities.asp 
+                -->
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+            </li>
+            <li>
+                <h3>BRANDING IDENTITY</h3>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+            </li>
+            <li>
+                <h3>MOBILE APP</h3>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+            </li>
+            <li>
+                <h3>SEARCH ENGINE OPTIMIZATION</h3>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+            </li>
+            <li>
+                <h3>GAME DEVELOPMENT</h3>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+            </li>
+            <li>
+                <h3>MADE WITH LOVE</h3>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+            </li>
+        </ul>
+    </section>
+    <!-- ? expertise Fin -->
     <!-- 잘못된 예시 1. 배경이 있는데 섹션안에 고정할 만한 div를 넣지 않음 2.피규어 쓰는데 이미지 안넣음 -->
     <section id="teams" class="teamArea">
         <h2>MEET OUR AMAZING TEAM</h2>
@@ -161,45 +161,39 @@
         <a href="#">WE ARE HIRING</a>
     </section>
     <!-- ?teams Fin -->
-    
-    
-    <section id="works" class="workArea">
-        <div>
-            <h2>OUR WORKS</h2>
+
+    <section id="works" class="worksArea">
+        <h2>
+            OUR WORKS
             <a href="#">See All Project in dribbble &gt;</a>
-            <!-- ul>li*12>a>img -->
-            <ul>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-                <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
-            </ul>
-            
-            <a href="#">LOAD MORE</a>
-
-        </div>
+        </h2>
+        <ul>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+            <li><a href="#" target="_blank"><img src="https://via.placeholder.com/270x200" alt="undefined"></a></li>
+        </ul>
+        <a href="#">LOAD MORE</a>
     </section>
-    <!-- ?works Fin -->
+    <!-- ? works Fin -->
 
-    <!-- 원래 div 가능 -->
     <section id="peoplesay" class="talkArea">
-        <!-- ! validation check -->
         <h2>Quote's section</h2>
         <p>
             This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
             <strong>JANE GALADRIEL</strong>
             <span>CEO TENGKUREP</span>
         </p>
-        <!-- 안에 뭐가 들어갈지도 모르고 컴퍼넌트가 언제든 들어가고 나올 수 있어야하기 때문에 구조화고 뭐고 그냥 div -->
-        <!--  todo div>a+(ul>li*5>a>img)+a -->
+            <!-- todo div>a+(ul>li*5>a>img)+a -->
+            <!-- 안에 뭐가 들어갈지도 모르고 컴퍼넌트가 언제든 들어가고 나올 수 있어야하기 때문에 구조화고 뭐고 그냥 div -->
         <div>
             <a href="#">&lt;</a>
             <ul>
@@ -213,18 +207,15 @@
         </div>
     </section>
     <!-- ? quote's Fin -->
-
-    <!-- 위와 다르게 검수에서는 안걸림 왜냐?
+     <!-- 위와 다르게 검수에서는 안걸림 왜냐?
          섹션은 타이틀이 필요(h2) 근데 여기서는 두 구간 좌측은 전송이니까 폼필드셋레전드태그로 우측은 디아이브이에이치
          섹션은 타이틀이 없으면 자기 자손의 타이틀을 가져다씀 레전드(전용)말고 에이치만 해당사항 
          결국 섹션의 타이틀이 our어쩌고가 되버림 -->
     <section id="contact" class="contactArea">
-        <!-- ! validation check -->  
         <h2>contact US</h2>
         <form>
             <fieldset>
                 <legend>GIVE US A GOOD NEWS</legend>
-                
                 <input type="text" placeholder="Name" title="userName">
                 <input type="email" placeholder="Email" title="emailAddress">
                 <input type="text" placeholder="Subject" title="postSubject">
@@ -232,20 +223,20 @@
                 <input type="submit" value="SUBMIT">
             </fieldset>
         </form>
-
         <div>
             <h3>OUR HAPPY CLIENT</h3>
+            <!-- todo banner(click -> 이동) -->
             <ul>
-               <li><a href="#" target="_blank"><img src="images/ban_01.png" alt="ZARA"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_02.png" alt="MANGO"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_03.png" alt="BARNEYSNEWYORK"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_04.png" alt="GUCCI"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_05.png" alt="CALVINKLEIN"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_06.png" alt="NIKE"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_07.png" alt="CONVERSE"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_08.png" alt="PUMA"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_09.png" alt="LEVI'S"></a></li>
-               <li><a href="#" target="_blank"><img src="images/ban_10.png" alt="BILLABONG"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_01.png" alt="ZARA"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_02.png" alt="MANGO"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_03.png" alt="BARNEYS NEWYORK"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_04.png" alt="GUCCI"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_05.png" alt="Calvin Klein"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_06.png" alt="Nike"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_07.png" alt="CONVERSE"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_08.png" alt="PUMA"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_09.png" alt="LEVIS"></a></li>
+                <li><a href="#" target="_blank"><img src="images/ban_10.png" alt="BILLABONG"></a></li>
             </ul>
         </div>
     </section>
@@ -257,7 +248,6 @@
                 <h2><img src="images/logo.png" alt="goodBye. Tajam"></h2>
                 <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
             </div>
-
             <div>
                 <h2>OUR STUDIO</h2>
                 <address>
@@ -269,7 +259,6 @@
                     </span>
                 </address>
             </div>
-
             <div>
                 <h2>STAY IN TOUCH</h2>
                 <!-- input그룹이 하나만 있으면 굳이 필드셋(&레전드) 안써도 됨 -->
@@ -281,13 +270,12 @@
                     <!-- 작은 공간은 웬만하면 이미지 쓰지 말기 -->
                     <li><a href="#">facebook</a></li>
                     <li><a href="#">twitter</a></li>
-                    <li><a href="#">dribble</a></li>
+                    <li><a href="#">dribbble</a></li>
                     <li><a href="#">instagram</a></li>
                     <li><a href="#">google</a></li>
                     <li><a href="#">youtube</a></li>
                 </ul>
             </div>
-
             <div>
                 <a href="#">HELP</a>
                 <a href="#">TERMS &amp; CONDITION</a>
