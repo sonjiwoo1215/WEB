@@ -1,76 +1,118 @@
-/* 반응형은 밑에서 위 순서로 만듬  큰 장치의 가장 작은 해상도(1280)부터 만듬 */
-
-/* 우리나라만 1279와 1280으로 해서 끊김없게 함 
-    768은 아이패드1세대 즉 가장 작음 가장 작은 사이즈를 중점으로 하면 큰 사이즈는 무조건 잘 나옴*/
-/* landscape가로 portrait세로 */
-
-@media screen and (max-width: 767px) and (orientation:landscape){
-    body{
-        font-family: 'Playfair Display'; background-color: palevioletred; text-align: center; color: purple
-    }
-    h1{
-        font-size: 24px; line-height: 30px; font-weight: 500; color: white;
-        margin-bottom: 30px;
-    }
-    p{
-        font-size: 12px; line-height: 18px; font-weight: 300;
-        margin-bottom: 15px;
-    }
+header > div nav ul li a,
+header > div > ul li p{
+    font-family: 'Roboto';
 }
-/* ? mobile 사용자의 해상도가 768미만일 때  */
-
-@media screen and (max-width: 767px) and (orientation:portrait){
-    body{
-        font-family: 'Roboto'; background-color: rgb(207, 192, 205); color: brown;
-    }
-    h1{
-        font-size: 20px; line-height: 26px;
-        margin-bottom: 30px;
-    }
-    p{
-        font-size: 10px; line-height: 16px;
-        margin-bottom: 15px;
-    }
+a{
+    text-decoration: none;
 }
-/* ? mobile 사용자의 해상도가 768미만일 때  */
-
-@media screen and (min-width: 768px) and (max-width:1279px) and (orientation:landscape){
-    body{
-        font-family: 'Playfair Display'; background-color: palegreen; color: forestgreen;
-    }
-    h1{
-        font-size: 30px; line-height: 42px; font-weight: 300;
-    }
-    p{
-        font-size: 16px; line-height: 22px; font-weight: 500;
-    }
+header > div > ul li h2{
+    font-family: 'Playfair Display';       
 }
-/* ? tablet 사용자 해상도가 768이상 1280미만일 때 */
-
-@media screen and (min-width: 768px) and (max-width:1279px) and (orientation:portrait){
-    body{
-        font-family: 'Roboto'; background-color: paleturquoise; color: white;
-    }
-    h1{
-        font-size: 28px; line-height: 40px; font-weight: 300;
-    }
-    p{
-        font-size: 14px; line-height: 20px; font-weight: 500;
-    }
+/* display block이라 길어짐 원래는 line-height나 padding을 줘도 됨
+    근데 얘는 모듈임 모듈은 아무에게나 적용이 되어야함 line-height이 안들어가는 것도 있음 그러니 모듈쓸때는 쓰면 안됨 */
+.btn_more{
+    font-family: 'hammersmith One'; font-weight: 400; text-align: center; display: block;
+    font-size: 16px; color: #00e0d0; border: 1px solid #00e0d0; 
 }
-/* ? tablet 사용자 해상도가 768이상 1280미만일 때 */
 
-/* 1280이상의 모든 모니터를 지칭함 1280까지만 적용된것 1279부터는 적용 안됨*/
-@media screen and (min-width: 1280px){
-    body{
-        font-family: 'Playfair Display'; background-color: blue; color: white;
+
+
+/* ? All Use */
+
+/* header footer는 global.css / 안에 컨텐츠는 page.css */
+/* background-position은 배경이 공간보다 클 때 의미가 있음 */
+@media screen and (min-width: 1280px) {
+    
+    footer > div{
+        max-width: 940px; margin: 0 auto; padding: 70px 0;
     }
-    h1{
-        font-size: 32px; line-height: 40px; font-weight: 700;
+    .btn_more{
+        padding: 10px 0.6%; box-sizing: border-box;
     }
-    p{
-        font-size: 16px; line-height: 22px; font-weight: 400;
+    header{
+        padding: 15px 0 70px; background: url('../images/bg_01.png') left top / cover no-repeat;
     }
+    header > div{
+        max-width: 940px; margin: 0 auto; position: relative;
+    }
+    /* 블럭이니까 %보다는 max-width줌 / 근데 왜?? 이미 100%차지하니까???*/
+    header > div h1{
+        max-width: 128px;
+    }
+    /* a 안에 img쓰는 경우 거의 고정으로 블럭 & 너비100
+        a에 블럭은 안주면 주저앉으니까 무조건 주는거고 a가 줄어들때 같이 영역이 줄어드려면 이미지 너비100% */
+    header > div h1 a{
+        display: block;
+    }
+    header > div h1 a img{
+        width: 100%;
+    }
+    /* nav너비만큼 패딩깔아주고 포지션 쓰기(안겹치게하려고) 오른쪽0으로하면 안정적 nav는 인라인블럭 사용하지말기
+        float쓰기엔 nav가 좀 길다 */
+    /* 패딩 썼으니까 box-sizing(패딩삼킴) ab주면 너비상실하니까 너비 100% 줌 그럼 정확히 130에서 멈춤 그럼 오른쪽 정렬해주면 됨*/
+    header > div nav{
+        position: absolute; right: 0; top: 0; padding-left: 130px; box-sizing: border-box; 
+        width: 100%; text-align: right;
+    }
+    header > div nav ul li{
+        display: inline-block; 
+    }
+    /* css는 소수 두자리수까지 쓰기 */
+    header > div nav ul li:not(:first-child){
+        margin-left: 2.65%;
+    }
+    /* 이미지 로고가 128x50사이즈라 line-height 50넣어서 수직정렬 */
+    header > div nav ul li a{
+        line-height: 50px; display: block; font-size: 13px; color: white; font-weight: 900;
+    }
+    header > div nav ul li a:hover,
+    header > div nav ul li a.active{
+        color: #00e0d0;
+    }
+    /* ? gnb Fin */
+    header > div > ul{
+        margin-bottom: 125px;
+    }
+    header > div > ul li{
+        padding-top: 165px; display: block;
+    }
+    header > div > ul li h2{
+        font-size: 32px; color: white; font-weight: 900; padding-bottom: 22px;
+        background: url('../images/border.png') no-repeat center bottom; 
+        /* 둘 중 하나가 글자인거나 둘 다 글자이면 마진을 다 잰대로 넣으면 안됨 글자는 line-height 동반 즉 시안보다 더 들어감(5배수계산 -5하기) */
+        text-align: center; margin-bottom: 25px;
+    }
+    /* max-width: 775px; 시안처럼 3줄로 나오게 하려고 텍스트상자의 너비를 구함 */
+    header > div > ul li p{
+        font-size: 14px; color: white; font-weight: 300; text-align: center;
+        line-height: 24px; max-width: 775px; margin: 0 auto 45px;
+    }
+    header > div > ul li a.btn_more{
+       width: 120px; margin: 0 auto;
+    }
+    /* ol에 너비 안줄거라 text-align: center 사용 */
+    header > div > ol{
+        text-align: center;
+    }
+    header > div > ol li{
+        display: inline-block;
+    }
+    /* 동그래미 만들려고 너비높이보더 */
+    header > div > ol li a{
+        display: block; text-indent: -9999px; width: 8px; height: 8px;
+        border: 1px solid rgba(255,255,255,0.8); border-radius: 5px;
+    }
+    header > div > ol li a:hover,
+    header > div > ol li a.active{
+        background-color: #00e0d0; border-color: #00e0d0; 
+    }
+    /* ? header Fin */
+
+    footer{
+        background: url('../images/bg_05.png') left top / cover no-repeat;
+    }
+    
+
+
 }
-/* ? desktop 사용자 해상도가 1280 이상일 때 */
-
+/* ? desktop */
