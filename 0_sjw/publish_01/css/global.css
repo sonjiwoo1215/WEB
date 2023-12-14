@@ -248,7 +248,7 @@ header > div > ul li h2{
    footer > div div:last-of-type p{
     float: right;
    }
-/* ! float만 쓰는 경우 너비잡고애프터랑플롯쓰는 경우 비교 */
+/* ! float만 쓰는 경우 너비잡고애프터랑플롯쓰는 경우 비교 //height는 자손한테 상속이 안됨*/
 
 
 }
