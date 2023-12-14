@@ -2,6 +2,36 @@
 
 
 @media screen and (min-width:1280px){
-
+    /* 이런경우에선 절대 숏앤드 쓰지말기 (글로벌에서 상하패딩 잡아놨으니까 글로벌은 웬만한면 숏앤드) */
+    #about{
+        padding-left: 6.8%;
+    }
+    /* 어댑티브니까 당연히 float */
+    /* ! 플롯 둘다 쓰는 경우 */
+    #about:after{
+        content: ''; display: block; clear: both;
+    }
+    /* max-width: 235px 이미지 원래 너비 */
+    #about img{
+        float: left; width: 25%; max-width: 235px;
+    }
+    /* 자 이제 75%남음 기억*/
+    #about figcaption{
+        float: left; margin-left: 10px; width: 65%;
+    }
+    #about figcaption > *:not(a){
+        margin-bottom: 20px;
+    }
+    #about figcaption h2{
+        font-size: 22px; font-weight: 700; color: #413d4b;
+    }
+    #about figcaption p{
+        font-size: 14px; font-weight: 300; color: rgba(65,61,75,0.75); line-height: 22px;
+    }
+    /* ! max-width 랑 % 구분 상황이 점점 좁아지니까  */
+    #about .btn_more{
+        max-width: 120px;
+    }
+    /* ? CI figure Fin */
 }
 /* ? desktop */
