@@ -1,6 +1,10 @@
 header > div nav ul li a,
 header > div > ul li p,
 #about figcaption p,
+section.videoArea h2,
+section.expArea ul,
+section.teamArea ul,
+section.teamArea ul + p,
 footer > div *{
     font-family: 'Roboto';
 }
@@ -8,7 +12,10 @@ a{
     text-decoration: none;
 }
 header > div > ul li h2,
-#about figcaption h2{
+#about figcaption h2,
+section.expArea >*:not(ul),
+section.teamArea h2,
+section.teamArea > p:not(:last-of-type){
     font-family: 'Playfair Display';       
 }
 /* display block이라 길어짐 원래는 line-height나 padding을 줘도 됨
@@ -17,7 +24,10 @@ header > div > ul li h2,
     font-family: 'hammersmith One'; font-weight: 400; text-align: center; display: block;
     font-size: 16px; color: #00e0d0; border: 1px solid #00e0d0; 
 }
-
+section[class$='Area']> hr{
+    width: 3%; min-width: 50px; border-width: 2px 0 0; border-style: solid;
+    margin: 0 auto 45px;
+}
 
 
 /* ? All Use */
@@ -26,6 +36,7 @@ header > div > ul li h2,
 /* background-position은 배경이 공간보다 클 때 의미가 있음 */
 @media screen and (min-width: 1280px) {
     #about,
+    section.expArea,
     footer > div{
         max-width: 940px; margin: 0 auto; padding: 70px 0;
     }
@@ -153,7 +164,7 @@ header > div > ul li h2,
    footer > div div:nth-of-type(2) address span:last-of-type{
     background-image: url('../images/bul_phone.png');
    }
-   /* ! 애프터 구분*/
+   /* ! 애프터 구분 */
    /* input들은 마진패딩보더 다 갖고태어남 근데 box-sizing은 안갖고 태어나서 넣어줌 이건 좌우만 삼킴 상하는 아님*/
    footer > div div:nth-of-type(3) input{
     float: left; margin-bottom: 25px; display: block; box-sizing: border-box;
@@ -177,9 +188,9 @@ header > div > ul li h2,
    footer > div div:nth-of-type(3) ul{
     clear: left;
    }
-   /* px을 써야되는 상황에서 옆으로 붙이려면 인라인블럭이고 % 쓸 수 있는 경우는 float */
+   /* px을 써야되는 상황에서 옆으로 붙이려면 인라인블럭이고 %쓸 수 있는 경우는 float */
    /* 인라인블럭은 마진있음 */
-   /* li에는 규격만 설정*/
+   /* li에는 규격만 설정 나머지는 a꺼*/
    footer > div div:nth-of-type(3) ul li{
     display: inline-block; width: 35px; line-height: 35px;
    }
@@ -250,7 +261,7 @@ header > div > ul li h2,
    footer > div div:last-of-type p{
     float: right;
    }
-/* ! float만 쓰는 경우 너비잡고애프터랑플롯쓰는 경우 비교 //height는 자손한테 상속이 안됨*/
+/* ! height는 자손한테 상속이 안됨 */
 
 
 }
