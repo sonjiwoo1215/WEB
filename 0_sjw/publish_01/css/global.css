@@ -25,7 +25,7 @@ section.contactArea form fieldset legend,
 section.contactArea div h3{
     font-family: 'Playfair Display';       
 }
-/* display block이라 길어짐 원래는 line-height나 padding을 줘도 됨
+/* display block이라 길어짐 원래는 line-height이나 padding을 줘도 됨
     근데 얘는 모듈임 모듈은 아무에게나 적용이 되어야함 line-height이 안들어가는 것도 있음 그러니 모듈쓸때는 쓰면 안됨 */
 .btn_more{
     font-family: 'hammersmith One'; font-weight: 400; text-align: center; display: block;
@@ -411,7 +411,6 @@ section[class$='Area']> hr{
    footer > div div:nth-of-type(2) address span:last-of-type{
     background-image: url('../images/bul_phone.png');
    }
-   /* ! 애프터 구분 */
    /* input들은 마진패딩보더 다 갖고태어남 근데 box-sizing은 안갖고 태어나서 넣어줌 이건 좌우만 삼킴 상하는 아님*/
    footer > div div:nth-of-type(3) input{
     float: left; margin-bottom: 25px; display: block; box-sizing: border-box;
@@ -467,35 +466,6 @@ section[class$='Area']> hr{
    footer > div div:nth-of-type(3) ul li:nth-of-type(6) a{
     background-image: url('../images/ico_sns_06.png');
    }
-
-   /* footer > div div:nth-of-type(3) ul{
-    clear: left; height: 40px;
-   }
-   footer > div div:nth-of-type(3) ul li{
-    display: block; float: left; width: 14%; height: 100%;
-   }
-   footer > div div:nth-of-type(3) ul li a{
-    display: block; height: 100%; text-indent: -9999px;
-   }
-   footer > div div:nth-of-type(3) ul li:first-child a{
-    background: url('../images/ico_sns_01.png') no-repeat;
-   }
-   footer > div div:nth-of-type(3) ul li:nth-of-type(2) a{
-    background: url('../images/ico_sns_02.png') no-repeat;
-   }
-   footer > div div:nth-of-type(3) ul li:nth-of-type(3) a{
-    background: url('../images/ico_sns_03.png') no-repeat;
-   }
-   footer > div div:nth-of-type(3) ul li:nth-of-type(4) a{
-    background: url('../images/ico_sns_04.png') no-repeat;
-   }
-   footer > div div:nth-of-type(3) ul li:nth-of-type(5) a{
-    background: url('../images/ico_sns_05.png') no-repeat;
-   }
-   footer > div div:nth-of-type(3) ul li:nth-of-type(6) a{
-    background: url('../images/ico_sns_06.png') no-repeat;
-   } */
-   
    footer > div div:last-of-type{
     clear: left; font-weight: 400;
    }

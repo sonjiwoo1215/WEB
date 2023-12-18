@@ -428,7 +428,6 @@
         padding-left: 6.8%;
     }
     /* adaptive니까 당연히 float */
-    /* ! 플롯 둘다 쓰는 경우 */
     #about:after{
         content: ''; display: block; clear: both;
     }
@@ -522,65 +521,7 @@
         border-right: 1px solid rgba(0,0,0,0.2);
     }
     /* ? expArea Fin */
-    /* section#expertise{
-        padding: 70px 330px; height: 755px;
-    }
-    section#expertise h2, p{
-        text-align: center; margin-bottom: 14px;
-    }
-    section#expertise h2{
-        font-size: 22px;
-    }
-    section#expertise > p{
-        font-size: 14px;
-    }
-    section#expertise hr{
-        width: 50px; height: 0px; margin: 0 auto;
-        border: 1px solid rgba(47,45,53,0.3); 
-        margin-bottom: 48px;
-    }
-    section#expertise ul{
-        width: 100%; margin: 0; padding: 0;
-    }
-    section#expertise ul:after{
-        content: ''; display: block; clear: both;
-    }
-    section#expertise ul li{
-        float: left; display: block; width: 33.33%; 
-        background-repeat: no-repeat;
-        background-position: 50% top; padding:
-    }
-    section#expertise ul li:first-child{
-        background-image: url('../images/ico_01.png');
-    }
-
-    section#expertise ul li:nth-of-type(2){
-        background-image: url('../images/ico_02.png');
-    }
-    section#expertise ul li:nth-of-type(3){
-        background-image: url('../images/ico_03.png');
-    }
-    section#expertise ul li:nth-of-type(4){
-        background-image: url('../images/ico_04.png');
-    }
-    section#expertise ul li:nth-of-type(5){
-        background-image: url('../images/ico_05.png');
-    }
-    section#expertise ul li:nth-of-type(6){
-        background-image: url('../images/ico_06.png');
-    }
-    section#expertise ul li h3,
-    section#expertise ul li p{
-        text-align: center; font-size: 14px;
-    }
-    section#expertise ul li h3{
-        margin-bottom: 25px; 
-    }
-    section#expertise ul li p{
-        max-width: 254px; max-height: 59px; 
-        margin: 0 auto 39px;
-    } */
-
+    
     /* padding: 70px 0; 글로벌이 쓰는 코드인데 그냥 여기서 치고 넘어감 */
     section.teamArea{
         background: url('../images/bg_03.png') left top / cover no-repeat; text-align: center;
@@ -641,7 +582,7 @@
     }
     /* ! inherit */
     /* h2 폰트사이즈가 22이고 a가 14니까 탑에서 8내려오게 */
-    /* flaot right display block line-height 22 하는법도 있지만 이건 띄운 상태가 아니기 때문에 화면이 줄어들면 무조건 떨어짐 특히 모바일로 줄어들게 되면ㅇㅇ */
+    /* float right display block line-height 22 하는법도 있지만 이건 띄운 상태가 아니기 때문에 화면이 줄어들면 무조건 떨어짐 특히 모바일로 줄어들게 되면ㅇㅇ */
     section.worksArea h2 a{
         position: absolute; right: 0; top: 8px; font-size: 14px; font-weight: 300; color: inherit;
     }
@@ -665,27 +606,6 @@
         max-width: 140px; margin: 0 auto;
     }
 
-    /* section.worksArea{
-        padding: 70px 0;
-    }
-    section.worksArea h2{
-        width: 940px; font-size: 22px; margin: 0 auto;
-    } 
-    section.worksArea h2 a{
-        font-size: 14px; display: block; float: right; color: #413d4b;
-    }
-    section.worksArea ul{
-        width: 100%; margin: 0 0 70px; padding: 70px 0;
-    }
-    section.worksArea ul:after{
-        content: ''; display: block; clear: both;
-    }
-    section.worksArea ul li{
-        display: block;
-    }
-    section.worksArea ul li img{
-        float: left; width: 16.66%; 
-    } */
   /* ? worksArea Fin */
     
     section.talkArea{
