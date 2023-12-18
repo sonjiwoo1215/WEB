@@ -211,11 +211,214 @@
         max-width: 140px; margin: 0 auto;
     }
     /* ? teanArea Fin */
-    /* ! 밑에 과제 */
-    
-    
+    section.worksArea{
+        padding: 70px 0;
+    }
+    section.worksArea h2{
+        font-size: 22px; font-weight: 700; color: #413d4b; max-width: 940px; margin: 0 auto 70px;
+        position: relative;
+    }
+    /* ! inherit */
+    /* h2 폰트사이즈가 22이고 a가 14니까 탑에서 8내려오게 */
+    /* flaot right display block line-height 22 하는법도 있지만 이건 띄운 상태가 아니기 때문에 화면이 줄어들면 무조건 떨어짐 특히 모바일로 줄어들게 되면ㅇㅇ */
+    section.worksArea h2 a{
+        position: absolute; right: 0; top: 8px; font-size: 14px; font-weight: 300; color: inherit;
+    }
+    section.worksArea ul{
+        list-style: none; margin-bottom: 70px;
+    }
+    section.worksArea ul:after{
+        content: ''; display: block; clear: both;
+    }
+    section.worksArea ul li{
+        width: 16.66%; float: left;
+    }
+    section.worksArea ul li a{
+        display: block;
+    }
+    /* img블럭 주는 대신 line-height 0해도 되는데 추천 안함 */
+    section.worksArea ul li a img{
+        width: 100%; display: block;
+    }
+    section.worksArea a.btn_more{
+        max-width: 140px; margin: 0 auto;
+    }
 
+    /* section.worksArea{
+        padding: 70px 0;
+    }
+    section.worksArea h2{
+        width: 940px; font-size: 22px; margin: 0 auto;
+    } 
+    section.worksArea h2 a{
+        font-size: 14px; display: block; float: right; color: #413d4b;
+    }
+    section.worksArea ul{
+        width: 100%; margin: 0 0 70px; padding: 70px 0;
+    }
+    section.worksArea ul:after{
+        content: ''; display: block; clear: both;
+    }
+    section.worksArea ul li{
+        display: block;
+    }
+    section.worksArea ul li img{
+        float: left; width: 16.66%; 
+    } */
+  /* ? worksArea Fin */
+    
+    section.talkArea{
+        background: url("../images/bg_04.png") left top / cover no-repeat; padding: 70px 0;
+        text-align: center;
+    }
+    /* 불릿끄기 섹션안썼으면 안해도 되는 작업 */
+    section.talkArea h2{
+        display: none;
+    }
+    /* padding-top: 70px; 이거는 배경임 뒤에다 까는거니까 글자랑 만나는거 아님 -5할필요없음 */
+    section.talkArea p{
+        max-width: 770px; margin: 0 auto 45px; color: white; font-size: 16px; line-height: 26px;
+        font-weight: 400; padding-top: 70px; background: url('../images/quote.png') no-repeat center top;
+    }
+    section.talkArea p > *{
+        display: block;
+    }
+    /* p태그에다 라인헤잇줘서 얘네도 라인헤잇을 먹은거고 그러다보니 마진을 좀만 줘도 크게 벌어지는 것처럼 보임 */
+    section.talkArea p strong{
+        margin: 40px 0 5px; font-size: 14px; font-weight: 900; line-height: 14px;
+    }
+    section.talkArea p span{
+        font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7);
+    }
+    section.talkArea div{
+        max-width: 940px; margin: 0 auto;
+    }
+    section.talkArea div > *{
+        display: inline-block; vertical-align: middle;
+    }
+    section.talkArea div > a{
+        font-size: 22px; color: rgba(255,255,255,0.5);
+    }
+    /*  꺽쇄 이미지 3분할 근데 원래 크기 305는 지키기 */
+    section.talkArea div ul{
+        max-width: 305px; width: 33%;
+    }
+    section.talkArea div ul:after{
+        content: ''; display: block; clear: both;
+    }
+    /* 원래 20주려고 했는데 이미지 간격 1프로 제외 */
+    section.talkArea div ul li{
+        float: left; display: block; width: 19%;
+    }
+    section.talkArea div ul li:not(:first-child){
+        margin-left: 1.25%;
+    }
+    section.talkArea div ul li a{
+        display: block; text-align: center;
+    }
+    /* 활성화가 아닌 애들한테 패딩넣기*/
+    section.talkArea div ul li:not(.active) a{
+        padding: 15px 0; transition: padding 0.35s ease-in-out;
+    }
+    section.talkArea div ul li.active a,
+    section.talkArea div ul li:not(.active):hover a{
+        padding: 0;
+    }
+    /* 이미지가 커지면 패딩이 줄어들어야 자연스러움 두가지 잡은거임(패딩과 이미지크기) 둘다 시간 가속도 같게*/
+    section.talkArea div ul li:not(.active) a img{
+        width: 65%; transition: width 0.35s ease-in-out;
+    }
+    section.talkArea div ul li.active a img,
+    section.talkArea div ul li:not(.active):hover a img{
+        width: 100%;
+    }
+    /* ? talkArea Fin */
+    /* ! after float */
+    /* !플롯 하나만 두개다 애프터 안쓰는경우 플롯롸잇 정리 */
+    section.contactArea:after{
+        content: ''; display: block; clear: both;
+    }
+    section.contactArea h2{
+        display: none;
+    }
+    section.contactArea form fieldset,
+    section.contactArea div{
+        float: left;
+    }
+    section.contactArea form fieldset legend,
+    section.contactArea div h3{
+        font-size: 22px; font-weight: 700; color: #413d4b; margin-bottom: 35px;
+    }
+    section.contactArea form fieldset{
+        width: 50%;
+    }
+    section.contactArea form fieldset > *:not([type='submit'],legend){
+        border: 1px solid rgba(0,0,0,0.1); padding: 14px 20px; font-size: 14px;
+        font-weight: 300; display: block; width: 100%; box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    section.contactArea form fieldset > *:not([type='submit'],legend)::placeholder{
+        color: rgba(65,61,75,0.5);
+    }
+    section.contactArea form fieldset textarea{
+        height: 200px; resize: none;
+    }
+    section.contactArea form fieldset .btn_more{
+        background-color: transparent; min-width: 120px;
+    }
+    section.contactArea div{
+        width: 40%; margin-left: 10%;
+    } 
+    section.contactArea div ul:after{
+        content: ''; display: block; clear: both;
+    }
+    /* section.contactArea div ul li:nth-child(2n+1) a{text-align left} 이런 방법도 있음  */
+    section.contactArea div ul li{
+        width: 50%; float: left; display: block;
+    }
+    section.contactArea div ul li a{
+        display: block; text-align: center;
+    }
+    /* 이미지만 있으면 라인헤잇보다 마진으로 위아래 띄우기 */
+    section.contactArea div ul li a img{
+        width: 100%; max-width: 162px;
+    }
 
+    /* section.contactArea{
+        padding: 70px 0; max-width: 940px; margin: 0 auto;
+    }
+    section.contactArea:after{
+        content: ''; display: block; clear: both;
+    }
+    section.contactArea h2{
+        color: transparent;
+    }
+    section.contactArea form{
+        width: 50%; float: left;
+    }
+    section.contactArea form fieldset > *{
+        display: block; margin-bottom: 23px; width: 100%; box-sizing: border-box;
+        height: 45px;
+    }
+    section.contactArea form fieldset textarea{
+        font-family: 'Playfair Display'; resize: none; height: 200px;
+    }
+    section.contactArea form fieldset input[type='submit']{
+        width: 120px;
+    }
+    section.contactArea form fieldset legend,
+    section.contactArea div h3{
+        font-size: 22px; font-weight: 900; margin-bottom: 35px;
+    }
+    section.contactArea div{
+        width: 40%; margin-left: 5%; float: left; display: block;
+    }
+    section.contactArea div ul li{
+        display: block; float: left; width: 45%; margin-right: 5%;
+    }
+    section.contactArea div ul li a img{
+        width: 100%;
+    } */
 
 
 }
