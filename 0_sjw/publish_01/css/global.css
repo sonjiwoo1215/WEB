@@ -39,6 +39,245 @@ section[class$='Area']> hr{
 
 /* ? All Use */
 
+/* 태블릿 시뮬레이터 확인 좌우스크롤 -> 무너지는지 */
+
+
+@media screen and (min-width: 768px) and (max-width:1279px){
+    #about,
+    section.expArea,
+    section.contactArea,
+    footer > div{
+        /* 우리는 맥스를 줬으니까 패딩 좌우 3%안넣음 요즘은 맥스 없고 패딩만 */
+        max-width: 728px; margin: 0 auto; padding: 70px 0;
+    }
+    .btn_more{
+        padding: 10px 0.6%; box-sizing: border-box;
+    }
+    header{
+        padding: 15px 0 70px; background: url('../images/bg_01.png') left top / cover no-repeat;
+    }
+    header > div{
+        max-width: 728px; margin: 0 auto; position: relative;
+    }
+    /* 블럭이니까 %보다는 max-width줌 / 근데 왜?? 이미 100%차지하니까???*/
+    header > div h1{
+        max-width: 128px;
+    }
+    /* a 안에 img쓰는 경우 거의 고정으로 블럭 & 너비100
+        a에 블럭은 안주면 주저앉으니까 무조건 주는거고 a가 줄어들때 같이 영역이 줄어드려면 이미지 너비100% */
+    header > div h1 a{
+        display: block;
+    }
+    header > div h1 a img{
+        width: 100%;
+    }
+    /* nav너비만큼 패딩깔아주고 포지션 쓰기(안겹치게하려고) 오른쪽0으로하면 안정적 nav는 인라인블럭 사용하지말기
+        float쓰기엔 nav가 좀 길다 */
+    /* 패딩 썼으니까 box-sizing(패딩삼킴) ab주면 너비상실하니까 너비 100% 줌 그럼 정확히 130에서 멈춤 그럼 오른쪽 정렬해주면 됨*/
+    header > div nav{
+        position: absolute; right: 0; top: 0; padding-left: 130px; box-sizing: border-box; 
+        width: 100%; text-align: right;
+    }
+    header > div nav ul li{
+        display: inline-block; 
+    }
+    /* css는 소수 두자리수까지 쓰기 */
+    header > div nav ul li:not(:first-child){
+        margin-left: 2.65%;
+    }
+    /* 이미지 로고가 128x50사이즈라 line-height 50넣어서 수직정렬 */
+    header > div nav ul li a{
+        line-height: 50px; display: block; font-size: 13px; color: white; font-weight: 900;
+    }
+    header > div nav ul li a:hover,
+    header > div nav ul li a.active{
+        color: #00e0d0;
+    }
+    /* ? gnb Fin */
+    header > div > ul{
+        margin-bottom: 125px;
+    }
+    header > div > ul li{
+        padding-top: 165px; display: block;
+    }
+    header > div > ul li h2{
+        font-size: 32px; color: white; font-weight: 900; padding-bottom: 22px;
+        background: url('../images/border.png') no-repeat center bottom; 
+        /* 둘 중 하나가 글자인거나 둘 다 글자이면 마진을 다 잰대로 넣으면 안됨 글자는 line-height 동반 즉 시안보다 더 들어감(5배수계산 -5하기) */
+        text-align: center; margin-bottom: 25px;
+    }
+    /* max-width: 775px; 시안처럼 3줄로 나오게 하려고 텍스트상자의 너비를 구함 */
+    header > div > ul li p{
+        font-size: 14px; color: white; font-weight: 300; text-align: center;
+        line-height: 24px; max-width: 775px; margin: 0 auto 45px;
+    }
+    header > div > ul li a.btn_more{
+       width: 120px; margin: 0 auto;
+    }
+    /* ol에 너비 안줄거라 text-align: center 사용 */
+    header > div > ol{
+        text-align: center;
+    }
+    header > div > ol li{
+        display: inline-block;
+    }
+    /* 동그래미 만들려고 너비높이보더 */
+    header > div > ol li a{
+        display: block; text-indent: -9999px; width: 8px; height: 8px;
+        border: 1px solid rgba(255,255,255,0.8); border-radius: 5px;
+    }
+    header > div > ol li a:hover,
+    header > div > ol li a.active{
+        background-color: #00e0d0; border-color: #00e0d0; 
+    }
+    /* ? header Fin */
+
+    footer{
+        background: url('../images/bg_05.png') left top / cover no-repeat;
+    }
+    /* 가장 넓은 것의 너비 기준으로 너비 잡기 나머진 마진 던지기 */
+    /* 전체에 적용될 부분을 숏앤드로 */
+   footer > div div:not(:last-of-type){
+    float: left; width: 32%; margin: 0 0 70px 2%;
+   }
+   /* 취소가 되어야할 개별적인 부분을 따로 쓰기 그래야 캔슬러가 안남 */
+   footer > div div:first-of-type{
+    margin-left: 0;
+   } 
+   footer > div div h2{
+    margin-bottom: 20px;
+   }
+   /* 줄바꿈이 일어나지 않는다는 전제하에 */
+   footer > div div:not(:first-of-type) h2{
+    line-height: 50px; color: white; font-size: 15px; font-weight: 900;
+   }
+   footer > div div:not(:nth-of-type(3)){
+    font-size: 14px; line-height: 26px; color: white;
+   }
+   footer > div div:not(:nth-of-type(3)) a{
+    color: white;
+   }
+   footer > div div:nth-of-type(1),
+   footer > div div:nth-of-type(2){
+    font-weight: 300;
+   }
+   footer > div div:nth-of-type(2) address{
+    font-style: normal;
+   }
+   footer > div div:nth-of-type(2) address span{
+    display: block; padding-left: 30px;
+    background-repeat: no-repeat; background-position: left 5px;
+   }
+   footer > div div:nth-of-type(2) address span:first-of-type{
+    background-image: url('../images/bul_map.png'); margin-bottom: 10px;
+   }
+   footer > div div:nth-of-type(2) address span:last-of-type{
+    background-image: url('../images/bul_phone.png');
+   }
+   /* ! 애프터 구분 */
+   /* input들은 마진패딩보더 다 갖고태어남 근데 box-sizing은 안갖고 태어나서 넣어줌 이건 좌우만 삼킴 상하는 아님*/
+   footer > div div:nth-of-type(3) input{
+    float: left; margin-bottom: 25px; display: block; box-sizing: border-box;
+   }
+   footer > div div:nth-of-type(3) input[type='email']{
+    width: 70%; font-size: 14px; border: 1px solid rgba(255,255,255,0.5);
+    color: white; background-color: transparent; line-height: 40px;
+    /* %쓴다는건 adaptive한다는건데 이 경우는 %써서 좋을게 없음 */
+    padding: 0 15px;
+   }
+   footer > div div:nth-of-type(3) input[type='email']::placeholder{
+    color: rgba(255,255,255,0.75);
+   }
+   /* 배경 숏앤드 쓸때 이미지랑 색을 같이 써야하면 색을 맨 마지막에 쓰기 
+        배경 사이즈는 필요없으면 쓰지말기*/
+   footer > div div:nth-of-type(3) input[type='submit']{
+    width: 20%; margin-left: 5%; text-indent: -9999px; border: none; line-height: 40px;
+    background: url('../images/btn_submit.png') no-repeat center rgba(255,255,255,0.5);
+   }
+   /* 딸려오지말고 가만히 있어 */
+   footer > div div:nth-of-type(3) ul{
+    clear: left;
+   }
+   /* px을 써야되는 상황에서 옆으로 붙이려면 인라인블럭이고 %쓸 수 있는 경우는 float */
+   /* 인라인블럭은 마진있음 */
+   /* li에는 규격만 설정 나머지는 a꺼*/
+   footer > div div:nth-of-type(3) ul li{
+    display: inline-block; width: 35px; line-height: 35px;
+   }
+   footer > div div:nth-of-type(3) ul li:not(:first-child){
+    margin-left: 0;
+   }
+   /* 컨테인은 줄어들 때 대응 1대1비율로 정확하게 근데 단점은 얘가 커질일이 생기면 안됨 */
+   footer > div div:nth-of-type(3) ul li a{
+    display: block; text-indent: -9999px; background-repeat: no-repeat;
+    background-size: contain;
+   }
+   footer > div div:nth-of-type(3) ul li:first-child a{
+    background-image: url('../images/ico_sns_01.png');
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(2) a{
+    background-image: url('../images/ico_sns_02.png');
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(3) a{
+    background-image: url('../images/ico_sns_03.png');
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(4) a{
+    background-image: url('../images/ico_sns_04.png');
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(5) a{
+    background-image: url('../images/ico_sns_05.png');
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(6) a{
+    background-image: url('../images/ico_sns_06.png');
+   }
+
+   /* footer > div div:nth-of-type(3) ul{
+    clear: left; height: 40px;
+   }
+   footer > div div:nth-of-type(3) ul li{
+    display: block; float: left; width: 14%; height: 100%;
+   }
+   footer > div div:nth-of-type(3) ul li a{
+    display: block; height: 100%; text-indent: -9999px;
+   }
+   footer > div div:nth-of-type(3) ul li:first-child a{
+    background: url('../images/ico_sns_01.png') no-repeat;
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(2) a{
+    background: url('../images/ico_sns_02.png') no-repeat;
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(3) a{
+    background: url('../images/ico_sns_03.png') no-repeat;
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(4) a{
+    background: url('../images/ico_sns_04.png') no-repeat;
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(5) a{
+    background: url('../images/ico_sns_05.png') no-repeat;
+   }
+   footer > div div:nth-of-type(3) ul li:nth-of-type(6) a{
+    background: url('../images/ico_sns_06.png') no-repeat;
+   } */
+   
+   footer > div div:last-of-type{
+    clear: left; font-weight: 400;
+   }
+   footer > div div:last-of-type a{
+    display: inline-block;
+   }
+   footer > div div:last-of-type a:not(:first-of-type){
+    margin-left: 30px;
+   }
+   footer > div div:last-of-type p{
+    float: right;
+   }
+/* ! height는 자손한테 상속이 안됨 */
+
+
+}
+/* ? tablet*/
+
+
 /* header footer는 global.css / 안에 컨텐츠는 page.css */
 /* background-position은 배경이 공간보다 클 때 의미가 있음 */
 @media screen and (min-width: 1280px) {
