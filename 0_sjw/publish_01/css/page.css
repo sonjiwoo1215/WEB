@@ -1,6 +1,313 @@
 /* !contain cover */
 /*  테블릿에서 호버 이벤트는 지우기 */
 
+@media screen and (max-width:767px){
+    /* 이런경우에선 절대 숏앤드 쓰지말기 (글로벌에서 상하패딩 잡아놨으니까 글로벌은 웬만한면 숏앤드) */
+    #about{
+        padding-left: 3.5%;
+    }
+    /* adaptive니까 당연히 float */
+    #about:after{
+        content: ''; display: block; clear: both;
+    }
+    /* max-width: 235px 이미지 원래 너비 */
+    #about img{
+        float: left; width: 32%; max-width: 235px;
+    }
+    /* 자 이제 75%남음 기억*/
+    #about figcaption{
+        float: left; margin-left: 8%; width: 60%;
+    }
+    #about figcaption > *:not(a){
+        margin-bottom: 20px;
+    }
+    #about figcaption h2{
+        font-size: 22px; font-weight: 700; color: #413d4b;
+    }
+    #about figcaption p{
+        font-size: 14px; font-weight: 300; color: rgba(65,61,75,0.75); line-height: 22px;
+    }
+    /* ! max-width 랑 % 구분 상황이 점점 좁아지니까  */
+    #about .btn_more{
+        max-width: 120px;
+    }
+    /* ? CI figure Fin */
+    section.videoArea{
+        background: url('../images/bg_02.png') left top / cover no-repeat;
+        /* ! tempCode 비디오가 실제로 들어오게 되면 없어질 코드 지금 비디오 없어서 배경 넣은게 안보이니까 넣음 */
+        padding: 200px 0;
+    }
+    /* 특수문자는 일반 문자랑 다르게 밑으로 주저앉아나옴 (4px오차남 웹폰트 적용을 못받아서) 그래서 너비랑 line-height 100-4만큼 잘라낸건데 그래도 안됨 
+        즉 line-height 못쓰고 너비100px다시 돌리고 벅스사이징 후 패딩으로 맞추기*/
+    section.videoArea a{
+        display: block; font-size: 45px; color: white; border: 3px solid white;
+        margin: 0 auto 30px; border-radius: 50px; text-align: center; box-sizing: border-box;
+        width: 100px; padding: 23px 0 27px 5px;
+    }
+    section.videoArea h2{
+        font-size: 16px; color: white; text-align: center;
+    }
+    /* ? videoArea Fin */
+    section.expArea{
+        text-align: center;
+    }
+    section.expArea h2{
+        font-size: 22px; font-weight: 700; color: #413d4b; margin-bottom: 10px;
+    }
+    section.expArea > p{
+        font-size: 14px; font-weight: 400; color: rgba(47,45,53,0.75);
+        margin-bottom: 15px;
+    }
+    section.expArea ul:after{
+        content: ''; display: block; clear: both;
+    }
+    /* ! 940기준으로 패딩 좌우 퍼센트 잡아야함 33.33기준으로 하면 안됨 */
+    /* background-position 좌중우 상중하 순서 */
+    /* * 임시방편 min-height: 296px; white space를 같이 써서 해결하면 좋음 
+        아니면 현재 문제가 되는 h3의 폰트사이즈를 줄이기 (영문 10이하로는 줄이지 말기)*/
+    section.expArea ul li{
+        float: left; width: 33.33%; display: block; padding: 120px 3.5% 40px; box-sizing: border-box;
+        background-repeat: no-repeat; background-position: center 30px; min-height: 296px;
+    }
+
+    section.expArea ul li:nth-child(1){
+        background-image: url('../images/ico_01.png');
+    }
+    section.expArea ul li:nth-child(2){
+        background-image: url('../images/ico_02.png');
+    }
+    section.expArea ul li:nth-child(3){
+        background-image: url('../images/ico_03.png');
+    }
+    section.expArea ul li:nth-child(4){
+        background-image: url('../images/ico_04.png');
+    }
+    section.expArea ul li:nth-child(5){
+        background-image: url('../images/ico_05.png');
+    }
+    section.expArea ul li:nth-child(6){
+        background-image: url('../images/ico_06.png');
+    }
+    section.expArea ul li h3{
+        font-size: 12px; font-weight: 900; color: #413d4b; margin-bottom: 20px;
+    }
+    section.expArea ul li p{
+        font-size: 12px; font-weight: 300; color: rgba(51,51,51,0.75); line-height: 22px;
+    }
+    /* 123을 제외한 나머지에 적용 (앞에는 n으로 증가 021 / 뒤에는 321 결국 123 범위가 갇힌 것) */
+    section.expArea ul li:not(:nth-child(n):nth-child(-n+3)){
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    section.expArea ul li:not(:nth-child(3n)){
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }
+    /* ? expArea Fin */
+   
+    /* padding: 70px 0; 글로벌이 쓰는 코드인데 그냥 여기서 치고 넘어감 */
+    section.teamArea{
+        background: url('../images/bg_03.png') left top / cover no-repeat; text-align: center;
+        padding: 70px 0; color: white;
+    }
+    section.teamArea h2{
+        font-size: 12px; font-weight: 700; margin-bottom: 10px;
+    }
+    section.teamArea P{
+        font-size: 12px;
+    }
+    section.teamArea p:first-of-type{
+        font-weight: 400; margin: 15px;
+    }
+    /* max-width: 50px; 감싸는 디아이브이가 없어서 940안에 못가뒀기때문에 너비가 달라져서 지정함 */
+    section.teamArea > hr{
+        border-color: rgba(255,255,255,0.2); max-width: 50px;
+    }
+    /* ul은 플롯 써야하니까 꼭 940안에 가두기 */
+    section.teamArea ul{
+        max-width: 728px; margin: 0 auto 65px;
+    }
+    section.teamArea ul:after{
+        content: ''; display: block; clear: both;
+    }
+    section.teamArea ul li{
+        float: left; width: 23.5%; display: block;
+    }
+    section.teamArea ul li:not(:first-child){
+        margin-left: 2%;
+    }
+    section.teamArea ul li figure{
+        background: url('https://via.placeholder.com/220x230') center top / contain no-repeat;
+        padding-top: 180px;
+    }
+    section.teamArea ul li figure figcaption{
+        border: 1px solid rgba(255,255,255,0.5); padding: 20px 0;
+    }
+    section.teamArea ul li figure figcaption dl dt{
+        font-size: 14px; font-weight: 900; margin-bottom: 10px; 
+    }
+    section.teamArea ul li figure figcaption dl dd{
+        font-size: 13px; font-weight: 300; color: rgba(250,250,250,0.7);
+    }
+    section.teamArea ul + p{
+        margin-bottom: 25px; font-weight: 300;
+    }
+    section.teamArea a.btn_more{
+        max-width: 140px; margin: 0 auto;
+    }
+    /* ? teanArea Fin */
+    section.worksArea{
+        padding: 70px 0;
+    }
+    section.worksArea h2{
+        font-size: 22px; font-weight: 700; color: #413d4b; max-width: 728px; margin: 0 auto 70px;
+        position: relative;
+    }
+    /* ! inherit */
+    /* h2 폰트사이즈가 22이고 a가 14니까 탑에서 8내려오게 */
+    /* flaot right display block line-height 22 하는법도 있지만 이건 띄운 상태가 아니기 때문에 화면이 줄어들면 무조건 떨어짐 특히 모바일로 줄어들게 되면ㅇㅇ */
+    section.worksArea h2 a{
+        position: absolute; right: 0; top: 8px; font-size: 14px; font-weight: 300; color: inherit;
+    }
+    section.worksArea ul{
+        list-style: none; margin-bottom: 70px;
+    }
+    section.worksArea ul:after{
+        content: ''; display: block; clear: both;
+    }
+    section.worksArea ul li{
+        width: 16.66%; float: left;
+    }
+    section.worksArea ul li a{
+        display: block;
+    }
+    /* img블럭 주는 대신 line-height 0해도 되는데 추천 안함 */
+    section.worksArea ul li a img{
+        width: 100%; display: block;
+    }
+    section.worksArea a.btn_more{
+        max-width: 140px; margin: 0 auto;
+    }
+  /* ? worksArea Fin */
+    
+    section.talkArea{
+        background: url("../images/bg_04.png") left top / cover no-repeat; padding: 70px 0;
+        text-align: center;
+    }
+    /* 불릿끄기 섹션안썼으면 안해도 되는 작업 */
+    section.talkArea h2{
+        display: none;
+    }
+    /* padding-top: 70px; 이거는 배경임 뒤에다 까는거니까 글자랑 만나는거 아님 -5할필요없음 */
+    section.talkArea p{
+        max-width: 728px; margin: 0 auto 45px; color: white; font-size: 16px; line-height: 26px;
+        font-weight: 400; padding-top: 70px; background: url('../images/quote.png') no-repeat center top;
+    }
+    section.talkArea p > *{
+        display: block;
+    }
+    /* p태그에다 라인헤잇줘서 얘네도 라인헤잇을 먹은거고 그러다보니 마진을 좀만 줘도 크게 벌어지는 것처럼 보임 */
+    section.talkArea p strong{
+        margin: 40px 0 5px; font-size: 14px; font-weight: 900; line-height: 14px;
+    }
+    section.talkArea p span{
+        font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7);
+    }
+    section.talkArea div{
+        max-width: 728px; margin: 0 auto;
+    }
+    section.talkArea div > *{
+        display: inline-block; vertical-align: middle;
+    }
+    section.talkArea div > a{
+        font-size: 22px; color: rgba(255,255,255,0.5);
+    }
+    /*  꺽쇄 이미지 3분할 근데 원래 크기 305는 지키기 */
+    section.talkArea div ul{
+        max-width: 305px; width: 43%;
+    }
+    section.talkArea div ul:after{
+        content: ''; display: block; clear: both;
+    }
+    /* 원래 20주려고 했는데 이미지 간격 1프로 제외 */
+    section.talkArea div ul li{
+        float: left; display: block; width: 19%;
+    }
+    section.talkArea div ul li:not(:first-child){
+        margin-left: 1.25%;
+    }
+    section.talkArea div ul li a{
+        display: block; text-align: center;
+    }
+    /* 활성화가 아닌 애들한테 패딩넣기*/
+    section.talkArea div ul li:not(.active) a{
+        padding: 15px 0; transition: padding 0.35s ease-in-out;
+    }
+    section.talkArea div ul li.active a,
+    section.talkArea div ul li:not(.active):hover a{
+        padding: 0;
+    }
+    /* 이미지가 커지면 패딩이 줄어들어야 자연스러움 두가지 잡은거임(패딩과 이미지크기) 둘다 시간 가속도 같게*/
+    section.talkArea div ul li:not(.active) a img{
+        width: 65%; transition: width 0.35s ease-in-out;
+    }
+    section.talkArea div ul li.active a img,
+    section.talkArea div ul li:not(.active):hover a img{
+        width: 100%;
+    }
+    /* ? talkArea Fin */
+    /* ! after float */
+    /* !플롯 하나만 두개다 애프터 안쓰는경우 플롯롸잇 정리 */
+    section.contactArea:after{
+        content: ''; display: block; clear: both;
+    }
+    section.contactArea h2{
+        display: none;
+    }
+    section.contactArea form fieldset,
+    section.contactArea div{
+        float: left;
+    }
+    section.contactArea form fieldset legend,
+    section.contactArea div h3{
+        font-size: 22px; font-weight: 700; color: #413d4b; margin-bottom: 35px;
+    }
+    section.contactArea form fieldset{
+        width: 50%;
+    }
+    section.contactArea form fieldset > *:not([type='submit'],legend){
+        border: 1px solid rgba(0,0,0,0.1); padding: 14px 20px; font-size: 14px;
+        font-weight: 300; display: block; width: 100%; box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    section.contactArea form fieldset > *:not([type='submit'],legend)::placeholder{
+        color: rgba(65,61,75,0.5);
+    }
+    section.contactArea form fieldset textarea{
+        height: 200px; resize: none;
+    }
+    section.contactArea form fieldset .btn_more{
+        background-color: transparent; min-width: 120px;
+    }
+    section.contactArea div{
+        width: 40%; margin-left: 10%;
+    } 
+    section.contactArea div ul:after{
+        content: ''; display: block; clear: both;
+    }
+    /* section.contactArea div ul li:nth-child(2n+1) a{text-align left} 이런 방법도 있음  */
+    section.contactArea div ul li{
+        width: 50%; float: left; display: block;
+    }
+    section.contactArea div ul li a{
+        display: block; text-align: center;
+    }
+    /* 이미지만 있으면 라인헤잇보다 마진으로 위아래 띄우기 */
+    section.contactArea div ul li a img{
+        width: 100%; max-width: 162px;
+    }
+
+
+}
+/* ? mobile */
 
 @media screen and (min-width:768px) and (max-width:1297px){
     /* 이런경우에선 절대 숏앤드 쓰지말기 (글로벌에서 상하패딩 잡아놨으니까 글로벌은 웬만한면 숏앤드) */
