@@ -71,8 +71,28 @@ section[class$='Area']> hr{
         float쓰기엔 nav가 좀 길다 */
     /* 패딩 썼으니까 box-sizing(패딩삼킴) ab주면 너비상실하니까 너비 100% 줌 그럼 정확히 130에서 멈춤 그럼 오른쪽 정렬해주면 됨*/
     header > div nav{
-        position: absolute; right: 0; top: 0; padding-left: 130px; box-sizing: border-box; 
-        width: 100%; text-align: right;
+        width: 50%; margin-left: 15%; float: right; text-align: right;
+    }
+    header > div nav label.mui{
+        padding: 5px 3px; border: 1px solid white; width: 22px; display: block;
+        /* 오른쪽 끝으로 오게 하려고 left auto */
+        margin: 5px 0 0 auto;
+    }
+    header > div nav label.mui span{
+        border-top: 2px solid white; display: block;
+    }
+    header > div nav label.mui span:not(:last-of-type){
+        margin-bottom: 3px;
+    }
+    header > div nav input[type='checkbox'].mui{
+        display: none;
+    }
+    /* 높이값 초과되면 싹 다 감추기 */
+    header > div nav ul{
+        height: 0; overflow: hidden; transition: height 1s ease-in-out;
+    }
+    header > div nav input[type='checkbox']#mnav:checked + ul{
+        height: 350px;
     }
     header > div nav ul li{
         display: inline-block; 
