@@ -41,6 +41,8 @@ section[class$='Area']> hr{
 @media screen and (max-width: 767px){
     #about,
     section.expArea,
+    section.teamArea ul,
+    section.worksArea h2,
     section.contactArea,
     footer > div{
         /* 우리는 맥스를 줬으니까 패딩 좌우 3%안넣음 요즘은 맥스 없고 패딩만 */
@@ -292,7 +294,7 @@ section[class$='Area']> hr{
         width: 100%; text-align: right;
     }
     header > div nav ul li{
-        display: inline-block; 
+        display: inline-block;
     }
     /* css는 소수 두자리수까지 쓰기 */
     header > div nav ul li:not(:first-child){
