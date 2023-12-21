@@ -1,11 +1,96 @@
+body{
+    background-color: #e4e5e7;
+}
 .mont{
     font-family: 'Montserrat'; 
 }
 .crim{
     font-family: 'Crimson Pro';
 }
+/* 모듈: 클래스 만들고 속성 넣고 구조에 넣기 */
+input[type='checkbox'],
+input[type='radio']{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+/* ? All Use */
 
 @media screen and (min-width: 1280px){
-    
+    header > div{
+        max-width: 1170px; margin: 0 auto;
+    }
+    header{
+        border-bottom: 1px solid #f0f2f7; background-color: white;
+    }
+    header > div:after{
+        content: ''; display: block; clear: both;
+    }
+    header > div > *{
+        float: left;
+    }
+    /* 우선순위 : 태그 > 선택자 > class & id 
+    class나 id 명령을 듣는 구글에서 땡겨오는 cdn ..(여기서 label)같은 것들은 그냥 div label이렇게 하면 css가 잘 안들어감  */
+    header > div label.material-icons{
+        width: 5.12%; max-width: 60px; line-height: 90px; box-sizing: border-box;
+        border-right: 1px solid #f0f2f7; display: block; color: #3e425a; 
+    }
+    /* 4덩어리 너비 합이 100%가 되게하고 오른쪽으로 붙이기 
+        마진 안구하니까 빠른 플롯 방식이지만 추천은 안함 반응형에서 힘듬  */
+    header > div h1{
+        width: 10.68%; max-width: 125px;
+    }
+    /* 이미지니까 라인헤잇 줄 수가 없음 */
+    header > div h1 a{
+        display: block; padding: 31px 0; text-align: right;
+    }
+    header > div h1 a img{
+        width: 100%; max-width: 92px;
+    }
+    header > div nav{
+        width: 54.7%;
+    }
+    header > div nav ul{
+        text-align: center;
+    }
+    header > div nav ul li{
+        display: inline-block;
+    }
+    /* 마진은 부모 뚫고 나감 그럼 나가서 밑에 애들 밀어서 밑은 떨어짐 마진 넣을때 첫/마지막 해제 잊지말기 */
+    header > div nav ul li:not(:first-child){
+        margin-left: 2.56%;
+    }
+    header > div nav ul li a{
+        display: block; font-size: 14px; font-weight: 600; color: #343e5c;
+        line-height: 90px;
+    }
+    header > div div{
+        width: 29.5%; font-size: 11px; color: #343e5c; text-align: right;
+        line-height: 90px;
+    }
+    /* figure는 블럭 css에서 디스플레이 바꾸는건 감쌀 수 없지만 감쌀 수 있는 척을 하게 하는 것 원체 속성이 바뀌는게 아님
+        a태그는 블럭을 감쌀 수 없음 */
+    header > div > *:not(input){
+        display: inline-block;
+    }
+    /* png는 사이즈를 안적는게 좋음 근데 그럼 숏앤드를 밀어야하니까
+         contain 쓰려면 svg여야함 가변이 가능함 자유자재로 늘어나기도 하고 줄어들기도 함 */
+    header > div div strong{
+        padding-left: 25px; line-height: 17px; font-weight: 600;
+        background: url('../images/bul_cart.png') left top / contain no-repeat;
+    }
+    /* 웨이트는 사용자가 브라우저 뭐 바꾸면 넘 두껍게 나와서 400설정 넣음 */
+    header > div div span{
+        width: 24px; line-height: 24px; background-color: #e3e8f0; border-radius: 12px;
+        text-align: center; margin-left: 2%; font-weight: 400;
+    } 
+    /* 버튼이나 셀렉트 같은 인풋들은 상속을 잘 못받음 글꼴이 적용안됨 font-family: inherit; 이거 넣어주기*/
+    header > div div input[type='button']{
+        font-size: 11px; font-weight: 600; padding: 8px 15px; border: 2px solid #e3e8f0;
+        border-radius: 16px; background-color: white; margin-left: 8%;
+        font-family: inherit;
+    }
+
 }
 /* ?desktop */
