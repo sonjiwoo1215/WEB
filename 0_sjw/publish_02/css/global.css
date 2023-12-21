@@ -155,6 +155,7 @@ a{
         display: inline-block;
     }
     /* ! 2.56??? */
+    /* p태그 맥스윗스 잠궈서 */
     footer > div:first-child ul li:not(:first-child){
         margin-left: 2.56%;
     }
