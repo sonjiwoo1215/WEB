@@ -105,7 +105,7 @@ a{
         position: absolute; top: 0; text-align: center; width: 17%; line-height: 90px;
         font-size: 18px; font-weight: 600; color: #3a405b;
     }
-    /* ol한테 보더 주기보다는 <>한테 주기 ul한테 주려면 max-width잡아야하는데 그럼 포지션을 왜썼냐 */
+    /* ol한테 보더 주기보다는 <>한테 주기 ol한테 주려면 max-width잡아야하는데 그럼 포지션을 왜썼냐 */
     .paging > a:first-of-type{
         left: 0; border-right: 1px solid #f0f2f7;
     }
