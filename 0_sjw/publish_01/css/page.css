@@ -1,4 +1,4 @@
-/* ! clearboth content 안쓰고..*/
+
 /*  테블릿에서 호버 이벤트는 지우기 */
 /*  figcaption은 블럭 */
 /* 한글 최저폰트는 12 */
@@ -140,7 +140,6 @@
         font-size: 18px; font-weight: 700; color: #413d4b; 
         position: relative;
     }
-    /* ! inherit */
     /* h2 폰트사이즈가 22이고 a가 14니까 탑에서 8내려오게 */
     /* flaot right display block line-height 22 하는법도 있지만 이건 띄운 상태가 아니기 때문에 화면이 줄어들면 무조건 떨어짐 특히 모바일로 줄어들게 되면ㅇㅇ */
     section.worksArea h2 a{
@@ -434,7 +433,6 @@
         font-size: 22px; font-weight: 700; color: #413d4b; max-width: 728px; margin: 0 auto 70px;
         position: relative;
     }
-    /* ! inherit */
     /* h2 폰트사이즈가 22이고 a가 14니까 탑에서 8내려오게 */
     /* flaot right display block line-height 22 하는법도 있지만 이건 띄운 상태가 아니기 때문에 화면이 줄어들면 무조건 떨어짐 특히 모바일로 줄어들게 되면ㅇㅇ */
     section.worksArea h2 a{
@@ -527,8 +525,6 @@
         width: 100%;
     }
     /* ? talkArea Fin */
-    /* ! after float */
-    /* !플롯 하나만 두개다 애프터 안쓰는경우 플롯롸잇 정리 */
     section.contactArea:after{
         content: ''; display: block; clear: both;
     }

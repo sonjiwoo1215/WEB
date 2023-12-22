@@ -25,12 +25,13 @@ section.contactArea form fieldset legend,
 section.contactArea div h3{
     font-family: 'Playfair Display';       
 }
-/* display block이라 길어짐 원래는 line-height이나 padding을 줘도 됨
+/* display block이라 길어짐 (100%차지하니까) 원래는 line-height이나 padding을 줘도 됨
     근데 얘는 모듈임 모듈은 아무에게나 적용이 되어야함 line-height이 안들어가는 것도 있음 그러니 모듈쓸때는 쓰면 안됨 */
 .btn_more{
     font-family: 'hammersmith One'; font-weight: 400; text-align: center; display: block;
     font-size: 16px; color: #00e0d0; border: 1px solid #00e0d0; 
 }
+/* 원래 보더는 약간 네모모양 */
 section[class$='Area']> hr{
     width: 3%; min-width: 50px; border-width: 2px 0 0; border-style: solid;
     margin: 0 auto 45px;
