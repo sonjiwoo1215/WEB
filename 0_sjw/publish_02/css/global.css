@@ -15,6 +15,18 @@ input[type='radio']{
 a{
     text-decoration: none;
 }
+/* 셀렉트는 자기가 데리고 있는 옵션 중 가장 긴 것을 기준으로 너비를 잡음 */
+.selectBox{
+    display: inline-block; box-sizing: border-box;
+    background: url('../images/bg_arrow.png') no-repeat right center;
+}
+ /* 해킹코드 (운영체제가 내리는 지시사항을 취소시킴) */
+ .selectBox select{
+    border: none; box-shadow: none; background-image: none; background-color: transparent;
+    appearance: none; font-family: inherit; font-weight: 600; font-size: 11px;
+    color: #343e5c; padding: 10px 20px 10px 0;
+}
+
 /* ? All Use */
 
 @media screen and (min-width: 1280px){
@@ -105,7 +117,7 @@ a{
         position: absolute; top: 0; text-align: center; width: 17%; line-height: 90px;
         font-size: 18px; font-weight: 600; color: #3a405b;
     }
-    /* ol한테 보더 주기보다는 <>한테 주기 ol한테 주려면 max-width잡아야하는데 그럼 포지션을 왜썼냐 */
+    /* ol한테 보더 주기보다는 <>한테 주기 ul한테 주려면 max-width잡아야하는데 그럼 포지션을 왜썼냐 */
     .paging > a:first-of-type{
         left: 0; border-right: 1px solid #f0f2f7;
     }
