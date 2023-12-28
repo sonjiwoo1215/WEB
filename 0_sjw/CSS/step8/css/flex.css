@@ -21,12 +21,51 @@
            플렉스는 부모가 자손을 배치함 모든 권한이 부모에게 있음 감싸지 않는다 떨어지지 않는다 
    wrap:너비만큼 다 갖고 떨어짐 (width초과시 개행)
    wrap-reverse: 아래 왼쪽에서 오른쪽으로가다가 위로 쌓아올려지는 방식 (개행하되 역배치) */
-   
+
 /* direction row-reverse랑 같이 쓰면 오른쪽에서 위로 밀면서 위로 쌓아올리기 */
 .flexContainer.wrap{
     flex-wrap: wrap-reverse; flex-direction: row-reverse;
 }
 /* 값들의 너비를 지정해야함 */
-.flexContainer.wrap .flexItem{
+.flexContainer.wrap .flexItem,
+.flexContainer.flow .flexItem{
     width: 500px;
+}
+/* flex-flow: direction wrap 한번에 쓰기(위위에는 나눠서 씀) */
+.flexContainer.flow{
+    flex-flow: row-reverse wrap-reverse;
+}
+/* 플롯과 플렉스의 가장 큰 차이점
+     플롯에는 정렬이 없음 플롯된 걸 부모가 마진0오토등으로 움직이는것 
+     플렉스는 부모가 기준을 잡아서 자손들에게 정렬을 내릴 수 있음 trbl이런 단어를 아예 안씀 start,end 등등 사용
+        x,y각 정렬법 3개 갖고있음 (items 안중요 content 가장 중요)  
+       xAxis : justufy  
+         1. -content : 부모를 기준으로 자손을 정렬 시키는 방법
+         2. -items : 자손들끼리 정렬하는 방법
+         3. -self : 자기 혼자 정렬하는 방법 
+
+       yAxis: align
+         1. -content : 부모를 기준으로 자손을 정렬 시키는 방법
+         2. -items : 자손들끼리 정렬하는 방법
+         3. -self : 자기 혼자 정렬하는 방법
+         
+     ab이나 텍스트 버티컬 얼라인등은 축이 변하지 않았음 
+     근데 플렉스공간내애서 x,y축은 의미가 없음 direction의 영향을 받음 축이 돌아갈 수 있음
+        row-reverse하면 축이 바뀌어버리는것 
+        column은 시계방향 회전 x,y축이 바뀜
+        column-reverse하면 start end가 바뀜
+        column-reverse로 x,y축이 회전해서 바뀌어도 y가 된 연두색을 건드리고 싶으면 justify*/
+
+/* flex-start default 원래 왼쪽에서 정렬 
+   flex-end 디렉션 로우리벌스랑 다름 그냥 그대로 움직여서 오른쪽 정렬
+   center 가운데 정렬 (플롯은 못해도 인라인블럭으로도 할 수 있음) 
+   space 3형제 매우 중요
+    -between : 첫이 부모의 왼쪽 끝 마지막이 부모의 오른쪽 끝 기준으로 여백없이 0으로 붙음 나머지 간격은 다 같음
+    -around : 항목 간 간격을 최대한 벌려놓고 남은 공간을 좌우에 나누기 2해서 첫 마지막에다가 버림 부모 경계선과 닿지 않게 
+    -evenly :  간격 다 동일하게*/
+.flexContainer.justifyContent{
+    justify-content: space-evenly; margin: 0; padding: 0;
+}
+.flexContainer.justifyContent .flexItem{
+    margin: 0;
 }
