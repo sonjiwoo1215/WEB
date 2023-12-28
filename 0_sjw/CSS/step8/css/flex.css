@@ -8,7 +8,25 @@
 .flexItem{
     margin: 10px; padding: 20px; color: white; text-align: center; border-radius: 27px;
     background-color: black;
- }
+}
+/*  row: left to right
+    row-reverse: right to left (float: right)
+    column: top to bottom
+    column-reverse: bottom to top (float에서 불가능)
+*/
 .flexContainer.direction{
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
+}
+/* nowrap (default/ 개행불허 flexItem width자동축소 /줄바꿈 안됨 인블이나 플롯이였으면 부모가 2500을 담을 수 없으니 무조건 떨어짐 
+           플렉스는 부모가 자손을 배치함 모든 권한이 부모에게 있음 감싸지 않는다 떨어지지 않는다 
+   wrap:너비만큼 다 갖고 떨어짐 (width초과시 개행)
+   wrap-reverse: 아래 왼쪽에서 오른쪽으로가다가 위로 쌓아올려지는 방식 (개행하되 역배치) */
+   
+/* direction row-reverse랑 같이 쓰면 오른쪽에서 위로 밀면서 위로 쌓아올리기 */
+.flexContainer.wrap{
+    flex-wrap: wrap-reverse; flex-direction: row-reverse;
+}
+/* 값들의 너비를 지정해야함 */
+.flexContainer.wrap .flexItem{
+    width: 500px;
 }
