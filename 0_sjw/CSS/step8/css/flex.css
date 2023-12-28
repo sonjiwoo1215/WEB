@@ -50,7 +50,7 @@
          3. -self : 자기 혼자 정렬하는 방법
          
      ab이나 텍스트 버티컬 얼라인등은 축이 변하지 않았음 
-     근데 플렉스공간내애서 x,y축은 의미가 없음 direction의 영향을 받음 축이 돌아갈 수 있음
+     근데 플렉스공간내애서 x,y축은 의미가 없음 direction의 영향을 받음 축이 돌아갈 수 있음 좌중우상중하가 바뀔 수 있다
         row-reverse하면 축이 바뀌어버리는것 
         column은 시계방향 회전 x,y축이 바뀜
         column-reverse하면 start end가 바뀜
@@ -62,10 +62,17 @@
    space 3형제 매우 중요
     -between : 첫이 부모의 왼쪽 끝 마지막이 부모의 오른쪽 끝 기준으로 여백없이 0으로 붙음 나머지 간격은 다 같음
     -around : 항목 간 간격을 최대한 벌려놓고 남은 공간을 좌우에 나누기 2해서 첫 마지막에다가 버림 부모 경계선과 닿지 않게 
-    -evenly :  간격 다 동일하게*/
+    -evenly :  간격 다 동일하게 */
 .flexContainer.justifyContent{
     justify-content: space-evenly; margin: 0; padding: 0;
 }
-.flexContainer.justifyContent .flexItem{
+.flexContainer.justifyContent .flexItem,
+.flexContainer.alignContent .flexItem{
     margin: 0;
+}
+/* 높이 지정을 안하면 아무 변화가 없음 
+    wrap
+    align은 justify가 없는 스트레칭이라는 속성이 디폴트임 늘리는 것 그래서 wrap으로 끊어버리기 그때부터 얼라인이 가동함*/
+.flexContainer.alignContent{
+   height: 400px; align-content: center; flex-wrap: wrap;
 }
