@@ -14,8 +14,9 @@
     column: top to bottom
     column-reverse: bottom to top (float에서 불가능)
 */
+/* column reverse 열 정렬되고 위아래 바뀜 */
 .flexContainer.direction{
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
 }
 /* nowrap (default/ 개행불허 flexItem width자동축소 /줄바꿈 안됨 인블이나 플롯이였으면 부모가 2500을 담을 수 없으니 무조건 떨어짐 
            플렉스는 부모가 자손을 배치함 모든 권한이 부모에게 있음 감싸지 않는다 떨어지지 않는다 
@@ -53,7 +54,7 @@
      근데 플렉스공간내애서 x,y축은 의미가 없음 direction의 영향을 받음 축이 돌아갈 수 있음 좌중우상중하가 바뀔 수 있다
         row-reverse하면 축이 바뀌어버리는것 
         column은 시계방향 회전 x,y축이 바뀜
-        column-reverse하면 start end가 바뀜
+        column-reverse하면 start end가 바뀜 
         column-reverse로 x,y축이 회전해서 바뀌어도 y가 된 연두색을 건드리고 싶으면 justify*/
 
 /* flex-start default 원래 왼쪽에서 정렬 
