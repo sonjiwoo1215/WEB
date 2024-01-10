@@ -1,4 +1,4 @@
-html, body{
+html,body{
     height: 100%;
 }
 body{
@@ -7,21 +7,20 @@ body{
 header nav, .container{
     max-width: 1170px; margin: 0 auto;
 }
-
 .container .row article{
-    transition-duration: 0.75s; transition-timing-function: ease-out;
+    transition-duration: 0.75s; transition-timing-function: ease-out; 
 }
-.container .row > [class$='1']{background-color: #b6ff00;}
-.container .row > [class$='2']{background-color: #0094ff;}
-.container .row > [class$='3']{background-color: #ff00dc;}
-.container .row > [class$='4']{background-color: #dfd8ca;}
-.container .row > [class$='8']{background-color: #b91646;}
+.container .row >[class$='1']{background-color:#b6ff00;}
+.container .row >[class$='2']{background-color: #0094ff;}
+.container .row >[class$='3']{background-color: #ff00dc;}
+.container .row >[class$='4']{background-color: #dfd8ca;}
+.container .row >[class$='8']{background-color: #b91646;}
 
 header nav ul li a{
     font-weight: 700;
 }
-
 /* ? A/U */
+
 
 @media screen and (max-width: 767px){
     header{
@@ -30,10 +29,6 @@ header nav ul li a{
     header nav{
         padding: 10px 0;
     }
-    header nav #MUI_on,
-    header nav ul li.mobileUI{
-        display: none;
-    }
     header nav #MUI_on{
         display: none;
     }
@@ -41,10 +36,11 @@ header nav ul li a{
         height: 340px;
     }
     header nav ul{
-        height: 18px; overflow: hidden; transform: height 1s ease-out;
+        height: 18px; overflow: hidden; transition: height 1s ease-out;
     }
     header nav ul li{
-        display: block; text-align: center;
+        display: /*inline-*/block; text-align: center;
+        /* width: 19%; */
     }
     header nav ul li.mobileUI label{
         display: block; width: 30px; margin: 0 auto;
@@ -56,9 +52,7 @@ header nav ul li a{
     header nav ul li.mobileUI label:hover span{
         border-top: 3px solid #ff00dc;
     }
-    /* 디스플레이를 블럭으로 했다가 인라인블럭으로 바꿈 
-    그럼 부모가 인라인블럭에 19퍼차지해도 부모 너비를 따라가지 않고 자기가 데리고있는 컨텐츠 너비만큼만 차지 
-    남는 간격은 마진으로 알아서 남도록 냅둠*/
+    
     header nav ul li a{
         text-decoration: none; text-transform: uppercase; display: inline-block;
         font-size: 14px; color: #635f59; padding: 20px; border: 5px solid white;
@@ -71,10 +65,10 @@ header nav ul li a{
         border-radius: 10px 0;
     }
     .container{
-        padding-top: 40px;
+        padding-top: /*85px*/ 40px;
     }
 }
-/* ? mobile -> 768px이상일 때 */
+/* ? mobile*/
 
 @media screen and (min-width: 768px){
     header{
@@ -108,4 +102,5 @@ header nav ul li a{
         padding-top: 85px;
     }
 }
-/* ? tablet & desktop -> 768px이상일 때 */
+/* ? tablet & desktop -> 768px 일 때 */
+

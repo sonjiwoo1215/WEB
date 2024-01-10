@@ -1,12 +1,12 @@
+/*
 
-/* 
 @ColumnWidth: 6.5%;
 @GutterWidth: 2%;
 @paddingWidth: 1%;
+
 .span(@column){
     width: (@ColumnWidth * @column) + (@GutterWidth * (@column - 1));
 }
-
 .row{
     overflow: hidden; width: 100%;
 }
@@ -17,10 +17,10 @@
 .span_2{.span(2);}
 .span_3{.span(3);}
 .span_4{.span(4);}
-.span_8{.span(8);} */
+.span_8{.span(8);}
+*/
 
-@media screen and (max-width: 757px){
-    
+@media screen and (max-width: 767px) {
     .row article{
         padding: 30px; box-sizing: border-box;
     }
@@ -28,16 +28,14 @@
         padding: 50px;
     }
 }
+/* ? mobile */
 
-/* ?mobile */
-
-@media screen and (min-width: 768px) and (max-width: 959px){
-    
+@media screen and (min-width: 768px) and (max-width: 959px) {
     .row {
         overflow: hidden;
         width: 100%;
       }
-      [class*='span'] {
+      [class*='span']{
         float: left;
         padding: 10px 1%;
         box-sizing: border-box;
@@ -45,9 +43,7 @@
       [class*='span']:first-child{
         padding: 10px 0;
       }
-      .span_1,
-      .span_2,
-      .span_3{
+      .span_1,.span_2,.span_3{
         width: 25%;
       }
       .span_4{
@@ -56,21 +52,23 @@
       .span_8{
         width: 45%;
       }
-      /* ? grid Less */
+      /* ? grid less */
+
       .container .row.line1 article.span_4{
         height: 286px;
       }
-      /* .container .row.line1 article.span_2:nth-child(n+6):nth-child(-n+9)   */
-      .container .row.line1 article.span_2:nth-child(6),
+      /* .container .row.line1 article.span_2:nth-child(6),
       .container .row.line1 article.span_2:nth-child(7),
       .container .row.line1 article.span_2:nth-child(8),
-      .container .row.line1 article.span_2:nth-child(9){
+      .container .row.line1 article.span_2:nth-child(9) */
+      .container .row.line1 article.span_2:nth-child(n+6):nth-child(-n+9){
         width: 50%;
       }
       .container .row.line1 article:not(.span_4){
         height: 143px;
       }
-      /* * Line1 */
+      /* * line1 */
+
       .container .row.line2 article.span_2:nth-child(4),
       .container .row.line2 article.span_2:last-child{width:50%;}
       .container .row.line2 article{height:143px;}
@@ -85,16 +83,14 @@
       .container .row.line4 article{height:195px;}
       /*line4 Fin*/
 }
+/* ? tablet */
 
-/* ?tablet */
-
-@media screen and (min-width: 960px){
-    
+@media screen and (min-width: 960px) {
     .row {
         overflow: hidden;
         width: 100%;
       }
-      [class*='span'] {
+      [class*='span']{
         float: left;
         padding: 10px 1%;
       }
@@ -116,7 +112,7 @@
       .span_8 {
         width: 66%;
       }
-      /* ? grid Less */
+      /* ? grid less */
       .container .row.line1 article.span_4{
         height: 266px;
       }
@@ -131,8 +127,45 @@
         height: 175px;
       }
 
-
-
 }
-/* ?desktop */
-      
+/* ? desktop */
+
+/* 
+.span_1 {
+  width: 6.5%;
+}
+.span_2 {
+  width: 15%;
+}
+.span_3 {
+  width: 23.5%;
+}
+.span_4 {
+  width: 32%;
+}
+.span_5 {
+  width: 40.5%;
+}
+.span_6 {
+  width: 49%;
+}
+.span_7 {
+  width: 57.5%;
+}
+.span_8 {
+  width: 66%;
+}
+.span_9 {
+  width: 74.5%;
+}
+.span_10 {
+  width: 83%;
+}
+.span_11 {
+  width: 91.5%;
+}
+.span_12 {
+  width: 100%;
+}
+*/
+
