@@ -1,0 +1,111 @@
+
+/* 
+@ColumnWidth: 6.5%;
+@GutterWidth: 2%;
+@paddingWidth: 1%;
+.span(@column){
+    width: (@ColumnWidth * @column) + (@GutterWidth * (@column - 1));
+}
+
+.row{
+    overflow: hidden; width: 100%;
+}
+[class*='span']{
+    float: left; padding: 10px @paddingWidth;
+}
+.span_1{.span(1);}
+.span_2{.span(2);}
+.span_3{.span(3);}
+.span_4{.span(4);}
+.span_8{.span(8);} */
+
+@media screen and (min-width: 768px) and (max-width: 959px){
+    
+    .row {
+        overflow: hidden;
+        width: 100%;
+      }
+      [class*='span'] {
+        float: left;
+        padding: 10px 1%;
+        box-sizing: border-box;
+      }
+      [class*='span']:first-child{
+        padding: 10px 0;
+      }
+      .span_1,
+      .span_2,
+      .span_3{
+        width: 25%;
+      }
+      .span_4{
+        width: 50%;
+      }
+      .span_8{
+        width: 45%;
+      }
+      /* ? grid Less */
+      .container .row.line1 article.span_4{
+        height: 286px;
+      }
+      .container .row.line1 article.span_2:nth-child(6),
+      .container .row.line1 article.span_2:nth-child(7),
+      .container .row.line1 article.span_2:nth-child(8),
+      .container .row.line1 article.span_2:nth-child(9){
+        width: 50%;
+      }
+      .container .row.line1 article:not(.span_4){
+        height: 143px;
+      }
+      /* * Line1 */
+}
+/* ?tablet */
+
+@media screen and (min-width: 960px){
+    
+    .row {
+        overflow: hidden;
+        width: 100%;
+      }
+      [class*='span'] {
+        float: left;
+        padding: 10px 1%;
+      }
+      [class*='span']:first-child{
+        padding: 10px 0;
+      }
+      .span_1 {
+        width: 6.5%;
+      }
+      .span_2 {
+        width: 15%;
+      }
+      .span_3 {
+        width: 23.5%;
+      }
+      .span_4 {
+        width: 32%;
+      }
+      .span_8 {
+        width: 66%;
+      }
+      /* ? grid Less */
+      .container .row.line1 article.span_4{
+        height: 266px;
+      }
+      .container .row.line1 article:not(.span_4),
+      .container .row.line2 article{
+        height: 123px;
+      }
+      .container .row.line3 article{
+        height: 180px;
+      }
+      .container .row.line4 article{
+        height: 175px;
+      }
+
+
+
+}
+/* ?desktop */
+      

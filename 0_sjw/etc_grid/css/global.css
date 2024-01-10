@@ -16,9 +16,13 @@ header nav, .container{
 .container .row > [class$='4']{background-color: #dfd8ca;}
 .container .row > [class$='8']{background-color: #b91646;}
 
+header nav ul li a{
+    font-weight: 700;
+}
+
 /* ? A/U */
 
-@media screen and (min-width:960px){
+@media screen and (min-width: 768px){
     header{
         background-color: white; position: fixed; width: 100%;
     }
@@ -32,6 +36,22 @@ header nav, .container{
     header nav ul li.mobileUI{
         display: none;
     }
-    /* leafEffect... */
+    /* 디스플레이를 블럭으로 했다가 인라인블럭으로 바꿈 
+    그럼 부모가 인라인블럭에 19퍼차지해도 부모 너비를 따라가지 않고 자기가 데리고있는 컨텐츠 너비만큼만 차지 
+    남는 간격은 마진으로 알아서 남도록 냅둠*/
+    header nav ul li a{
+        text-decoration: none; text-transform: uppercase; display: inline-block;
+        font-size: 14px; color: #635f59; padding: 20px; border: 5px solid white;
+        transition-property: background-color, border;
+        transition-duration: 1s, 0.5s;
+        transition-delay: 0.2s, 0.1s;
+    }
+    header nav ul li:hover a{
+        background-color: #0cf; border-color: #0cf; color: white;
+        border-radius: 10px 0;
+    }
+    .container{
+        padding-top: 85px;
+    }
 }
-/* ? desktop -> 1024px 일 때 */
+/* ? tablet & desktop -> 768px이상일 때 */
