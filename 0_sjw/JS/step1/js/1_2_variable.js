@@ -58,3 +58,33 @@
     var objClass = new Markclass();
     objClass.showName();
 */
+
+// *만들기
+// ? var(선언) 변수이름; -> 선언
+// ? var 변수이름 = 값; -> 선언 및 초기화
+
+// * case.1 선언
+// ? name이라는 변수가 선언됨 초기화안됨 == 미정의
+var userName; 
+
+// *case.2 선언 및 초기화
+// ! 개발언어는 '자료형을 근거로 둔 순환'을 하기 때문에 대상이 명확하게 명시되어야함(""이건 그냥 글자야라고 선언을 해줘야함)
+var userName = "jiwoo";
+
+// *case.3 위 예제의 문제점
+// ! 변수는 위 언급한 바대로 순환할 수 있는 도구여야함 운반자의 역할
+// 선언 두 번 하지말기 두 개가 생성됨 =의 의미는 대입(같다X) 오른쪽 값을 왼쪽에 넣는다(좌변에 우변을 대입하라)
+// ?컵을 만들었다 -> 컵에 녹차를 담았다 -? 컵에 녹차를 버리고 꽃차를 담았다
+var cup;   
+cup = 'greenTea';
+cup = 'flowerTea';
+
+// *case.4 연산자 사용시
+// ? numbValue라는 변수를 만들고 10을 담았다
+var numbValue = 10; 
+numbValue = numbValue + 20;
+
+var cliAge = 24;
+console.log("나의 나이는 현재 " + cliAge + '세 이고,');
+cliAge += 20;
+console.log("20년 뒤에는 " + cliAge + '세 이다.')
