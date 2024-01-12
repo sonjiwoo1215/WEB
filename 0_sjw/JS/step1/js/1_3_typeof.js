@@ -47,7 +47,7 @@ function check1(){
 // *case.4 test 변수를 선언하고 초기화하지 않은 상태에서 자료형을 check
 function check2(){
     var test;
-    console.log('초기화 하지 않은 변수의 자료유형은 ? ' + typeof(test) + "입니다.");
+    console.log('초기화 하지 않은 변수의 자료유형은 ? ' + typeof(test) + "입니다.")
 }
 // todo.5 obj 변수에 객체를 담을 예정이니 null로 초기화해서 자료형을 check해보자
 function check3(){
