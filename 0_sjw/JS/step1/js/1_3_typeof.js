@@ -52,5 +52,5 @@ function check2(){
 // todo.5 obj 변수에 객체를 담을 예정이니 null로 초기화해서 자료형을 check해보자
 function check3(){
     var obj = null;
-    console.log('null로 초기화한 변수의 자료유형은 ? ' + typeof(obj) + '입니다.');
+    console.log('obj변수에 담긴 값의 자료유형은 ' + typeof(obj) + '입니다.');
 }   

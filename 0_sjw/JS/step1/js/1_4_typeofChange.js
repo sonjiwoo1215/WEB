@@ -107,7 +107,7 @@ function todo3(){
 function todo4(){
     var test = '100.51';
     console.log('변환 전 : ' + typeof(test) + ' = ' + test);
-    var result = parseInt(test) + 150 + parseInt('20');
+    var result = parseFloat(test) + 150 + parseInt('20');
     console.log('변환 후 : ' + typeof(result) + ' = ' + result);
 }
 // todo. -2 Number 이용해보기
