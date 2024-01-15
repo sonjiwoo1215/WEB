@@ -21,11 +21,11 @@ function amORpm(){
     // 한번에 여러개를 동시에 실행할 수 없다 생성과 호출을 따로해야함
     var date = new Date();
     var hour = date.getHours();
-    // 0 자정 12 정오 (24시간제)
+    // 0 자정 12 정오 (24시간제) 비교하는 대상이 하나면 상황도 하나여야 함(if두개로 쪼개지말고 else쓰거나 else if (hour >= 12))
     if (hour < 12){
         alert('오전입니다.');
     }
-    if (hour >= 12){
+    else{
         alert('오후입니다.');
     }
 }
