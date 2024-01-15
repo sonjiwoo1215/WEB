@@ -57,3 +57,54 @@ function numbOP2(){
     var result = a*b/10;
     console.log('복합연산 : ' + result);
 }
+// *case.3 ul,li 구조의 tag를 html page에 삽입 후 출력
+function operationEx(){
+    var list = '';
+    list += '<ul>';
+    list += '   <li>Hello</li>';
+    list += '   <li>JS..!</li>';
+    list += '</ul>';
+    document.body.innerHTML = list;
+}
+// *case.4 연산자가 뒤로 올 경우
+function numberPlusAfter(){
+    var number = 10;
+    alert(number++); //? 10
+    alert(number++); //? 11
+    alert(number++); //? 12 -> 12를 확인했을 때 이미 13으로 변경된 상태
+}
+// *case.5 연산자가 앞으로 올 경우
+function numberPlusBefore(){
+    var number = 10;
+    alert(++number); //? 11 
+    alert(++number); //? 12
+    alert(++number); //? 13
+}
+// todo  증감연산자복합
+function numberPlusTodo(){
+    var number = 10;
+    console.log(number++); //? 10 11
+    console.log(--number); //? 10 10 
+    console.log(++number); //? 11 11
+    console.log(number--); //? 11 10
+    console.log(number++); //? 10 11
+    console.log(++number); //? 12 12
+    console.log(--number); //? 11 11
+    console.log(number++); //? 11 12
+    console.log(++number); //? 13 13
+    console.log(number); //? 13
+}
+// *case.6 숫자 10이 담긴 변수a와 숫자20이 담긴 변수b의 크기를 비교하여 결과를 출력
+function compareOperator1(){
+    var a = 10;
+    var b = 20;
+    var result = a>b;
+    console.log("10 > 20 ? " + result);
+}
+// *case.7 숫자 10이 담긴 변수a와 숫자20이 담긴 변수b가 같은지 비교하여 결과를 출력
+function compareOperator2(){
+    var a = 10;
+    var b = 20;
+    var result = a == b;
+    console.log("10 = 20 ? " + result);
+}
