@@ -98,13 +98,25 @@ function numberPlusTodo(){
 function compareOperator1(){
     var a = 10;
     var b = 20;
-    var result = a>b;
-    console.log("10 > 20 ? " + result);
+    var result = a < b;
+    console.log("a < b ? " + result);
 }
 // *case.7 숫자 10이 담긴 변수a와 숫자20이 담긴 변수b가 같은지 비교하여 결과를 출력
 function compareOperator2(){
     var a = 10;
     var b = 20;
-    var result = a == b;
-    console.log("10 = 20 ? " + result);
+    var result = a != b;
+    console.log("a = b ? " + result);
+}
+// *case.8 a변수에는 '남자', b변수에는 '웹퍼블리셔'라는 값이 저장되어 있다 담겨있는 두 값중 하나라도 맞는지 result 변수에 저장 후 출력
+function logicalOperator(){
+    var a = '남자';
+    var b = '웹디자이너';
+    var result = (a=="남자")&&(b=="웹퍼블리셔");
+    console.log('결과 = ' + result);
+}
+// todo. 다음 코드의 결과를 예상 후 문제점 수정하기
+function compareTodo(){
+    //  true가 1로 형변환되고 1 > 10을 비교하니까 false가 나옴
+    console.log(30 > 20 && 20 > 10); 
 }
