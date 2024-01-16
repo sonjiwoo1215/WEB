@@ -128,3 +128,13 @@ function avgScore(){
     }
 
 }
+// *case.5 사용자 id를 입력받아 맞다면 승인 메시지 출력
+function userIDCheck(){
+    var userID = window.prompt('사용자의 아이디');
+    if(userID == "jiwoo"){
+        alert("접속을 승인합니다");
+    }
+    else{
+        alert("잘못된 ID입니다");
+    }
+}
