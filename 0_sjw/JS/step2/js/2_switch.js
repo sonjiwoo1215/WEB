@@ -64,7 +64,4 @@ function calculator(){
         default:
             alert("잘못된 값이 입력되었습니다.");
     }
-
-
-
 }
