@@ -117,6 +117,6 @@ function logicalOperator(){
 }
 // todo. 다음 코드의 결과를 예상 후 문제점 수정하기
 function compareTodo(){
-    //  true가 1로 형변환되고 1 > 10을 비교하니까 false가 나옴
+    // 30>20은 true임 true가 1로 형변환되고 1 > 10을 비교하니까 false가 나옴
     console.log(30 > 20 && 20 > 10); 
 }
