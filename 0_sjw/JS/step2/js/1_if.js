@@ -78,7 +78,7 @@ function numbJudgement(){
     if(numb > 0){
         alert('양수입니다');
     }
-    else if(numb<0){
+    else if(numb < 0){
         alert('음수입니다');
     }
     else{
@@ -136,5 +136,52 @@ function userIDCheck(){
     }
     else{
         alert("잘못된 ID입니다");
+    }
+}
+/*
+axios.get('/user?ID=12345')
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function (error){
+        console.log(error);
+    })
+    .finally(function(){
+        
+    });
+*/
+// todo. 사용자 id "mark"와 password "1234"를 입력받고 "둘 다 맞을 경우"에만 승인메시지("Mark님으로 확인되었습니다.") 출력. 거부메시지 ("ID 혹은 PASSWORD가 틀렸습니다.") 출력.
+// (userID=="mark"&&userPass=="1234")? alert("Mark님으로 확인되었습니다.") : alert("ID 혹은 PASSWORD가 틀렸습니다.");
+//* 위 주석은 if문 대신 씀 ?는 연결역할 삼항처리식 '? :'  조건이 참이면 좌변 거짓이면 우변을 실행하라
+function logIn(){
+    var userID = window.prompt('사용자의 아이디');
+    var userPass = window.prompt('사용자의 비밀번호');
+    if(userID == "mark" && userPass == "1234"){
+        alert("Mark님으로 확인되었습니다.");
+    }
+    // else if(userID!="Mark" || userPass!="1234")
+    else{
+        alert("ID 혹은 PASSWORD가 틀렸습니다.");
+    }
+}
+// todo 사용자 id "mark"와 password "1234"의 정봑 틀릴 경우 틀린 정보에 대한 오류메시지 출력
+// ? case.1 둘 다 맞은 경우 = "Mark님으로 확인되었습니다."
+// ? case.2 둘 다 틀린경우 = "모든정보가 맞지않습니다"
+// ?case.3 아이디만 틀린경우 = "ID가 존재하지 않습니다"
+// ?case.4 패스워드만 틀린경우 = "password가 틀렸습니다"
+function userInfoCheck2(){
+    var userID = window.prompt('사용자의 아이디');
+    var userPW = window.prompt('사용자의 비밀번호');
+    if(userID=="Mark"&&userPW=="1234"){
+        alert("Mark님으로 확인되었습니다.");
+    }
+    else if(userID!="Mark"&&userPW!="1234"){
+        alert("모든 정보가 맞지 않습니다.");
+    }
+    else if(userID!="Mark"){
+        alert("ID가 존재하지 않습니다.");
+    }
+    else if(userID=="Mark"){
+        alert("password가 틀렸습니다.");
     }
 }
