@@ -39,3 +39,32 @@ function lotto(){
             break;   
     }
 }
+// todo switch로 만드는 간단한 계산기
+function calculator(){
+    var firstNumb = Number(window.prompt("첫번째 숫자를 입력하세요."));
+    var operator = window.prompt("사칙연산자중 하나를 입력하세요.(+,-,*,/)");
+    var lastNumb = Number(window.prompt("두번째 숫자를 입력하세요."));
+
+    // console.log(typeof(firstNumb));
+    // console.log(typeof(lastNumb));
+
+    switch(operator){
+        case "+":
+            alert(firstNumb + lastNumb);
+            break;
+        case "-":
+            alert(firstNumb - lastNumb);
+            break;
+        case "*":
+            alert(firstNumb * lastNumb);
+            break;
+        case "/":
+            alert(firstNumb / lastNumb);
+            break;
+        default:
+            alert("잘못된 값이 입력되었습니다.");
+    }
+
+
+
+}
