@@ -73,9 +73,24 @@ function answer5(){
 function favorFruit(){
     var array = ["귤","사과","딸기","블루베리"]; //? array(배열)-> data들이 저장되는 공간
     //*["귤"] -> data[0] -> array[0]
-    // index는 []안에 숫자의 명칭
-    for(var i=0; i<4; i++){
+    // index는 []안에 숫자의 명칭 let과 const는 var=변수임 암묵적인 룰 var은 상수변수 못건드림  
+    // 진짜 중요 length 원래 길이를 의미하지만 우리한테는 개수
+    for(var i=0; i<array.length; i++){
         alert(array[i]);
+    }
+}
+// todo 지금까지 배웠던 js단원명을 배열을 통해 출력해보자
+function arrayFor(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    for(var i=0; i<data.length; i++){
+        document.write(i+". "+data[i]+"<br>");
+    }
+}
+// todo 과제 switch array 2가지방법으로
+function arrayHW(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    for(var i=0; i<data.length; i++){
+        document.write(i+". "+data[i]+"<br>");
     }
 }
 
