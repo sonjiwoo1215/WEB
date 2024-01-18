@@ -1,5 +1,6 @@
 //todo hw.1 각 수를 입력 받아 해당하는 조건의 메시지를 출력하라.
 //? 1일 경우 "1등 10억", 2일 경우 "2등 5천만원", 3일 경우 "3등 300만원", 그외 수일 경우 "낙첨되었습니다."
+// prompt쓰면 string으로 들어오지만 비교연산자를 쓸 때는 형변환 안해도 됨
 function Lotto(){
     var numbValue = window.prompt("입력하실번호는?");
     if(numbValue == "1"){
