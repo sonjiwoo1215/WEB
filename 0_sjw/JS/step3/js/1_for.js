@@ -86,11 +86,83 @@ function arrayFor(){
         document.write(i+". "+data[i]+"<br>");
     }
 }
-// todo 과제 switch array 2가지방법으로
-function arrayHW(){
+
+// todo 과제
+function arrayHW1(){
     var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    var cou = ["첫번째 ","두번째 ","세번째 ","네번째 ","다섯번째 ","여섯번째 ","일곱번째 "];
     for(var i=0; i<data.length; i++){
-        document.write(i+". "+data[i]+"<br>");
+        document.write(cou[i]+data[i]+"<br>");
     }
 }
-
+function arrayHW2(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    for(var i=0; i<data.length; i++){
+        switch(i){
+            case 0:
+                document.write("첫번째 "+data[i]+"<br>");
+            break;
+            case 1:
+                document.write("두번째 "+data[i]+"<br>");
+            break;
+            case 2:
+                document.write("세번째 "+data[i]+"<br>");
+            break;
+            case 3:
+                document.write("네번째 "+data[i]+"<br>");
+            break;
+            case 4:
+                document.write("다섯번째 "+data[i]+"<br>");
+            break;
+            case 5:
+                document.write("여섯번째 "+data[i]+"<br>");
+            break;
+            case 6:
+                document.write("일곱번째 "+data[i]+"<br>");
+            break;
+    
+        }
+    }  
+}
+function arrayHW3(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    var cou = ["첫번째 ","두번째 ","세번째 ","네번째 ","다섯번째 ","여섯번째 ","일곱번째 "];
+    for(var i=0; i<data.length; i++){
+        switch(i){
+            case 0:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+            case 1:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+            case 2:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+            case 3:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+            case 4:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+            case 5:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+            case 6:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+    
+        }
+    }
+}
+// ! 이게 되나
+function arrayHW4(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    var cou = ["첫번째 ","두번째 ","세번째 ","네번째 ","다섯번째 ","여섯번째 ","일곱번째 "];
+    for(var i=0; i<data.length; i++){
+        switch(i){
+            case i:
+                document.write(cou[i]+data[i]+"<br>");
+            break;
+        }
+    }
+}
