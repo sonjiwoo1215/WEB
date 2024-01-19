@@ -154,7 +154,7 @@ function arrayHW3(){
         }
     }
 }
-// ! 이게 되나
+// ! 
 function arrayHW4(){
     var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
     var cou = ["첫번째 ","두번째 ","세번째 ","네번째 ","다섯번째 ","여섯번째 ","일곱번째 "];
@@ -162,6 +162,108 @@ function arrayHW4(){
         switch(i){
             case i:
                 document.write(cou[i]+data[i]+"<br>");
+            break;
+        }
+    }
+}
+function arrayHW5(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    var swapNumb = '';
+    for(var i=0; i<data.length; i++){
+        swapNumb = i;
+        switch(i){
+            case 0:
+                swapNumb = '첫';
+            break;
+            case 1:
+                swapNumb = '두';
+            break;
+            case 2:
+                swapNumb = '세';
+            break;
+            case 3:
+                swapNumb = '네';
+            break;
+            case 4:
+                swapNumb = '다섯';
+            break;
+            case 5:
+                swapNumb = '여섯';
+            break;
+            case 6:
+                swapNumb = '일곱';
+            break;
+        }
+        document.write(swapNumb + "번째 내용 = "+data[i]+'<br>');
+    }
+}
+function arrayHW6(){
+    var data = ["변수","연산자","형변환","조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    var swapNumb = ["첫","두","세","네","다섯","여섯","일곱"];
+    for(var i=0; i<data.length; i++){
+        document.write(swapNumb[i] + "번째 내용 = "+data[i]+'<br>');
+    }
+}
+// *case.4 continue
+// break처럼 중단은 아님 받아쳐냄 docu보다 continue가 먼저 실행될테니 밑으로 못내려가게 위로쳐냄(필터역할 판매순 인기순..)
+// continue가 돌다가 조건에서 벗어나면 빠져나가서 for밖에 있는 docum가 실행됨 동기방식이기때문에 for가 멈추지 않으면 밖에 docu는 실행되지 않음
+function forContinue(){
+    for(var i=0; i<=10; i++){
+        continue;
+        document.write(i+"<br>");
+    }
+    document.write("최종 i = "+i+"<br>");
+}
+// *case. 5-1 continue문제
+// 필터의 의미가 강함 내가 제외시키고 싶은 대상이 있다면 거기에 컨티뉴
+function continueEx(){
+    let text = '';
+    for(let i=0; i<10; i++){
+        if(i==3){
+            continue;
+        }
+        text=text+i;
+    }
+    console.log(text); //? 012456789
+}
+// *case. 5-2 continue문제
+// if가 false가 되면 continue는 실행되지 않고 output+=i로 넘어감 출력되고 다시 반복 
+function runContinue(){
+    var output=0;
+    for(var i=1; i<=10; i++){
+        if(i%2 == 1){
+            continue;
+        }
+        output = output + i; //? 2 4 6 8 10 
+        console.log(output); //? 2 6 12 20 30
+    }
+}
+// *case.5 break
+function forBreak(){
+    for(var i=1; i<=10; i++){
+        break;
+        document.write(i+"<br>");
+    }
+    document.write("최종 i = "+i+"<br>");
+}
+// *case.5-1 break문제
+// 콘솔이 반복문 밖에 있으니 출력은 한번밖에 안됨
+function breakEx(){
+    var i=0; //? 0에서 1로 바뀜
+
+    while(i<6){
+        if(i == 3){
+            break;
+        }
+        i=i+1;
+    }
+    console.log(i); //? i가 3이 되는 순간 while문이 죽고 얘가 실행됨
+}
+// *case.5-2 break 문제
+function runBreak(){
+    for(var i=0; true; i++){ //? true쓰면 for문 무한반복 가능 근데 무한반복은 while을 쓰는게 편함
+        alert(i+'번째 반복문');
+        if(!confirm('계속할래?')){
             break;
         }
     }
