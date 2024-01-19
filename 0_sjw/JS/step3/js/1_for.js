@@ -269,7 +269,6 @@ function runBreak(){
     }
 }
 // ! 다중 for
-
 // *case.1 반절 피라미드
 function halfPyramid(){
     var star = ''
@@ -280,4 +279,8 @@ function halfPyramid(){
         star += '<br>';
     }
     document.write(star);
+}
+//todo.역반절피라미드
+function reverseHalfPyramid(){
+    
 }
