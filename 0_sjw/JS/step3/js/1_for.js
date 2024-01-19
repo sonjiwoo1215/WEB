@@ -268,3 +268,16 @@ function runBreak(){
         }
     }
 }
+// ! 다중 for
+
+// *case.1 반절 피라미드
+function halfPyramid(){
+    var star = ''
+    for (var i=0; i<=10; i++){
+        for(var j=0; j<i; j++){ //? jfor죽으면 다시 ifor실행되서 내려오고 jfor가 다시 실행이 됐을때 얘는 j는 0부터 다시 시작
+            star += '*';
+        }
+        star += '<br>';
+    }
+    document.write(star);
+}
