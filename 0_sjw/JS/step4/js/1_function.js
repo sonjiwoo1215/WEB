@@ -32,7 +32,7 @@ function sumParam(num1,num2){
 // *case.3 arguments(가변-변할 수 있는 인자) - 매개변수의 자리가 없어도 있는 것처럼..개수가 고정이 아님
 /*  
      ? arguments - 배열인듯 배열아닌 배열같은...
-     * arguments 변수가 아니라 객체(object)형태 / 모든 함수 안에 사용하는 지역변수(함수안에 있는 변수)
+     * arguments 변수가 아니라 객체(object)형태 / 모든 함수 안에서 사용하는 지역변수(함수안에 있는 변수)
      * arguments를 이용해서 함수 내 인수들을 참조할 수 있고 이 객체의 함수에 전달된 각 인수항목을 포함한다(괄호안에 넘1,2 안써도 안에 실행식을 가동시킬수 있다)
      * 단 arguments는 array와 비슷해보이지만 length를 구하는 방식을 제외하고는 array와는 다르다
      * 배열이 필요하다면 변환하여 사용할 수는 있다
@@ -83,17 +83,17 @@ function sumReturn1(num1,num2){
     return result;
 }
 function infiniteSum(){
-    var sum = 0; //?
-    var count = 1; //?
-    while(true){ //?무한반복
-        var value=parseInt(window.prompt("숫자만 입력해라"));
-        if(value==0){
-            document.write("종료");
-            return;
+    var sum = 0; //? sum=0
+    var count = 1; //? count=1
+    while(true){ //? 무한반복
+        var value = parseInt(window.prompt("숫자만 입력해라.")); //? 숫자입력창
+        if(value ==0){ //? 입력받은 수가 0이면
+            document.write("종료."); //? 종료라고 쓰기
+            return; //? 숫자입력창으로 돌아감?
         }
-        sum += value;
-        document.write(count+"."+sum+"<br>");
-        count++;
+        sum += value; //? 1,2,3순서대로 넣으면 1저장-> sum=1+2 3이 저장 -> sum=3+3 6저장
+        document.write(count + ". " + sum + "<br>"); //? 1.입력값
+        count++; //? count=2됨
     }
-    document.write("총"+count+"번 실행함"); //?
+    document.write("총 " + count + "번 실행함."); //? 총 1번 실행함
 }
