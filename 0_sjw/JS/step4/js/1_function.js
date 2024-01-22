@@ -17,7 +17,6 @@
 
 function helloFunc(count){
     var comment = "안녕, 방가와";
-    var count = prompt(count);
     for(var i=0; i<count; i++){    
         document.write(comment,"<br>");
     }
@@ -39,5 +38,24 @@ function sumParam(num1,num2){
      * 배열이 필요하다면 변환하여 사용할 수는 있다
 */
 function sumAll(){
-
+    console.log(typeof(arguments) + ':' + arguments.length);
+    var willReturn =0;
+    for(var i=0; i<arguments.length; i++){
+        willReturn += arguments[i];
+    }
+    console.log(willReturn);
 }
+// 위 함수 실무형태로 바꾸면?
+function sumAllEX(){
+    var willReturn = 0;
+    for(var i in arguments){ //? for in loop는 ie9이하 작업 불가
+         willReturn += arguments[i];
+    }
+    return willReturn;
+}
+// *case.4 "자신의 이름"의 나이는 "자신의 나이"세 입니다. 를 arguments를 이용해 만들어보기
+function showInfo(){
+    console.log("0번방 = "+arguments[0]);
+    console.log("1번방 = "+arguments[1]);
+    alert(arguments[0]+"의 나이는 "+arguments[1]+"세 입니다.");
+} 
