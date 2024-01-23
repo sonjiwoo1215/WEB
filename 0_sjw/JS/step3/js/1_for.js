@@ -296,6 +296,7 @@ function reverseHalfPyramid(){
     // *반복시켜야되는 대상 수 - &nbsp;, *, <br> / 만큼의 for문을 작성 (for문의 개수 3)
     // ! 각 루프가 할당해야하는 대상을 정확히 지정하기 (i loop s lop e loop 이름 짓기 for루프를 어디안에다 어떻게 쓰느냐)
     // *한번 반복이 완성할 때 형태가 star변수에 어떻게 담기는지 예측하면서 작성
+    
 function pyramid(){
     var star='';
     for(var i=0; i<=10; i++){
@@ -306,6 +307,21 @@ function pyramid(){
                 }
             }
             star += '*';    
+            star += '&nbsp';
+        }
+        star += '<br>';
+    }
+    document.write(star);
+}
+
+function pyramid1(){
+    var star='';
+    for(var i=0; i<=10; i++){
+        for(var e=10; e>=i; e--){
+            star += '&nbsp';
+        }
+        for(var s=0; s<i; s++){
+            star += '*';
             star += '&nbsp';
         }
         star += '<br>';
