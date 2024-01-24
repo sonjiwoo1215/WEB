@@ -198,3 +198,22 @@ function welcome(){
 $(function(){
     $("#runEx7").click(welcome);
 });
+// *case.8 1초마다 매개변수 값으로 넘긴 익명함수 호출
+// setInterval(실행될 함수,간격의 기준이 되는 시간) 정해진 시간만큼의 반복 1초는 1000 (m/s기준)
+// 기명함수는 위 welcome같은거고 익명함수는 function(){}이렇게 생김 function이랑 ()사이에 띄어쓰기 없음
+// 익명함수는 단발성임(한번쓰고 버림) 저장함수는 기명일 필요가 없음 함수지향적목적+보안문제 때문에 저장은 익명으로 하되 들어온 데이터를 꽂아주는 함수는 서버 내에 기명함수로 하자..
+// 예를들어 스크롤위치 감지하는 함수를 만들었는데 이 역할이 여러페이지에 쓰인다면 기명함수 한번만 사용하고 버리면 익명함수 
+function loopStart(){
+    setInterval(function(){
+        document.write("hi,hello?");
+    },1000);
+}
+// *case.9 함수를 매개변수로 전달받아 반복호출하기
+function callFunctionTenTimes(otherFunction){
+    for(var i=0; i<10; i++){
+        otherFunction();
+    }
+}
+function hellojw(){
+    document.write('hello jiwoo~~!!!! ');
+}
