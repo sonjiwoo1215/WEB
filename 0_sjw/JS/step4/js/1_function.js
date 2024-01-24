@@ -215,5 +215,20 @@ function callFunctionTenTimes(otherFunction){
     }
 }
 function hellojw(){
-    document.write('hello jiwoo~~!!!! ');
+    document.write('hello jiwoo~~!!!!'+"<br>");
 }
+// *fin. returnValue로 함수를 사용하기
+// 함수안에다 함수를 만들면 함수자체는 폐쇄적이라 갇혀있기 때문에 부를 수 있는 방법이 없어서 실행을 못함
+// createHello를 실행하면 그 위치로 hello함수를 보냄 
+// 리턴은 값이 뒤에 있으면 데리고 나가는거고 없으면 그냥 나가는것
+function createHello(){
+    function hello(user){
+        document.write(user+' welcome! ');
+    }
+    return hello;
+}
+/* var result =  function hello(user){
+    document.write(user+'welcome!');}
+*/
+// 리턴은 ch함수안에 있고 밑에서 ch함수실행식을 입력했음 리턴뒤에는 h함수 통째로가 붙어있음 그럼 ch함수가 실행된 곳으로 h함수를 보냄
+var result = createHello();
