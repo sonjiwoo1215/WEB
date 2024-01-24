@@ -15,19 +15,28 @@ $(document).ready(function(){
 
     // ?case.3
     $("#btnAddBorder").click(addBorder);
+
+    // ?case.4
+    $("#btnTextChange").click(change);
 });
 // $(function(){
 
 // });
+// 함수밖에 만들고 저 안에 클릭되면 뜨게하는건 안에 쓰기 
 // *case.2
 function sayHello(){
     alert('hello');
 }
-// 얘네들 case1쪽 안에 넣으면 안됨?? 함수밖에 만들고 저 안에 클릭되면 뜨게하는건 안에 쓰기 
 // 스크립트로 넣는 css / 이렇게 직접 5px어쩌고 넣는것보다 css에서 클래스로 넣고 스크립트에서 클래스 갖고놀기
 // *case.3
 function addBorder(){
     // js는 document.body.getElement 어쩌고 해야함
     // 매개변수는 이름이랑 값 두개
     $("#panel").css("border","5px solid black");
+}
+// *case.4
+function change(){
+    $("#panel2").css("font-size","100px");
+    $("#panel2").css("font-weight","900");
+    $("#panel2").css("color","yellow");
 }
