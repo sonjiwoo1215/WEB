@@ -202,7 +202,7 @@ $(function(){
 // setInterval(실행될 함수,간격의 기준이 되는 시간) 정해진 시간만큼의 반복 1초는 1000 (m/s기준)
 // 기명함수는 위 welcome같은거고 익명함수는 function(){}이렇게 생김 function이랑 ()사이에 띄어쓰기 없음
 // 익명함수는 단발성임(한번쓰고 버림) 저장함수는 기명일 필요가 없음 함수지향적목적+보안문제 때문에 저장은 익명으로 하되 들어온 데이터를 꽂아주는 함수는 서버 내에 기명함수로 하자..
-// 예를들어 스크롤위치 감지하는 함수를 만들었는데 이 역할이 여러페이지에 쓰인다면 기명함수 한번만 사용하고 버리면 익명함수 
+//  예를들어 스크롤위치 감지하는 함수를 만들었는데 이 역할이 여러페이지에 쓰인다면 기명함수, 한번만 사용하고 버리면 익명함수 
 function loopStart(){
     setInterval(function(){
         document.write("hi,hello?");
@@ -219,7 +219,7 @@ function hellojw(){
 }
 // *fin. returnValue로 함수를 사용하기
 // 함수안에다 함수를 만들면 함수자체는 폐쇄적이라 갇혀있기 때문에 부를 수 있는 방법이 없어서 실행을 못함
-// createHello를 실행하면 그 위치로 hello함수를 보냄 
+// return hello; createHello를 실행하면 그 위치로 hello함수를 보냄 
 // 리턴은 값이 뒤에 있으면 데리고 나가는거고 없으면 그냥 나가는것
 function createHello(){
     function hello(user){
