@@ -59,7 +59,7 @@ function KeyControl(){
     var currentYpos=0;
     // 이런경우는 익명함수가 편함 키보드 키를 눌렀다는 상황이 너무 많고 그럼 어떤 키를 눌렀는지 감지할 수 있어야함 그거 처리를 하는게 기명함수를 쓰면 너무 복잡함
     // 이벤트의 약자 e 키다운함수가 눌린 키를 e매개변수로 꽂아줌 키보드는 usb가 꽂아져있고 거길 통해 전기가 통하고 있음 키보드 배열 모양대로 구리가 깔려있음 고르게 1이라는 전류가 통하는 그 상태가 false상태
-    // 키를 누르면 false가 true로 바뀌어야함 키가 눌리면 전기가 흐르다가 막히고 다른 곳(눌린곳)으로 흐름(전류상승) 바뀐 전기신호를 컴퓨터가 알아듣게 컴파일 해주는게 e  
+    // 키를 누르면 false가 true로 바뀌어야함 키가 눌리면 전기가 흐르다가 막히고 다른 곳(눌린곳)으로 흐름(전류상승) 바뀐 전기신호를 컴퓨터가 알아듣게 컴파일 해줌
     // 근데 우리가 못알아들어서 e.keyCode 씀
     $(document).keydown(function(e){
         console.log("입력한 keyCode : "+ typeof(e.keyCode) + e.keyCode);
@@ -79,12 +79,19 @@ function KeyControl(){
                 currentXpos-=range;
                 break;
         }
-        $circle.css("left",currentXpos);
-        $circle.css("top",currentYpos);
-// 키를 누름과 동시에 50씩 하는거니 위처럼 상황을 하나로 묶어서 하지말고 xxyy나눠서 해도 상관없으니 가둬보기
-
-
-
-        
+        // 키를 누름과 동시에 50씩 하는거니 위처럼 상황을 하나로 묶어서 하지말고 xxyy나눠서 해도 상관없으니 가둬보기
+        if(currentXpos<=0 || currentXpos+50 >=380){
+            $circle.css("left",0);
+        }
+        else{
+            $circle.css("left",currentXpos);
+        }
+        if(currentYpos<=0 || currentYpos+50 >=380){
+            $circle.css("top",0);
+        }
+        else{
+            $circle.css("top",currentYpos);
+        }
+        return currentXpos, currentYpos;
     });
 }
