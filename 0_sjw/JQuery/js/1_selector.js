@@ -16,8 +16,8 @@ $(document).ready(function(){
     // ?case.3
     $("#btnAddBorder").click(addBorder);
 
-    // ?case.4
-    $("#btnTextChange").click(change);
+    // todo
+    $("#btnTextChange").click(textChange);
 });
 // $(function(){
 
@@ -34,9 +34,16 @@ function addBorder(){
     // 매개변수는 이름이랑 값 두개
     $("#panel").css("border","5px solid black");
 }
-// *case.4
-function change(){
-    $("#panel2").css("font-size","100px");
-    $("#panel2").css("font-weight","900");
-    $("#panel2").css("color","yellow");
+// todo
+function textChange(){
+    // $("#panel2").css("font-size","50px");
+    // $("#panel2").css("font-weight","900");
+    // $("#panel2").css("color","yellow");
+    
+    // -가 안되는경우 cap방식으로 쓰기
+    $("#panel2").css({
+        "fontSize":"25px",
+        "font-weight":"900",
+        "color":"darkgreen"
+    });
 }
