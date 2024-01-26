@@ -6,6 +6,8 @@ $(document).ready(function(){
     toggleTodo();
     // *case.2 
     tabUI();
+    // *case.3
+    accControl(".accComponent li h3");
 });
 // true false 왔다갔다하는 행위를 toggle
 function toggleCheck(){
@@ -52,10 +54,19 @@ function tabUI(){
     $(".tabMenu li").click(function(){
         // attr도 값을 가져올 수 있는데 이름(type)정도는 적어줘야함
         // 1,2,3 중 뭐가 클릭됐는지 알 수 있게 이벤트가 일어난 당사자가 필요 = this
-        var activeTab= $(this).attr("data-tabNumb");
-        console.log(activeTab);
+        var activeTab= "#"+ $(this).attr("data-tabNumb");
         // .tabMenu li안에 있는 class(activated)를 다 제거하라
         $(".tabMenu li").removeClass("activated");
         $(this).addClass("activated");
+        $(".tabPage").removeClass("activated");
+        $(activeTab).addClass("activated");
+        // $("#"+activeTab).addClass("activated");
+        // console.log(activeTab);
     });
+}
+
+function accControl(target){
+    $(target).click(function(){
+        $(this).toggleClass("active");
+    })
 }
