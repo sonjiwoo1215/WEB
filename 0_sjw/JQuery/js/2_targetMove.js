@@ -79,19 +79,31 @@ function KeyControl(){
                 currentXpos-=range;
                 break;
         }
-        // 키를 누름과 동시에 50씩 하는거니 위처럼 상황을 하나로 묶어서 하지말고 xxyy나눠서 해도 상관없으니 가둬보기
-        if(currentXpos<=0 || currentXpos+50 >=380){
-            $circle.css("left",0);
+        // if(currentXpos<=0 || currentXpos+50 >=380){
+        //     $circle.css("left",0);
+        // }
+        // else{
+        //     $circle.css("left",currentXpos);
+        // }
+        // if(currentYpos<=0 || currentYpos+50 >=380){
+        //     $circle.css("top",0);
+        // }
+        // else{
+        //     $circle.css("top",currentYpos);
+        // }
+        if(currentXpos<0){
+            currentXpos=0;
         }
-        else{
-            $circle.css("left",currentXpos);
+        if(currentXpos>380){
+            currentXpos=380;
         }
-        if(currentYpos<=0 || currentYpos+50 >=380){
-            $circle.css("top",0);
+        if(currentYpos<0){
+            currentYpos=0;
         }
-        else{
-            $circle.css("top",currentYpos);
+        if(currentYpos>380){
+            currentYpos=380;
         }
-        return currentXpos, currentYpos;
+        $circle.css("left",currentXpos);
+        $circle.css("top",currentYpos);
     });
 }
