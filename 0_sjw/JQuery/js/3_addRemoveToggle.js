@@ -64,7 +64,7 @@ function tabUI(){
         // console.log(activeTab);
     });
 }
-
+// toggleClass
 function accControl(target){
     $(target).click(function(){
         $(this).toggleClass("active");
