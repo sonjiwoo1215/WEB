@@ -56,4 +56,5 @@ function moveCircle(){
 // todo 3-2 멈추는 함수 생성
 function moveStop(){
     clearInterval(timerID);
+    timerID=0;
 }
