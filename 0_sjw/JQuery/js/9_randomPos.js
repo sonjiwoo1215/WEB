@@ -54,6 +54,7 @@ function gameEnd(){
     playState=false;
     // setInterval취소 / 클리어인터벌 실행될건데 10초뒤에 
     clearInterval(timerID);
+    // 중단점 : 우리가 확인을 눌러야 다음으로 넘어감
     alert("게임종료. 너의 점수는 "+count+"점이다.");
     count=0;
     $score.text(count);
