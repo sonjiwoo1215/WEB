@@ -44,6 +44,6 @@ $(document).ready(function(){
         // *auto
         auto:true, //? default:false slider자동전환 켜기
         autoControls:true, //?default:false 시각장애인 배려
-        autoControlsCombine:true, //? default:false play/pause 
+        autoControlsCombine:true, //? default:false play/pause toggle
     });
 });
