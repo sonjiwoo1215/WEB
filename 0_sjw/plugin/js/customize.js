@@ -45,5 +45,9 @@ $(document).ready(function(){
         auto:true, //? default:false slider자동전환 켜기
         autoControls:true, //?default:false 시각장애인 배려
         autoControlsCombine:true, //? default:false play/pause toggle
+        autoStart:true, //?default:true (false:autoControls로 시작)화면 준비가 완료되면 바로 자동전환 
+        pause:4000,
+        autoDelay:1500,
+    
     });
 });
