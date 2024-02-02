@@ -1,0 +1,126 @@
+/* customize 어쩌고는 내가 임의로 작성하는 css파일 우리가 공부중이니까 쓰는거고 실무에서는 쓰는거 아님 */
+.bx-wrapper {
+    box-shadow: none;
+    border: none;
+    /* background가 숏앤드 문법이라 우선임 이미bx가 background로 선언을 해놨으니 color로 바꾸지말고 수정 */
+    background: transparent;
+    position: relative;
+    margin-bottom: 60px;
+}
+.bx-wrapper .bx-caption {
+    position: absolute;
+    /* bottom을 top으로 바꾸기보다 bottom 값을 수정하는게 쉬움 원본파일은 건들지말기 */
+    bottom: 70%;
+    left: 0;
+    background: rgba(255, 80, 80, 0.75);
+    width: auto;
+}
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: 'Segoe UI';
+    display: block;
+    font-size: 22px;
+    padding: 10px;
+}
+/* ? caption css */
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+.bx-wrapper .bx-pager-item{
+    display: inline-block;
+    vertical-align: bottom;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus{
+    background: #000;
+}
+
+
+.newPager .bx-pager.bx-default-pager{
+    text-align: center;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item{
+    display: inline-block;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item:not(:first-of-type){
+    margin-left: 2%;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item a.bx-pager-link{
+    text-decoration: none; padding: 17px 20px; display: block; background-color: #eaeaea;
+    border-radius: 40px; font-size: 14px; color: black;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item a.bx-pager-link.active{
+    font-weight: bold; color: white; background-color: black;
+}
+/* ?pagerSelector customize */
+
+.customPager{
+    display: flex; max-width: 1000px; margin-bottom: 20px; margin: 0 auto; list-style: none;
+}
+.customPager li{
+    width: 20%; align-self: center;
+}
+.customPager li:not(:first-child){
+    margin-left: 2%;
+}
+.customPager li a{
+    opacity: 0.5; display: block; transition: all 0.35s ease-in;
+}
+.customPager li a.active{
+    padding: 5px; border: 3px solid black; opacity: 1;
+}
+.customPager li a img{
+    width: 100%; display: block;
+}
+/* ?customPager */
+
+.bx-wrapper .bx-controls-direction a{
+    height: 100%; top: 0; background-color: white; margin-top: 0;
+}
+.bx-wrapper .bx-next{
+    right: 0px; background: url('../images/controls_right.png') center / 24px no-repeat;
+}
+.bx-wrapper .bx-prev{
+    left: 0px; background: url('../images/controls_left.png') center / 24px no-repeat;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus{
+    background-position: center; background-image: url('../images/controls_left_hover.png');
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus{
+    background-position: center; background-image: url('../images/controls_right_hover.png');
+}
+/* ? controls customize - 1 */
+
+
+[class^='btn_']{
+    width: 50px; line-height: 25px; background-color: black; border-radius: 5px; 
+    display: inline-block;
+}
+[class^='btn_'] a{
+    display: block; font-size: 14px; color: white; text-decoration: none;
+    text-align: center;
+}
+/* ? controls customize - 2 */

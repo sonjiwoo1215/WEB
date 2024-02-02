@@ -14,5 +14,35 @@ $(document).ready(function(){
         // *infiniteLoop, hideControlOnEnd 충돌
         infiniteLoop:true, //? 버튼은 보이지만 처음에 이전을 누르거나 마지막에 다음을 누를때 안움직임 디폴트는 트루
         hideControlOnEnd:false, //? 첫장일땐 이전없고 막장일땐 다음이 없음 디폴트는 펄스
+
+        // *adaptiveHeight
+        adaptiveHeight:true, //? 적응형높이 높이값이 적응한다 지금은 이미지 사이즈가 다 같아서 차이가 안일어남
+        adaptiveHeightSpeed:300, //? default:500
+        
+        video:true, //? default는 false video 활성화
+        easing:'ease-in-out', //? default는 null
+        responsive:true, //? default:true slider자체의 반응형을 끄냐 키냐인데 거의 건드릴 일이 없음
+        captions:true, //? default:false img's에 title attr을 부여
+
+        // *pager-indicator
+        // hover는 모바일로 넘어가면 자동으로 터치로 바뀜 js click은 click임 원래 클릭이 터치를 대응할 수 없음
+        // 터치스와이프 쓰려면 '제이쿼리모바일'을 봐야함 제이쿼리에서 드래그 어쩌고해도 모바일로 넘어가면 터치스와이프 안됨
+        pager:true, //? default:true pager 켜기/끄기
+        pagerType:'full',
+        // pagerShortSeparator:'.',
+        // pagerSelector:'.newPager'
+        pagerCustom:'.customPager', //? default:none
+
+        // * controler
+        controls: true, //?default:true control button 켜기 끄기
+        nextSelector:'.btn_next', //? 공간 생성 및 class 부여하면 뼈대
+        prevSelector:'.btn_prev',
+        // 공간을 잡아놓고 a를 공급받는것 이렇게 공급받으면 css를 자유자제로 넣을 수 있음
+        nextText:'다음',
+        prevText:'이전',
+
+        // *auto
+        auto:true, //? default:false slider자동전환 켜기
+        autoControls:true,
     });
 });

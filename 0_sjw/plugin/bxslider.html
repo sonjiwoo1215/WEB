@@ -16,10 +16,22 @@
 </head>
 <body>
     <ul class="slider">
-        <li><img src="images/wallpaper1.jpg" alt="high Quality Wallpaper"></li>
-        <li><img src="images/wallpaper2.jpg" alt="high Quality Wallpaper"></li>
-        <li><img src="images/wallpaper3.jpg" alt="high Quality Wallpaper"></li>
-        <li><img src="images/wallpaper4.jpg" alt="high Quality Wallpaper"></li>
+        <li><img src="images/wallpaper1.jpg" alt="high Quality Wallpaper" title="wallpaper01"></li>
+        <li><img src="images/wallpaper2.jpg" alt="high Quality Wallpaper" title="wallpaper02"></li>
+        <li><img src="images/wallpaper3.jpg" alt="high Quality Wallpaper" title="wallpaper03"></li>
+        <li><img src="images/wallpaper4.jpg" alt="high Quality Wallpaper" title="wallpaper04"></li>
+        <!-- 웬만하면 유튜브  iframe가져오지말고 video 쓰기 -->
+        <li><iframe src="https://www.youtube.com/embed/JBa3al4Sd4w?si=KPvc1EfR1MmKxvZm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
     </ul>
+    <div class="pager"></div>
+    <ol class="customPager">
+        <li><a data-slide-index="0"><img src="images/wallpaper1.jpg" alt="slide1"></a></li>
+        <li><a data-slide-index="1"><img src="images/wallpaper2.jpg" alt="slide2"></a></li>
+        <li><a data-slide-index="2"><img src="images/wallpaper3.jpg" alt="slide3"></a></li>
+        <li><a data-slide-index="3"><img src="images/wallpaper4.jpg" alt="slide4"></a></li>
+        <li><a data-slide-index="4"><img src="https://via.placeholder.com/250" alt="slide5"></a></li>
+    </ol>
+    <div class="btn_prev"></div>
+    <div class="btn_next"></div>
 </body>
 </html>
